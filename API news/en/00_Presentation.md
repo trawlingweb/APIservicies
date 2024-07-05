@@ -23,4 +23,3 @@ Our News & Blogs API is designed to be a powerful and flexible tool, tailored to
 ---
 
 If you need additional assistance or have any questions, please do not hesitate to contact us. We are here to help you make the most of our API and its functionalities.
-SAT-SAC: support@trawlingweb.com
