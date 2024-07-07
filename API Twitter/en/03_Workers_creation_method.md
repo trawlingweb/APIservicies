@@ -3,6 +3,23 @@
 
 Allows creating new Workers with their words.
 
+# What is a Worker?
+
+A Worker in TrawlingWeb is an entity configured by the user to perform specific searches on social networks using Keywords. These Keywords are search terms configured within the Worker and are based on the credits purchased (1 credit = 1 Keyword).
+
+## Creating and Configuring Workers
+
+The user can create and define search terms for each Worker directly in the dashboard ([https://dashboard.trawlingweb.com/workers](https://dashboard.trawlingweb.com/workers)) or using the method provided by the API. Once a Worker is created, it begins its deployment to start its configuration process, which can take up to an hour.
+
+## Functionality of Workers
+
+- **Keywords**: Workers function as a list of keywords. They use the configured Keywords to perform searches on social networks.
+- **Search Process**: Workers deliver the Keywords to TrawlingWeb's spiders to execute their searches on the social network.
+- **Delivery Process**: Each time the client calls the Worker, it uses the list of Keywords to launch the search against the database of results obtained by TrawlingWeb and retrieve only those results that are related to the list of Keywords.
+
+Implementing and managing Workers efficiently allows users to maximize the relevance and accuracy of the data captured, adapting to the specific needs of their social media analysis and monitoring.
+
+
 # POST Parameters
 
 Let's see the structure of the example query:
@@ -65,14 +82,6 @@ Once a request is sent to the Twitter API, it will return a response structured 
     "error" : "..."
 }
 ```
-
-# Worker Characteristics
-
-We can define a Worker as an independent capture unit.
-
-The user creates and defines the search terms for each Worker and can do so directly in the dashboard (https://dashboard.trawlingweb.com/workers) or using this method.
-
-When a Worker is created, it begins its deployment to start its capture, structuring, and storage tasks. This deployment can take up to an hour.
 
 ## Better searches with Twitter syntax
 

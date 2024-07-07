@@ -2,6 +2,23 @@
 
 Permite crear nuevos Workers con sus palabras.
 
+# ¿Qué es un Worker?
+
+Un Worker en TrawlingWeb es una entidad configurada por el usuario para realizar búsquedas específicas en redes sociales utilizando Palabras Clave. Estas Palabras Clave son términos de búsqueda configurados dentro del Worker y se basan en los créditos contratados (1 crédito = 1 Palabra Clave).
+
+## Creación y Configuración de Workers
+
+El usuario puede crear y definir los términos de búsqueda para cada Worker directamente en el dashboard ([https://dashboard.trawlingweb.com/workers](https://dashboard.trawlingweb.com/workers)) o utilizando el método proporcionado por la API. Una vez creado un Worker, este comienza su despliegue para iniciar su labor de configuración, que puede tardar hasta una hora.
+
+## Funcionalidad de los Workers
+
+- **Palabras clave**: Los Workers funcionan como una lista de palabras clave. Usan las Palabras Clave configuradas para realizar búsquedas en redes sociales.
+- **Proceso de búsqueda**: Los Workers entregan las palabras clave a las arañas de TrawlingWeb para que ejecuten sus búsquedas en la red social.
+- **Proceso de entrega**: Cada vez que el cliente llama al Worker, este utiliza la lista de palabras clave para lanzar la búsqueda contra la base de datos de resultados obtenidos por TrawlingWeb y recuperar solo aquellos resultados que tienen relación con la lista de palabras clave.
+
+Implementar y gestionar Workers de manera eficiente permite a los usuarios maximizar la relevancia y precisión de los datos capturados, adaptándose a las necesidades específicas de sus análisis y monitoreo en redes sociales.
+
+
 # Parámetros POST
 
 Veamos la estructura de la consulta de ejemplo:
@@ -65,16 +82,7 @@ Una vez lanzada una petición al API de Twitter éste devolverá una respuesta e
 }
 ```
 
-# Características de los Workers
-
-Podemos definir un Worker como una unidad de captura independiente.
-
-El usuario crea y define que términos de búsqueda tiene cada Worker y lo puede hacer directamente en el dashboard ( https://dashboard.trawlingweb.com/workers) o usando este método.
-
-Al crearse un Worker empieza su despliegue para iniciar su labor de captura, estructuración y almacenaje. Este despliegue puede tarda hasta una hora.
-
-
-## Mejores búsquedas con la sintaxy de Twitter
+# Mejores búsquedas con la sintaxy de Twitter
 
 Twitter utiliza su propia sintaxis avanzada para ejecutar búsquedas específicas y detalladas dentro de su plataforma. Esta sintaxis permite filtrar resultados por palabras clave, hashtags, menciones, ubicaciones y fechas, entre otros parámetros. Además, al definir palabras clave para un Worker, es posible utilizar esta misma sintaxis para lanzar consultas precisas contra el buscador de Twitter. Esto maximiza la eficiencia y relevancia de los datos capturados por cada Worker, facilitando una monitorización y análisis más efectivos de las conversaciones en Twitter.
 
