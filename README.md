@@ -1,5 +1,6 @@
 
-# Servicios API de TrawlingWeb
+---
+# ES: Servicios API de TrawlingWeb
 
 Bienvenido al repositorio de soporte de los Servicios API de TrawlingWeb. Aquí encontrarás guías completas, manuales y recursos para ayudarte a aprovechar al máximo nuestros servicios API.
 
@@ -14,50 +15,37 @@ Nuestras APIs te permiten:
 - **Procesar Datos:** Utilizar nuestros servicios ETL (Extract, Transform, Load) para limpiar y organizar los datos.
 - **Analizar Datos:** Conectar los datos recopilados a herramientas de visualización para un análisis en profundidad.
 
+## Registro y Uso Gratuito de las APIs
+
+Te invitamos a registrarte y comenzar a utilizar cualquiera de nuestras APIs de manera gratuita. Este acceso inicial no tiene costo, pero incluye ciertas limitaciones que se pueden ajustar según tus necesidades específicas.
+
+1. **Regístrate Gratis:** Crea una cuenta en [TrawlingWeb](https://dashboard.trawlingweb.com/register) y accede a nuestras APIs sin costo.
+2. **Explora y Experimenta:** Comprueba la utilidad de nuestras APIs en tus proyectos.
+3. **Cotización de Servicios:** Una vez validados los servicios, puedes solicitar una cotización para servicios ampliados a través de nuestro contacto de email.
+
+
 ## Empezando
 
 ### Autenticación de la API
 Para acceder a nuestras APIs, necesitarás autenticar tus solicitudes usando una clave API. Aquí te explicamos cómo obtener y usar tu clave API:
 
-1. **Regístrate:** Crea una cuenta en TrawlingWeb.
-2. **Genera una Clave API:** Ve a la sección de API en la configuración de tu cuenta y genera una nueva clave API.
-3. **Usa la Clave API:** Incluye tu clave API en el encabezado de tus solicitudes HTTP de la siguiente manera:
-   ```http
-   GET /data HTTP/1.1
-   Host: api.trawlingweb.com
-   Authorization: Bearer TU_CLAVE_API
-   ```
+1. **Regístrate:** Crea una cuenta en TrawlingWeb desde [aquí](https://dashboard.trawlingweb.com/register)
+2. **Elige tu servicio API**: Elige que servicio o servicios API qeuires probar.
+2. **Consigue tus Clave API:** Una vez dentro del playground pudes conseguir tus claves API en la pagina de inicio.
+3. **Usa tu servicio medinate API REST:** Consulta la documentación del servicio API que quieres probar. Aqui tienes un indice de servicios y sus repsectivas documentaciones:
+- [API news](https://github.com/trawlingweb/APIservicies/tree/main/API%20news)
+- [API Twitter](https://github.com/trawlingweb/APIservicies/tree/main/API%20Twitter)
+- [API Facebook](https://github.com/trawlingweb/APIservicies/tree/main/API%20facebook)
+- [API Instagram](https://github.com/trawlingweb/APIservicies/tree/main/API%20instagram)
+- [API YouTube](https://github.com/trawlingweb/APIservicies/tree/main/API%20youtube)
+- [API Legal](https://github.com/trawlingweb/APIservicies/tree/main/API%20legal)
 
-### Endpoints de la API
-
-#### 1. Recuperación de Datos
-- **Datos de Redes Sociales:** Recoge publicaciones, comentarios y otras interacciones de plataformas de redes sociales.
-  ```http
-  GET /social-media
-  ```
-
-- **Datos de Noticias:** Obtén artículos y contenido de noticias de varias fuentes en línea.
-  ```http
-  GET /news
-  ```
-
-#### 2. Procesamiento de Datos
-- **Servicios ETL:** Configura y gestiona procesos ETL para limpiar y estructurar tus datos.
-  ```http
-  POST /etl
-  ```
 
 ### Ejemplo de Uso
 
 #### Configuración de Búsquedas para la Recuperación de Datos
 Para configurar búsquedas de contenido específico, configura tus trabajadores ETL con las palabras clave y fuentes requeridas. Esto te permite adaptar la recopilación de datos a tus necesidades.
 
-```json
-{
-  "keywords": ["ejemplo palabra clave1", "ejemplo palabra clave2"],
-  "sources": ["twitter", "news"]
-}
-```
 
 #### Almacenamiento de Resultados
 Los datos recopilados a través de nuestras APIs pueden almacenarse en tu base de datos preferida. Recomendamos usar una base de datos SQL estructurada para una consulta y gestión eficiente.
@@ -81,31 +69,112 @@ Nuestras APIs pueden integrarse con herramientas de visualización populares com
 - **Escalabilidad:** Amplía fácilmente la recopilación y procesamiento de datos a medida que crecen tus requisitos.
 - **Integración:** Integra sin problemas con herramientas y flujos de trabajo existentes para una experiencia de usuario fluida.
 
-## Contenidos del Repositorio
-
-En este repositorio, encontrarás los siguientes recursos para ayudarte a implementar y personalizar nuestros servicios API:
-
-- **/src:** Contiene scripts de ejemplo y código para configurar la recopilación y el procesamiento de datos.
-- **/clients:** Incluye scripts específicos para clientes para la recuperación de datos, permitiendo una gestión y personalización sencilla.
-
-Estos recursos están diseñados para facilitar la implementación de nuestros servicios API y asegurar que puedas maximizar su funcionalidad.
-
 ## Conclusión
 
 Los servicios API de TrawlingWeb ofrecen una solución robusta para la recopilación, procesamiento y análisis de datos. Siguiendo las guías y utilizando los recursos proporcionados en este repositorio, puedes integrar eficazmente nuestras APIs en tus flujos de trabajo y desbloquear valiosos insights de tus datos.
 
 Para obtener información más detallada, consulta nuestra documentación oficial y páginas de soporte.
 
----
+# Contacto
+Si tienes alguna pregunta, necesitas asistencia, contratar o ampliar tus servicios, por favor contacta con nosotros.
 
-No dudes en contactarnos si tienes alguna pregunta o necesitas más asistencia. ¡Feliz recolección de datos!
-
----
-
-**Contáctanos:**
-- [Correo de Soporte](mailto:support@trawlingweb.com)
+**SAT (Soporte Técnico):**
+- [Correo SAT](mailto:support@trawlingweb.com)
 - [Documentación Oficial](https://docs.trawlingweb.com)
 
+**SAC (Soporte Administrativo):**
+- [Correo SAC](mailto:gestion@trawlingweb.com)
+
+**Sales (Soporte Ventas):**
+- [Correo Ventas](mailto:sales@trawlingweb.com)
+
+<br>
+
 ---
 
-Este README proporciona una guía completa para ayudarte a comenzar con los servicios API de TrawlingWeb y asegurar una experiencia sin problemas.
+# ENG: TrawlingWeb API Services
+
+Welcome to the support repository for TrawlingWeb API Services. Here you will find comprehensive guides, manuals, and resources to help you make the most of our API services.
+
+## Overview
+
+TrawlingWeb offers a set of powerful APIs designed to help you collect, manage, and analyze data from various sources. Whether you're looking to integrate data from social media, news, or other online content into your applications, our APIs provide the flexibility and functionality you need.
+
+## What Do Our APIs Do?
+
+Our APIs allow you to:
+- **Collect Data:** Gather data from multiple sources such as social media, news websites, and more.
+- **Process Data:** Use our ETL (Extract, Transform, Load) services to clean and organize the data.
+- **Analyze Data:** Connect the collected data to visualization tools for in-depth analysis.
+
+## Registration and Free Use of APIs
+
+We invite you to register and start using any of our APIs for free. This initial access is cost-free but includes certain limitations that can be adjusted according to your specific needs.
+
+1. **Register for Free:** Create an account at [TrawlingWeb](https://dashboard.trawlingweb.com/register) and access our APIs at no cost.
+2. **Explore and Experiment:** Check the usefulness of our APIs in your projects.
+3. **Service Quotation:** Once the services are validated, you can request a quote for extended services through our contact email.
+
+## Getting Started
+
+### API Authentication
+To access our APIs, you will need to authenticate your requests using an API key. Here's how to obtain and use your API key:
+
+1. **Register:** Create an account at TrawlingWeb from [here](https://dashboard.trawlingweb.com/register).
+2. **Choose Your API Service:** Select the API service or services you want to test.
+3. **Get Your API Keys:** Once inside the playground, you can get your API keys on the homepage.
+4. **Use Your Service via REST API:** Refer to the documentation of the API service you want to test. Here is an index of services and their respective documentation:
+   - [API News](https://github.com/trawlingweb/APIservicies/tree/main/API%20news)
+   - [API Twitter](https://github.com/trawlingweb/APIservicies/tree/main/API%20Twitter)
+   - [API Facebook](https://github.com/trawlingweb/APIservicies/tree/main/API%20facebook)
+   - [API Instagram](https://github.com/trawlingweb/APIservicies/tree/main/API%20instagram)
+   - [API YouTube](https://github.com/trawlingweb/APIservicies/tree/main/API%20youtube)
+   - [API Legal](https://github.com/trawlingweb/APIservicies/tree/main/API%20legal)
+
+### Example of Use
+
+#### Setting Up Searches for Data Retrieval
+To set up searches for specific content, configure your ETL workers with the required keywords and sources. This allows you to tailor data collection to your needs.
+
+#### Data Storage
+Data collected through our APIs can be stored in your preferred database. We recommend using a structured SQL database for efficient querying and management.
+
+### Connecting to Visualization Tools
+
+Our APIs can integrate with popular visualization tools such as Looker Studio to enable detailed analysis and reporting of your data.
+
+1. **Create Data Sources:** Set up data sources in Looker Studio that connect to your SQL database containing the retrieved data.
+2. **Customize Visualizations:** Use custom templates and settings in Looker Studio to visualize the data according to your requirements.
+
+## Practical Use Cases
+
+- **Social Listening:** Monitor and analyze conversations about specific brands or topics on social media.
+- **Insight Reports:** Generate detailed reports on market trends and brand performance.
+- **Alerts:** Set up alerts for specific keywords or trends in social media and news data.
+
+## Benefits
+
+- **Customization:** Tailor the data collection and analysis processes to your specific needs.
+- **Scalability:** Easily scale up data collection and processing as your requirements grow.
+- **Integration:** Seamlessly integrate with existing tools and workflows for a smooth user experience.
+
+## Conclusion
+
+TrawlingWeb API services offer a robust solution for data collection, processing, and analysis. By following the guides and using the resources provided in this repository, you can effectively integrate our APIs into your workflows and unlock valuable insights from your data.
+
+For more detailed information, refer to our official documentation and support pages.
+
+# Contact
+
+If you have any questions, need assistance, or wish to contract or expand your services, please contact us.
+
+**SAT (Technical Support):**
+- [SAT Email](mailto:support@trawlingweb.com)
+- [Official Documentation](https://docs.trawlingweb.com)
+
+**SAC (Administrative Support):**
+- [SAC Email](mailto:gestion@trawlingweb.com)
+
+**Sales (Sales Support):**
+- [Sales Email](mailto:sales@trawlingweb.com)
+
