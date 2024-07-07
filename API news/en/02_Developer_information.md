@@ -4,6 +4,17 @@
 
 Trawlingweb.com API NEWS & BLOGS is an API REST, so although the data is intended to be consumed as a data stream, it is necessary to call the API continuously in order to receive the data batches.
 
+## Data Integrity
+
+Data integrity refers to the accuracy, consistency, and reliability of data over time. To ensure the integrity of the data provided by our API, Trawlingweb implements the following practices:
+
+- **Continuous Verification**: Data is continuously verified during the capture process to ensure its accuracy and consistency.
+- **Error Correction**: Any inconsistencies or errors detected in the data are promptly corrected to maintain its reliability.
+- **Regular Updates**: Data is regularly updated to reflect the most recent and relevant information, minimizing the possibility of outdated data.
+- **Source Maintenance**: Periodic maintenance of media sources is performed to ensure that the captured data is of high quality and up-to-date.
+
+Implementing these measures helps our clients maintain the integrity and reliability of the data captured by Trawlingweb.
+
 ## URL Structure
 
 ### The URL query call has three parts:
@@ -49,3 +60,17 @@ API is called with GET requests. In order to optimeze the requests, it's better 
 | 429  | Exceeds rate limit                              |
 
 NOTE: Detail of the error explained in the return of the request.
+
+---
+**Contact Us:**
+If you have any questions, need assistance, want to hire or expand your services, please contact us.
+
+**Technical Support (SAT):**
+- [SAT Email](mailto:support@trawlingweb.com)
+- [Official Documentation](https://docs.trawlingweb.com)
+
+**Administrative Support (SAC):**
+- [SAC Email](mailto:gestion@trawlingweb.com)
+
+**Sales Support (Sales):**
+- [Sales Email](mailto:sales@trawlingweb.com)

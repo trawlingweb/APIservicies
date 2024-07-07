@@ -1,6 +1,8 @@
 # API NEWS & BLOGS - Parámetro de filtrado
 
-Los siguientes filtros le permitirán obtener únicamente los datos que necesita.
+## API NEWS & BLOGS - Parámetros de Filtrado
+
+Los filtros son atributos asignados por TrawlingWeb a cada elemento durante su proceso de auditoría de fuentes y resultados. Estos filtros permiten especificar criterios detallados para obtener únicamente los datos que necesitas. Al aplicar estos filtros en tus consultas, puedes afinar los resultados para que se ajusten mejor a tus requisitos específicos. A continuación, se describen los filtros disponibles:
 
 | Filtro        | Descripción                                                                                                                                               |
 | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -36,7 +38,13 @@ Por ejemplo, para buscar url:https://www.linkedin.com , lo que se necesita para 
 
 El no poder escapar de estos caracteres especiales correctamente podría dar lugar a un error de sintaxis que impide que la consulta se ejecute de forma correcta.
 
-## Ejemplos de filtros **q**
+## Ejemplos de filtros y booleanas dentro de **q=**
+Como hemos explicado en la sección 03 COnusltas, las APIs de TrawlingWeb aceptan consultas booleanas combinadas con expresiones de la sintaxis de Lucene.
+
+La `q=` permite el filtrado y optimización de la consulta para obtener los mejores resultados posibles. Dentro de `q=` puedes utilizar parámetros de filtrado (ver ), que son atributos asignados por TrawlingWeb a cada elemento, así como expresiones booleanas que son características de los contenidos capturados. 
+
+Recuerda que en la sección 03 Consultas hay una lista más completa de expresiones booleanas que puedes combinar con los filtros dentro de `q=`. A continuación, algunos ejemplos de parámetros de filtrado.
+
 
 | Ejemplo                                                               | Explicación                                                                                                                                                              |
 | :-------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,3 +57,17 @@ El no poder escapar de estos caracteres especiales correctamente podría dar lug
 | author:Pedrolo                                                        | Recuperar solo documentos cuyo autor incluya "Pedrolo".                                                                                                                  |
 | (site_type:news OR site_type:blogs)                                   | Recuperar solo publicaciones de sitios web de noticias o de blogs.                                                                                                       |
 | NOT (site_type:general)                                               | Recuperar publicaciones de sitios web todos de los tipos excepto de los que solo ofrecen información general, es decir, obtener datos solo de sitios web especializados. |
+
+---
+# Contacto
+Si tienes alguna pregunta, necesitas asistencia, contratar o ampliar tus servicios por favor contacta con nosotros.
+
+**SAT (Soporte Técnico):**
+- [Correo SAT](mailto:support@trawlingweb.com)
+- [Documentación Oficial](https://docs.trawlingweb.com)
+
+**SAC (Soporte administrativo):**
+- [Correo SAC](mailto:gestion@trawlingweb.com)
+
+**Sales (Soporte ventas):**
+- [Correo Ventas](mailto:sales@trawlingweb.com)

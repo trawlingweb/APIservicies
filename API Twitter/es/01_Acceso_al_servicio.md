@@ -1,21 +1,37 @@
-# API Twitter - Acceso al servicio
+# API Twitter - Acceso al Servicio
 
-## Registro de usuario
+## Registro de Usuario
 
-Para poder acceder al servicio primero hay que estar registrado en nuestra base de datos.
+Para acceder al servicio, es necesario estar registrado como usuario en [www.trawlingweb.com](www.trawlingweb.com). Si aún no es usuario de TrawlingWeb, puede registrarse gratuitamente desde [aquí](https://dashboard.trawlingweb.com/register).
 
-Una vez registrado, el visitante recibe el rol de usuario de pruebas. Este rol permite acceder a la zona de clientes y realizar una cierta cantidad de configuraciones de Workers gratuitas.
+Una vez registrado, recibirá el rol de usuario de pruebas. Este rol permite acceder a la zona de clientes y realizar una cantidad limitada de configuraciones de Workers de forma gratuita.
 
-## Contratación de servicios
+## Contratación de Servicios
 
-Agotado el periodo de prueba, el usuario que desee continuar usando el servicio o ampliar el mismo deberá formalizar un contrato. TrawlingWeb permite escoger entre varios bloques de contratación, con diferente cantidad de Workers cada uno. De esta manera el cliente podrá escoger el bloque que se adapte mejor a sus necesidades.
+Una vez agotado el periodo de prueba, el usuario que desee continuar usando el servicio o ampliarlo deberá formalizar un contrato. TrawlingWeb ofrece varias opciones de contratación basadas en créditos de palabras clave. De esta manera, el cliente puede escoger la cantidad de créditos que desea contratar, los cuales le permiten crear y monitorear palabras clave dentro de la red social.
 
-## Modos de acceso
+## Uso del servicio medinate acceso API
 
-Se puede acceder al servico de dos maneras: a través de la API para sistemas en producción y a través de la consola para realizar pruebas.
-
-### Acceso por API
-
-El sistema de TrawlinWeb dispone de una interfície API REST. Se trata de un mòdulo que permite el acceso remoto desde un sistema cliente. El programa del usuario accede al sistema de TrawlingWeb y realiza consultas automatizadas a los Workers.
+El sistema de TrawlingWeb dispone de una interfaz API REST, que permite el acceso remoto desde un sistema cliente. El programa del usuario accede al sistema de TrawlingWeb y realiza consultas automatizadas a los Workers.
 
 Estas consultas automatizadas se realizan con un lenguaje de consultas propio que tiene su propia sintaxis. Recomendamos leer atentamente esta documentación para evitar la construcción de consultas erróneas.
+
+### Uso del servicio medinate acceso al PlayGround
+
+También se puede acceder a nuestro PlayGround para crear palabras clave dentro de los Workers y comprobar sus resultados de forma más visual, antes de configurar las conexiones y sincronizaciones con la API.
+
+---
+
+# Contacto
+
+Si tienes alguna pregunta, necesitas asistencia, contratar o ampliar tus servicios, por favor contacta con nosotros.
+
+**SAT (Soporte Técnico):**
+- [Correo SAT](mailto:support@trawlingweb.com)
+- [Documentación Oficial](https://docs.trawlingweb.com)
+
+**SAC (Soporte Administrativo):**
+- [Correo SAC](mailto:gestion@trawlingweb.com)
+
+**Sales (Soporte Ventas):**
+- [Correo Ventas](mailto:sales@trawlingweb.com)
