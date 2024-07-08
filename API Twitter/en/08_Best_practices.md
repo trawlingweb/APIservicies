@@ -63,7 +63,8 @@ Cases and examples of pagination modes.
 #### Case 1:
 `&sort=created_at&order=asc` _(Default mode that can return up to 500 results)_
 
-`example: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=asc&ts=1719784800000&tsi=1720130400000`
+example: 
+`https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=asc&ts=1719784800000&tsi=1720130400000`
 
 Explanation:
 - **Organization**: Tweets are organized by creation date ***(sort=created_at)***
@@ -74,7 +75,8 @@ Explanation:
 #### Case 2:
 `&sort=created_at&order=desc` _(Default mode that can return up to 500 results)_
 
-`example: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=desc&ts=1719784800000&tsi=1720130400000`
+example:
+`https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=desc&ts=1719784800000&tsi=1720130400000`
 
 Explanation:
 - **Organization**: Tweets are organized by creation date ***(sort=created_at)***
@@ -85,7 +87,8 @@ Explanation:
 #### Case 3:
 `&sort=created_at&order=desc&size=4` _(Default mode that can return up to 500 results)_
 
-`example: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
+example: 
+`https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
 
 Explanation:
 - **Organization**: Tweets are organized by creation date ***(sort=created_at)***
@@ -102,7 +105,8 @@ The grouping parameter is used with the following syntax: `sort=`. This allows t
 
 ### Example 1: Group by creation date
 
-`example: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
+example:
+`https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
 
 Explanation:
 - **Organization**: Tweets are organized by creation date ***(sort=created_at)***
@@ -112,7 +116,8 @@ Explanation:
 
 ### Example 2: Group by capture date
 
-`example: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=crawled&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
+example:
+`https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=crawled&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
 
 Explanation:
 - **Organization**: Tweets are organized by capture date ***(sort=crawled)***
