@@ -117,13 +117,16 @@ Explanation:
 ### Example 2: Group by capture date
 
 example:
-`https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=crawled&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
+```
+https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=crawled&order=desc&ts=1719784800000&tsi=1720130400000&size=4
+```
 
 Explanation:
-- **Organization**: Tweets are organized by capture date ***(sort=crawled)***
-- **Ordering**: Tweets are sorted from new to old ***(order=desc)***.
-- **Results**: Defining `size=4`, the maximum will always be 4 in each pagination.
-- **Next**: The "next" in the JSON allows you to jump to the next results, which will be a maximum of those defined in `size=n`, which in this case being `size=4` will be 4 results.
+
+* **Organization**: Tweets are organized by capture date ***(sort=crawled)***
+* **Ordering**: Tweets are sorted from new to old ***(order=desc)***.
+* **Results**: Defining `size=4`, the maximum will always be 4 in each pagination.
+* **Next**: The "next" in the JSON allows you to jump to the next results, which will be a maximum of those defined in `size=n`, which in this case being `size=4` will be 4 results.
 
 #### Tips:
 - If we want to get results grouped by creation date, we will use `sort=created_at`, and if we want to get results grouped by capture date, we will use `sort=crawled`.
