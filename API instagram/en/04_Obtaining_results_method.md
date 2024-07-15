@@ -72,7 +72,8 @@ One time it is launched petition to API Instagram, this will return a structured
 
 ## Example of response in json format:
 
-```json
+```
+"json"
 "response" : {
     "data" : [{
         "id": "...",

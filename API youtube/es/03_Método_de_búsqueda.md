@@ -74,7 +74,8 @@ Una vez lanzada una petición al API, éste devolverá los datos estructurados e
 ## Ejemplo de respuesta en formato json:
 
 
-````json
+```
+"json"
 "response" : {
   "data" : [{
     "id" : "...",

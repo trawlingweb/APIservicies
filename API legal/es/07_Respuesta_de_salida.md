@@ -42,7 +42,8 @@ Una vez lanzada una petición al API, éste devolverá una respuesta con dos tip
 
 ## Ejemplo de respuesta en formato json:
 
-```json
+```
+"json"
 "response" : {
     "data" : [{
         "id" : "...",

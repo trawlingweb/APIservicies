@@ -69,7 +69,8 @@ One time it is launched petition to API, this will return structured data in fun
 
 ## Example of response in json format:
 
-````json
+```
+"json"
 "response" : {
   "data" : [{
     "id" : "...",

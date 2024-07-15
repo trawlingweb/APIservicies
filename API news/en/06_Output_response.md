@@ -37,7 +37,8 @@ Once API request has been launched, API will return a file to client as a respon
 
 ### JSON format response:
 
-```json
+```
+"json"
 "response" : {
     "data" : [{
         "id" : "...",

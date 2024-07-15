@@ -42,7 +42,8 @@ Once a request is made to the API, it will return a response with two distinct t
 
 ## Example JSON Response:
 
-```json
+```
+"json"
 "response" : {
     "data" : [{
         "id" : "...",

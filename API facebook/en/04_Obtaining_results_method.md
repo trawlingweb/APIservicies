@@ -60,7 +60,8 @@ Upon making a request to the Facebook API, it will return a structured response 
 | reply                  | Indicates if it is a reply to a Tweet                                                                                                                                             |    No    |    No     | Boolean |                             |
 
 ## Example response in json format:
-```json
+```
+"json"
 "response" : {
     "data" : [{
         "id": "...",

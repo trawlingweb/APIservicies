@@ -66,7 +66,8 @@ Once a request is made to the Twitter API, it will return a response structured 
 
 ## Example response in json format:
 
-```json
+```
+"json"
 "response" : {
     "data" : [{
         "id": "...",

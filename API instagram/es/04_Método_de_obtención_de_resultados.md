@@ -72,7 +72,8 @@ Una vez lanzada una petición al API de Instagram éste devolverá una respuesta
 
 ## Ejemplo de respuesta en formato json:
 
-```json
+```
+"json"
 "response" : {
     "data" : [{
         "id": "...",
