@@ -1,7 +1,8 @@
 # Twitter API - Method GET /posts Worker
 
-It allows retrieving captured results from each configured Twitter worker.
-Temporal delimiters can be used to narrow down the returned content.
+This method allows obtaining results captured from each Worker configured in Twitter. Temporal delimiters can be used to narrow down the returned content.
+
+This is an advanced method that returns complete results about a tweet's publication, expanding the information compared to the basic method. In addition to basic data about the user who posted it, this method includes more detailed information about the user. It is ideal for statistical analysis that requires detailed information about the user and their posts.
 
 # GET Parameters
 
@@ -30,7 +31,9 @@ https://twitter.trawlingweb.com/posts_full/{WORKERID}?token={APIKEY}
 
 # Output Response - RESPONSE
 
-Once a request is made to the Twitter API, it will return a structured response in the following format:
+This method aims to retrieve all results related to a worker's keywords. However, using this method, the elements listed below will not be considered searchable and will only be sortable by date-related attributes. If you need a method that allows you to obtain the maximum information from each post and also use specific filters and searches, please refer to the document "Obtaining_results_method_Full_Search"
+
+Once a request is sent to the Twitter API, a response will be received structured as follows:
 
 ## Data of publication
 

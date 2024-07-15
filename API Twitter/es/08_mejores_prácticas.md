@@ -30,9 +30,9 @@ next "http://twitter.trawlingweb.com/010101010101010101?token=000000000000000000
 ```
 
 
-## Uso de las Fechas `created_at` y `crawled`
+## Uso de las Fechas `published` y `crawled`
 
-TrawlingWeb entrega dos fechas para cada tweet: `created_at` (fecha de creación) y `crawled` (fecha de captura). Esto es crucial ya que, al incorporar nuevas secciones, el sistema puede detectar como nuevos tweets que fueron publicados días o incluso meses atrás.
+TrawlingWeb entrega dos fechas para cada tweet: `published` (fecha de creación) y `crawled` (fecha de captura). Esto es crucial ya que, al incorporar nuevas secciones, el sistema puede detectar como nuevos tweets que fueron publicados días o incluso meses atrás.
 
 También puede suceder que Twitter modifique su sistema, lo que puede provocar la aparición de tweets antiguos debido a errores o estrategias de SEO. Para evitar o controlar estos sucesos, aconsejamos que los clientes implementen reglas de seguridad en sus sistemas.
 
@@ -60,34 +60,34 @@ Además, es posible modificar la cantidad de resultados que se desea obtener por
 Casos y ejemplos de modos de funcionamiento de la paginación.
 
 #### Caso 1: 
-`&sort=created_at&order=asc` _(Modo por defecto que puede entregar hasta un máximo de 500 resultados)_
+`&sort=published&order=asc` _(Modo por defecto que puede entregar hasta un máximo de 500 resultados)_
 
-`ejemplo: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=asc&ts=1719784800000&tsi=1720130400000`
+`ejemplo: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=published&order=asc&ts=1719784800000&tsi=1720130400000`
 
 Explicación: 
-* **Organización**: Los tweets se organizan por fecha de creación ***(sort=created_at)***
+* **Organización**: Los tweets se organizan por fecha de creación ***(sort=published)***
 * **Ordenación**: Los tweets se ordenan de viejos a nuevos ***(order=asc)***.
 * **Resultados**: Sin definir el `size=n`, el máximo siempre será 500.
 * **Next**: El "next" dentro del JSON permite saltar a los siguientes resultados, que como máximo serán 500.
 
 #### Caso 2: 
-`&sort=created_at&order=desc` _(Modo por defecto que puede entregar hasta un máximo de 500 resultados)_
+`&sort=published&order=desc` _(Modo por defecto que puede entregar hasta un máximo de 500 resultados)_
 
-`ejemplo: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=desc&ts=1719784800000&tsi=1720130400000`
+`ejemplo: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=published&order=desc&ts=1719784800000&tsi=1720130400000`
 
 Explicación: 
-* **Organización**: Los tweets se organizan por fecha de creación ***(sort=created_at)***
+* **Organización**: Los tweets se organizan por fecha de creación ***(sort=published)***
 * **Ordenación**: Los tweets se ordenan de nuevos a viejos ***(order=desc)***.
 * **Resultados**: Sin definir el `size=n`, el máximo siempre será 500.
 * **Next**: El "next" dentro del JSON permite saltar a los siguientes resultados, que como máximo serán 500.
 
 #### Caso 3: 
-`&sort=created_at&order=desc&size=4` _(Modo por defecto que puede entregar hasta un máximo de 500 resultados)_
+`&sort=published&order=desc&size=4` _(Modo por defecto que puede entregar hasta un máximo de 500 resultados)_
 
-`ejemplo: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
+`ejemplo: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=published&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
 
 Explicación: 
-* **Organización**: Los tweets se organizan por fecha de creación ***(sort=created_at)***
+* **Organización**: Los tweets se organizan por fecha de creación ***(sort=published)***
 * **Ordenación**: Los tweets se ordenan de nuevos a viejos ***(order=desc)***.
 * **Resultados**: Definiendo el `size=4`, el máximo siempre será 4 en cada paginación.
 * **Next**: El "next" dentro del JSON permite saltar a los siguientes resultados, que como máximo serán los definidos en el `size=n`, que en este caso al ser `size=4` serán 4 resultados.
@@ -96,15 +96,15 @@ Explicación:
 
 El parámetro de agrupación se usa con la siguiente sintaxis: `sort=`. Este permite agrupar los tweets por dos tipos de criterios temporales:
 
-- **Created_at**: Agrupa por fecha de creación. La fecha que se usará en la llamada al API es la fecha en la que se creó el tweet. `sort=created_at`
+- **published**: Agrupa por fecha de creación. La fecha que se usará en la llamada al API es la fecha en la que se creó el tweet. `sort=published`
 - **Crawled**: Agrupa por fecha de captura. La fecha que se usará en la llamada al API es la fecha en la que se capturó el tweet. `sort=crawled`
 
 ### Ejemplo 1: Agrupar por fecha de creación
 
-`ejemplo: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=created_at&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
+`ejemplo: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=published&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
 
 Explicación: 
-* **Organización**: Los tweets se organizan por fecha de creación ***(sort=created_at)***
+* **Organización**: Los tweets se organizan por fecha de creación ***(sort=published)***
 * **Ordenación**: Los tweets se ordenan de nuevos a viejos ***(order=desc)***.
 * **Resultados**: Definiendo el `size=4`, el máximo siempre será 4 en cada paginación.
 * **Next**: El "next" dentro del JSON permite saltar a los siguientes resultados, que como máximo serán los definidos en el `size=n`, que en este caso al ser `size=4` serán 4 resultados.
@@ -120,8 +120,8 @@ Explicación:
 * **Next**: El "next" dentro del JSON permite saltar a los siguientes resultados, que como máximo serán los definidos en el `size=n`, que en este caso al ser `size=4` serán 4 resultados.
 
 #### Tips: 
-* Si queremos obtener resultados agrupados por fecha de creación, usaremos `sort=created_at`, y si queremos obtener resultados agrupados por fecha de captura, usaremos `sort=crawled`.
-- Si no utilizamos el parámetro `sort=`, por defecto la agrupación será `created_at`.
+* Si queremos obtener resultados agrupados por fecha de creación, usaremos `sort=published`, y si queremos obtener resultados agrupados por fecha de captura, usaremos `sort=crawled`.
+- Si no utilizamos el parámetro `sort=`, por defecto la agrupación será `published`.
 
 ## Ordenación
 
@@ -132,8 +132,8 @@ El parámetro de ordenación se usa con la siguiente sintaxis: `order=`. Este pe
 
 ### Ejemplos:
 
-* Si queremos obtener resultados agrupados por fecha de creación en orden ascendente, usaremos `sort=created_at&order=asc`.
-* Si queremos obtener resultados agrupados por fecha de creación en orden descendente, usaremos `sort=created_at&order=desc`.
+* Si queremos obtener resultados agrupados por fecha de creación en orden ascendente, usaremos `sort=published&order=asc`.
+* Si queremos obtener resultados agrupados por fecha de creación en orden descendente, usaremos `sort=published&order=desc`.
 
 ## Número de Resultados
 
@@ -148,16 +148,16 @@ Para modificar el número máximo de resultados que devuelve la llamada a la API
 
 ## Mantenimiento Periódico de Fuentes de Datos
 
-El mantenimiento periódico de las fuentes de datos es constante y esencial en TrawlingWeb. Implica una reevaluación integral de cada fuente, lo que a menudo conlleva la incorporación de nuevas secciones para capturar contenido no recopilado anteriormente. Contar con las fechas de creación (`created_at`) y de captura (`crawled`) permite gestionar estas actualizaciones de manera eficiente.
+El mantenimiento periódico de las fuentes de datos es constante y esencial en TrawlingWeb. Implica una reevaluación integral de cada fuente, lo que a menudo conlleva la incorporación de nuevas secciones para capturar contenido no recopilado anteriormente. Contar con las fechas de creación (`published`) y de captura (`crawled`) permite gestionar estas actualizaciones de manera eficiente.
 
-Al agregar nuevas fuentes de datos a nuestra cobertura, frecuentemente incluimos su historial realizando una captura inicial profunda de todas sus secciones. Nuevamente, las fechas de creación (`created_at`) y de captura (`crawled`) facilitan este proceso.
+Al agregar nuevas fuentes de datos a nuestra cobertura, frecuentemente incluimos su historial realizando una captura inicial profunda de todas sus secciones. Nuevamente, las fechas de creación (`published`) y de captura (`crawled`) facilitan este proceso.
 
 Ciertas secciones de Twitter, además del contenido cronológico, pueden mostrar contenido no cronológico (como tweets destacados o relacionados) que también capturamos.
 
 ### Consideraciones
 
 * **Frecuencia de Captura**: La frecuencia de captura de una fuente de datos se determina por las necesidades del cliente, los requisitos funcionales, la cantidad de tweets y la frecuencia de publicación de la fuente.
-* **Diferenciación de Fechas**: Diferenciar claramente la fecha de captura (`crawled`) de la fecha de creación (`created_at`) permite que los clientes decidan qué tweets incorporar.
+* **Diferenciación de Fechas**: Diferenciar claramente la fecha de captura (`crawled`) de la fecha de creación (`published`) permite que los clientes decidan qué tweets incorporar.
 * **Filosofía de Entrega de Contenido**: Nuestra filosofía es entregar todos los tweets capturados, dejando la decisión sobre cómo utilizar este contenido a los clientes.
 
 ### Tweets Entregados y Descartados
