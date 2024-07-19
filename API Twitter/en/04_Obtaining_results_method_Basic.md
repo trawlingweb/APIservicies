@@ -62,7 +62,7 @@ Once a request is made to the Twitter API, it will return a response structured 
 | hashtags               | Hashtags referenced in the text                                                                                                                                                     |     No     |    No    | String  |                             |
 | user_mentions          | Names referenced in the text                                                                                                                                                        |     No     |    No    | String  |                             |
 | time_distance          | Hours elapsed between the publication date and the capture date                                                                                                                     |     No     |    No    | Decimal |                             |
-| reply                  | Indicates if it is a reply to a Tweet                                                                                                                                               |     No     |    No    | Boolean |                             |
+| reply                  | Indicates if it is a retweet                                                                                                                                               |     No     |    No    | Boolean |                             |
 
 ## Example response in json format:
 
