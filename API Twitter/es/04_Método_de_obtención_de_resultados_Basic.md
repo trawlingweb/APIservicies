@@ -62,7 +62,7 @@ Una vez lanzada una petición al API de Twitter éste devolverá una respuesta e
 | hashtags               | Hashtags referenciados en el texto                                                                                                                                                |    No    |    No     | Cadena  |                             |
 | user_mentions          | Nombres referenciados en el texto                                                                                                                                                 |    No    |    No     | Cadena  |                             |
 | time_distance          | Horas transcurridas entre la fecha de publicación y la de captura                                                                                                                 |    No    |    No     | Decimal |                             |
-| reply                  | Indica Sí es una respuesta a un Tweet                                                                                                                                             |    No    |    No     | Boleano |                             |
+| reply                  | Indica sí es un Retweet                                                                                                                                             |    No    |    No     | Boleano |                             |
 
 ## Ejemplo de respuesta en formato json:
 
