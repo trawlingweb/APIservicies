@@ -80,9 +80,9 @@ json
 }
 ```
 
-# Enhanced Searches with Twitter Syntax
+# Enhanced Searches with Instagram Syntax
 
-Twitter utilizes its own advanced syntax to execute specific and detailed searches within its platform. This syntax allows filtering results by keywords, hashtags, mentions, locations, dates, and other parameters. When defining keywords for a Worker, you can use this syntax to launch precise queries against Twitter's search engine. This maximizes the efficiency and relevance of the data captured by each Worker, facilitating more effective monitoring and analysis of conversations on Twitter.
+Instagram utilizes its own advanced syntax to execute specific and detailed searches within its platform. This syntax allows filtering results by keywords, hashtags, mentions, locations, dates, and other parameters. When defining keywords for a Worker, you can use this syntax to launch precise queries against Instagram's search engine. This maximizes the efficiency and relevance of the data captured by each Worker, facilitating more effective monitoring and analysis of conversations on Instagram.
 
 Here's a list of elements you can combine with your keywords when creating them within a worker:
 

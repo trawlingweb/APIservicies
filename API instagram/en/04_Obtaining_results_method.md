@@ -30,72 +30,74 @@ https://instagram.trawlingweb.com/posts/{WORKERID}?token={APIKEY}
 
 # Output Response - RESPONSE
 
-One time it is launched petition to API Instagram, this will return a structured response data:
+Upon making a request to the Instagram API, it will return a structured response as follows:
 
-## Data of the publication
+## Post Data
 
-| Field     | Description                                                              | Findable | Sortable |  Type   |           Format            |
-| --------- | ------------------------------------------------------------------------ | :------: | :------: | :-----: | :-------------------------: |
-| id        | Identification code assigned by Trawlingweb to each tracked publication. |    No    |    No    | String  |                             |
-| post_id   | Id of post                                                               |    No    |    No    | String  |                             |
-| type      | Type of publication(photo or video)                                      |    No    |    No    | String  |                             |
-| url       | Url of the publication                                                   |    No    |    No    | String  |                             |
-| media_url | Web address of multimedia contents.                                      |    No    |    No    | String  |                             |
-| likes     | Number of likes                                                          |    No    |    No    | Integer |                             |
-| text      | Written text of the publication                                          |    No    |    No    | String  |                             |
-| published | Post date published                                                      |    No    |    No    |  Date   |        ISO 8601-UTC         |
-| crawled   | Id crawled                                                               |    No    |   Yes    | Integer | UNIX Timestamp milisegundos |
+| Field     | Description                                                                 | Searchable | Orderable |  Type   |           Format           |
+| --------- | --------------------------------------------------------------------------- | :--------: | :-------: | :-----: | :-------------------------: |
+| id        | Identification code assigned by Trawlingweb to each tracked post            |     No     |     No    | String  |                             |
+| post_id   | ID of the post                                                              |     No     |     No    | String  |                             |
+| type      | Type of post (photo or video)                                               |     No     |     No    | String  |                             |
+| url       | URL of the post                                                             |     No     |     No    | String  |                             |
+| media_url | URL of the media content                                                    |     No     |     No    | String  |                             |
+| likes     | Number of likes                                                             |     No     |     No    | Integer |                             |
+| text      | Text description of the post                                                |     No     |     No    | String  |                             |
+| published | Date the post was published                                                 |     No     |     No    |  Date   |        ISO 8601-UTC         |
+| crawled   | Date and time when the post was captured                                    |     No     |    Yes    | Integer | UNIX Timestamp in milliseconds |
 
-## User data
+## User Data
 
-| Field             | Description              | Findable | Sortable |  Type   | Format |
-| ----------------- | ------------------------ | :------: | :------: | :-----: | :----: |
-| user_name         | Username                 |    No    |    No    | String  |        |
-| user_screen_name  | Username shown           |    No    |    No    | String  |        |
-| user_publications | Number of publications   |    No    |    No    | Integer |        |
-| user_followers    | Number of followers      |    No    |    No    | Integer |        |
-| user_followed     | Number of followed users |    No    |    No    | Integer |        |
+| Field             | Description                | Searchable | Orderable |  Type   | Format  |
+| ----------------- | -------------------------- | :--------: | :-------: | :-----: | :-----: |
+| user_name         | Username                   |     No     |     No    | String  |         |
+| user_screen_name  | Displayed username         |     No     |     No    | String  |         |
+| user_publications | Number of posts            |     No     |     No    | Integer |         |
+| user_followers    | Number of followers        |     No     |     No    | Integer |         |
+| user_followed     | Number of followed users   |     No     |     No    | Integer |         |
 
-## Data of comments
+## Comments Data
 
-| Field    | Description | Findable | Sortable |  Type  | Format |
-| -------- | ----------- | :------: | :------: | :----: | :----: |
-| comments | comments    |    No    |    No    | String |        |
+| Field    | Description | Searchable | Orderable |  Type   | Format  |
+| -------- | ----------- | :--------: | :-------: | :-----: | :-----: |
+| comments | Comments    |     No     |     No    | String  |         |
 
-## Petition data
+## Request Data
 
-| Field        | Description                                                      |  Type   |
-| :----------- | :--------------------------------------------------------------- | :-----: |
-| requestLeft  | Total of pending queries of the subscription                     | Integer |
-| totalResults | Total approximate of found results of the query                  | Integer |
-| next         | URL to continue with pagination and like that obtain all results | String  |
+| Field        | Description                                                             |  Type   |
+| ------------ | ----------------------------------------------------------------------- | :-----: |
+| requestLeft  | Total remaining queries for the subscription                            | Integer |
+| totalResults | Total results found for the query                                       | Integer |
+| next         | URL to continue pagination and retrieve all results                     | String  |
 
-## Example of response in json format:
+## Example response in JSON format:
 
-```
-"json"
-"response" : {
-    "data" : [{
-        "id": "...",
-        "post_id": "...",
-        "type": "...",
-        "url": "...",
-        "media_url": "...",
-        "user_name": "...",
-        "likes": "...",
-        "text": "...",
-        "comments": "...",
-        "published": "...",
-        "crawled": "...",
-        "user_screen_name": "...",
-        "user_publications": "...",
-        "user_followers": "...",
-        "user_followed": "..."
-    }],
-    "totalResults" : "...",
-    "restResults" : "...",
-    "next" : "..."
+```json
+{
+  "data": [
+    {
+      "id": "...",
+      "user_screen_name": "...",
+      "user_publications": 239,
+      "user_followers": 6762,
+      "user_followed": 1792,
+      "user_name": "...",
+      "post_id": "...",
+      "type": "...",
+      "url": "...",
+      "media_url": "...",
+      "likes": 125,
+      "text": "...",
+      "comments": null,
+      "published": "2024-08-03T11:00:04.000Z",
+      "crawled": 1722682829465
+    }
+  ],
+  "totalResults": "...",
+  "restResults": "...",
+  "next": "..."
 }
+
 ```
 
 # API Instagram - Best practices

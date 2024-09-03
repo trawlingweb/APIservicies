@@ -30,71 +30,72 @@ https://instagram.trawlingweb.com/posts/{WORKERID}?token={APIKEY}
 
 # Respuesta de salida - RESPONSE
 
-Una vez lanzada una petición al API de Instagram éste devolverá una respuesta estructurada de la siguiente forma:
+Una vez lanzada una petición a la API de Instagram, esta devolverá una respuesta estructurada de la siguiente forma:
 
 ## Datos de la publicación
 
-| Campo     | Descripción                                                              | Buscable | Ordenable |  Tipo  |           Formato           |
-| --------- | ------------------------------------------------------------------------ | :------: | :-------: | :----: | :-------------------------: |
-| id        | Identification code assigned by Trawlingweb to each tracked publication. |    No    |    No     | String |                             |
-| post_id   | Id del post                                                              |    No    |    No     | Cadena |                             |
-| type      | Tipo de publicación( photo o video )                                     |    No    |    No     | Cadena |                             |
-| url       | Url de la publicación                                                    |    No    |    No     | Cadena |                             |
-| media_url | Dirección web media content                                              |    No    |    No     | Cadena |                             |
-| likes     | Cantidad de likes                                                        |    No    |    No     | Entero |                             |
-| text      | Texto descrito de la publicación                                         |    No    |    No     | Cadena |                             |
-| published | Fecha publicado el post                                                  |    No    |    No     | Fecha  |        ISO 8601-UTC         |
-| crawled   | Id crawled                                                               |    No    |    Si     | Entero | UNIX Timestamp milisegundos |
+| Campo     | Descripción                                                                 | Buscable | Ordenable |  Tipo  |           Formato           |
+| --------- | --------------------------------------------------------------------------- | :------: | :-------: | :----: | :-------------------------: |
+| id        | Código de identificación asignado por Trawlingweb a cada publicación rastreada |    No    |    No     | Cadena |                             |
+| post_id   | ID de la publicación                                                        |    No    |    No     | Cadena |                             |
+| type      | Tipo de publicación (foto o video)                                          |    No    |    No     | Cadena |                             |
+| url       | URL de la publicación                                                       |    No    |    No     | Cadena |                             |
+| media_url | URL del contenido multimedia                                                |    No    |    No     | Cadena |                             |
+| likes     | Cantidad de "me gusta"                                                      |    No    |    No     | Entero |                             |
+| text      | Texto descriptivo de la publicación                                         |    No    |    No     | Cadena |                             |
+| published | Fecha de publicación del post                                               |    No    |    No     |  Fecha |        ISO 8601-UTC         |
+| crawled   | Fecha y hora en que se capturó la publicación                               |    No    |    Sí     | Entero | Timestamp UNIX en milisegundos |
 
 ## Datos del usuario
 
-| Campo             | Descripción                 | Buscable | Ordenable |  Tipo  | Formato |
-| ----------------- | --------------------------- | :------: | :-------: | :----: | :-----: |
-| user_name         | Nombre de usuario           |    No    |    No     | Cadena |         |
-| user_screen_name  | Nombre de usuario           |    No    |    No     | Cadena |         |
-| user_publications | Numero de publicaciones     |    No    |    No     | Entero |         |
-| user_followers    | Numero de seguidores        |    No    |    No     | Entero |         |
-| user_followed     | Numero de usuarios seguidos |    No    |    No     | Entero |         |
+| Campo             | Descripción                  | Buscable | Ordenable |  Tipo  | Formato |
+| ----------------- | ---------------------------- | :------: | :-------: | :----: | :-----: |
+| user_name         | Nombre de usuario            |    No    |    No     | Cadena |         |
+| user_screen_name  | Nombre de usuario mostrado   |    No    |    No     | Cadena |         |
+| user_publications | Número de publicaciones      |    No    |    No     | Entero |         |
+| user_followers    | Número de seguidores         |    No    |    No     | Entero |         |
+| user_followed     | Número de usuarios seguidos  |    No    |    No     | Entero |         |
 
-## Datos de comments
+## Datos de los comentarios
 
-| Campo    | Descripción | Buscable | Ordenable |  Tipo  | Formato |
-| -------- | ----------- | :------: | :-------: | :----: | :-----: |
-| comments | comentarios |    No    |    No     | Cadena |         |
+| Campo    | Descripción  | Buscable | Ordenable |  Tipo  | Formato |
+| -------- | ------------ | :------: | :-------: | :----: | :-----: |
+| comments | Comentarios  |    No    |    No     | Cadena |         |
 
-## Datos de petición
+## Datos de la petición
 
 | Campo        | Descripción                                                             |  Tipo  |
 | :----------- | :---------------------------------------------------------------------- | :----: |
-| requestLeft  | Total de consultas pendientes de la subscripción                        | Entero |
+| requestLeft  | Total de consultas pendientes de la suscripción                         | Entero |
 | totalResults | Total de resultados encontrados por la consulta                         | Entero |
 | next         | URL para continuar con la paginación y así obtener todos los resultados | Cadena |
 
-## Ejemplo de respuesta en formato json:
+## Ejemplo de respuesta en formato JSON:
 
-```
-"json"
-"response" : {
-    "data" : [{
-        "id": "...",
-        "post_id": "...",
-        "type": "...",
-        "url": "...",
-        "media_url": "...",
-        "user_name": "...",
-        "likes": "...",
-        "text": "...",
-        "comments": "...",
-        "published": "...",
-        "crawled": "...",
-        "user_screen_name": "...",
-        "user_publications": "...",
-        "user_followers": "...",
-        "user_followed": "..."
-    }],
-    "totalResults" : "...",
-    "restResults" : "...",
-    "next" : "..."
+```json
+{
+  "data": [
+    {
+      "id": "...",
+      "user_screen_name": "...",
+      "user_publications": 239,
+      "user_followers": 6762,
+      "user_followed": 1792,
+      "user_name": "...",
+      "post_id": "...",
+      "type": "...",
+      "url": "...",
+      "media_url": "...",
+      "likes": 125,
+      "text": "...",
+      "comments": null,
+      "published": "2024-08-03T11:00:04.000Z",
+      "crawled": 1722682829465
+    }
+  ],
+  "totalResults": "...",
+  "restResults": "...",
+  "next": "..."
 }
 ```
 
