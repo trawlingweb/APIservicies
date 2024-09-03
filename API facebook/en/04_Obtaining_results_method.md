@@ -34,63 +34,63 @@ Upon making a request to the Facebook API, it will return a structured response 
 
 ## Post Data
 
-| Field                  | Description                                                                                                                                                                       | Searchable | Orderable |  Type   |           Format           |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: | :-------: | :-----: | :-------------------------: |
-| id                     | Identification code assigned by Trawlingweb to each tracked post                                                                                                                 |    No    |    No     | String  |                             |
-| hash                   | Identification code based on text                                                                                                                                                 |    No    |    No     | String  |                             |
-| published              | Date when the post was published                                                                                                                                                 |    No    |    No     |  Date   |        ISO 8601-UTC         |
-| crawled                | Capture date                                                                                                                                                                      |    No    |    Yes    | Integer | UNIX Timestamp in milliseconds |
-| updated                | Update date                                                                                                                                                                       |    No    |    Yes    | Integer | UNIX Timestamp in milliseconds |
-| post_id                | Post ID                                                                                                                                                                           |    No    |    No     | String  |                             |
-| url                    | Post URL                                                                                                                                                                          |    No    |    No     | String  |                             |
-| text                   | Post text description                                                                                                                                                             |    No    |    No     | String  |                             |
-| lang                   | When present, indicates a BCP 47 language identifier corresponding to the language detected by the Tweet's machine text, or und if no language could be detected.             |    No    |    No     | String  |                             |
-| retweet_count          | Number of times this Tweet has been retweeted                                                                                                                                     |    No    |    No     | Integer |                             |
-| reply_count            | Number of times this Tweet has been replied                                                                                                                                       |    No    |    No     | Integer |                             |
-| favorite_count         | Approximate number of times users have liked this Tweet                                                                                                                           |    No    |    No     | Integer |                             |
-| reproduction_count     | Number of times this Tweet has been reproduced                                                                                                                                     |    No    |    No     | Integer |                             |
-| user_name              | User name                                                                                                                                                                         |    No    |    No     | String  |                             |
-| user_screen_name       | Displayed user name                                                                                                                                                               |    No    |    No     | String  |                             |
-| user_url               | User URL                                                                                                                                                                          |    No    |    No     | String  |                             |
-| user_profile_image_url | HTTP-based URL pointing to the user's profile image                                                                                                                                |    No    |    No     | String  |                             |
-| entities_url           | Mentioned links                                                                                                                                                                   |    No    |    No     | String  |                             |
-| hashtags               | Hashtags referenced in the text                                                                                                                                                   |    No    |    No     | String  |                             |
-| user_mentions          | Names referenced in the text                                                                                                                                                      |    No    |    No     | String  |                             |
-| time_distance          | Hours elapsed between the publication date and the capture date                                                                                                                   |    No    |    No     | Decimal |                             |
-| reply                  | Indicates if it is a reply to a Tweet                                                                                                                                             |    No    |    No     | Boolean |                             |
+| Field                      | Description                                                                                                           | Searchable | Orderable |  Type   |           Format           |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------- | :------: | :-------: | :-----: | :-------------------------: |
+| id                         | Identification code assigned by Trawlingweb to each tracked post                                                      |    No    |    No     | String  |                             |
+| post_id                    | Original Post ID                                                                                                      |    No    |    No     | String  |                             |
+| hash_text                  | Hash generated based on the post text                                                                                 |    No    |    No     | String  |                             |
+| user_name                  | Name of the user who made the post                                                                                     |    No    |    No     | String  |                             |
+| user_screen_name           | Displayed user name                                                                                                    |    No    |    No     | String  |                             |
+| user_url                   | URL to the user profile                                                                                                |    No    |    No     | String  |                             |
+| user_icon                  | URL pointing to the user's profile image                                                                               |    No    |    No     | String  |                             |
+| published                  | Date and time when the post was published                                                                              |    No    |    No     |  Date   |        ISO 8601-UTC         |
+| url                        | URL to the post on Facebook                                                                                            |    No    |    No     | String  |                             |
+| text                       | Text content of the post                                                                                               |    No    |    No     | String  |                             |
+| likes_num                  | Number of likes the post received                                                                                      |    No    |    No     | Integer |                             |
+| comments_num               | Number of comments on the post                                                                                         |    No    |    No     | Integer |                             |
+| type                       | Type of the post (e.g., story, photo)                                                                                  |    No    |    No     | String  |                             |
+| language                   | Detected language of the post, identified by a BCP 47 language tag                                                     |    No    |    No     | String  |                             |
+| language_detection_precision | Precision of the language detection as a percentage                                                                  |    No    |    No     | Integer |                             |
+| screen                     | Screen ID, related to the API's capture process                                                                        |    No    |    No     | Integer |                             |
+| last_article               | Date of the last article processed                                                                                     |    No    |    No     |  Date   |        ISO 8601-UTC         |
+| oldest_article             | Date of the oldest article processed                                                                                   |    No    |    No     |  Date   |        ISO 8601-UTC         |
+| hash                       | Hash generated based on the post metadata                                                                              |    No    |    No     | String  |                             |
+| crawled                    | Date and time when the post was captured                                                                               |    No    |    Yes    | Integer | UNIX Timestamp in milliseconds |
+| updated                    | Date and time when the post was last updated                                                                           |    No    |    Yes    | Integer | UNIX Timestamp in milliseconds |
+| time_distance              | Time elapsed between the publication date and the capture date, measured in hours                                      |    No    |    No     | Decimal |                             |
 
-## Example response in json format:
-```
-"json"
-"response" : {
-    "data" : [{
-        "id": "...",
-        "hash": "...",
-        "published" : "...",
-        "crawled" : "...",
-        "updated" : "...",
-        "post_id" : "...",
-        "url" : "...",
-        "text" : "...",
-        "lang" : "...",
-        "retweet_count" : "...",
-        "reply_count" : "...",
-        "favorite_count" : "...",
-        "reproductions_count" : "...",
-        "created_at" : "...",
-        "user_name" : "...",
-        "user_screen_name" : "...",
-        "user_url" : "...",
-        "user_profile_image_url" : "...",
-        "entities_url" : "...",
-        "hashtags" : "...",
-        "user_mentions" : "...",
-        "time_distance" : "...",
-        "reply" : "...",
-    }],
-    "totalResults" : "...",
-    "restResults" : "...",
-    "next" : "..."
+## Example response in JSON format:
+```json
+{
+  "data": [
+    {
+      "id": "...",
+      "post_id": "...",
+      "hash_text": "...",
+      "user_name": "...",
+      "user_screen_name": "...",
+      "user_url": "...",
+      "user_icon": "...",
+      "published": "2024-08-03T23:01:25.601Z",
+      "url": "...",
+      "text": "...",
+      "likes_num": 35,
+      "comments_num": 12,
+      "type": "...",
+      "language": "...",
+      "language_detection_precision": 99,
+      "screen": 0,
+      "last_article": "2024-08-03T23:01:25.601Z",
+      "oldest_article": "2024-08-03T23:01:25.601Z",
+      "hash": "...",
+      "crawled": 1722726103860,
+      "updated": 1722726103860,
+      "time_distance": 0.01
+    }
+  ],
+  "totalResults": "...",
+  "restResults": "...",
+  "next": "..."
 }
 ```
 

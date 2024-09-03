@@ -79,9 +79,9 @@ json
     "error" : "..."
 }
 ```
-# Enhanced Search with Twitter Syntax
+# Enhanced Search with Facebook Syntax
 
-Twitter employs its own advanced syntax for executing specific and detailed searches within its platform. This syntax allows filtering results by keywords, hashtags, mentions, locations, dates, among other parameters. Furthermore, when defining keywords for a Worker, this syntax can be used to launch precise queries against Twitter's search engine. This maximizes the efficiency and relevance of the data captured by each Worker, facilitating more effective monitoring and analysis of conversations on Twitter.
+Facebook employs its own advanced syntax for executing specific and detailed searches within its platform. This syntax allows filtering results by keywords, hashtags, mentions, locations, dates, among other parameters. Furthermore, when defining keywords for a Worker, this syntax can be used to launch precise queries against Facebook's search engine. This maximizes the efficiency and relevance of the data captured by each Worker, facilitating more effective monitoring and analysis of conversations on Facebook.
 
 Here is a list of elements you can combine with your keywords when creating them within a worker:
 

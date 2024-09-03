@@ -30,72 +30,73 @@ https://facebook.trawlingweb.com/posts/{WORKERID}?token={APIKEY}
 | tsi       | Se trata del delimitador temporal final. Formato Unix Time en milisegundos   | Delimita con la fecha de petición                       | &tsi=1524818189854 |
 
 
-# Respuesta de salida - RESPONSE
+# Respuesta de Salida - RESPONSE
 
-Una vez lanzada una petición al API de Facebook éste devolverá una respuesta estructurada de la siguiente forma:
+Al realizar una solicitud a la API de Facebook, se devolverá una respuesta estructurada de la siguiente manera:
 
-## Datos de la publicación
+## Datos del Post
 
-| Campo                  | Descripción                                                                                                                                                                       | Buscable | Ordenable |  Tipo   |           Formato           |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: | :-------: | :-----: | :-------------------------: |
-| id                     | Código de indentificación asignado por Trawlingweb a cada publicación rastreada                                                                                                   |    No    |    No     | Cadena  |                             |
-| hash                   | Código de indentificación en base al texto                                                                                                                                        |    No    |    No     | Cadena  |                             |
-| published              | Fecha publicado el post                                                                                                                                                           |    No    |    No     |  Fecha  |        ISO 8601-UTC         |
-| crawled                | Fecha de captura                                                                                                                                                                  |    No    |    Si     | Entero  | UNIX Timestamp milisegundos |
-| updated                | Fecha de actualitzación                                                                                                                                                           |    No    |    Si     | Entero  | UNIX Timestamp milisegundos |
-| post_id                | Id del post                                                                                                                                                                       |    No    |    No     | Cadena  |                             |
-| url                    | Url de la publicación                                                                                                                                                             |    No    |    No     | Cadena  |                             |
-| text                   | Texto descrito de la publicación                                                                                                                                                  |    No    |    No     | Cadena  |                             |
-| lang                   | Cuando está presente, indica un identificador de idioma BCP 47 correspondiente al idioma detectado por la máquina del texto del Tweet, o und si no se pudo detectar ningún idioma |    No    |    No     | String  |                             |
-| retweet_count          | Número de veces que este Tweet ha sido retwiteado.                                                                                                                                |    No    |    No     | Integer |                             |
-| reply_count            | Número de veces que este Tweet ha sido respondido                                                                                                                                 |    No    |    No     | Integer |                             |
-| favorite_count         | Indica aproximadamente cuántas veces ha gustado a los usuarios de Facebook este Tweet                                                                                              |    No    |    No     | Integer |                             |
-| reproductions_count    | Número de veces que este Tweet ha sido reproducido                                                                                                                                |    No    |    No     | Integer |                             |
-| user_name              | Nombre de usuario                                                                                                                                                                 |    No    |    No     | Cadena  |                             |
-| user_screen_name       | Nombre de usuario mostrado                                                                                                                                                        |    No    |    No     | Cadena  |                             |
-| user_url               | Url del usuario                                                                                                                                                                   |    No    |    No     | Cadena  |                             |
-| user_profile_image_url | Una URL basada en HTTP que apunta a la imagen de perfil del usuario                                                                                                               |    No    |    No     | Cadena  |                             |
-| entities_url           | Enlaces mencionados                                                                                                                                                               |    no    |    no     | Cadena  |                             |
-| hashtags               | Hashtags referenciados en el texto                                                                                                                                                |    No    |    No     | Cadena  |                             |
-| user_mentions          | Nombres referenciados en el texto                                                                                                                                                 |    No    |    No     | Cadena  |                             |
-| time_distance          | Horas transcurridas entre la fecha de publicación y la de captura                                                                                                                 |    No    |    No     | Decimal |                             |
-| reply                  | Indica si es una respuesta a un Tweet                                                                                                                                             |    No    |    No     | Boleano |                             |
+| Campo                      | Descripción                                                                                                           | Buscable | Ordenable |  Tipo   |           Formato           |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------- | :------: | :-------: | :-----: | :-------------------------: |
+| id                         | Código de identificación asignado por Trawlingweb a cada post rastreado                                                |    No    |    No     | Cadena  |                             |
+| post_id                    | ID original del post                                                                                                   |    No    |    No     | Cadena  |                             |
+| hash_text                  | Hash generado a partir del texto del post                                                                              |    No    |    No     | Cadena  |                             |
+| user_name                  | Nombre del usuario que hizo el post                                                                                    |    No    |    No     | Cadena  |                             |
+| user_screen_name           | Nombre de usuario mostrado                                                                                             |    No    |    No     | Cadena  |                             |
+| user_url                   | URL del perfil del usuario                                                                                             |    No    |    No     | Cadena  |                             |
+| user_icon                  | URL que apunta a la imagen de perfil del usuario                                                                       |    No    |    No     | Cadena  |                             |
+| published                  | Fecha y hora en que se publicó el post                                                                                 |    No    |    No     |  Fecha  |        ISO 8601-UTC         |
+| url                        | URL del post en Facebook                                                                                               |    No    |    No     | Cadena  |                             |
+| text                       | Contenido de texto del post                                                                                            |    No    |    No     | Cadena  |                             |
+| likes_num                  | Número de "me gusta" que recibió el post                                                                               |    No    |    No     | Entero  |                             |
+| comments_num               | Número de comentarios en el post                                                                                       |    No    |    No     | Entero  |                             |
+| type                       | Tipo de post (por ejemplo, historia, foto)                                                                             |    No    |    No     | Cadena  |                             |
+| language                   | Idioma detectado del post, identificado por una etiqueta de idioma BCP 47                                              |    No    |    No     | Cadena  |                             |
+| language_detection_precision | Precisión de la detección del idioma como un porcentaje                                                              |    No    |    No     | Entero  |                             |
+| screen                     | ID de pantalla, relacionado con el proceso de captura de la API                                                        |    No    |    No     | Entero  |                             |
+| last_article               | Fecha del último artículo procesado                                                                                    |    No    |    No     |  Fecha  |        ISO 8601-UTC         |
+| oldest_article             | Fecha del artículo más antiguo procesado                                                                               |    No    |    No     |  Fecha  |        ISO 8601-UTC         |
+| hash                       | Hash generado basado en los metadatos del post                                                                         |    No    |    No     | Cadena  |                             |
+| crawled                    | Fecha y hora en que se capturó el post                                                                                 |    No    |    Sí     | Entero  | Timestamp UNIX en milisegundos |
+| updated                    | Fecha y hora en que se actualizó por última vez el post                                                                |    No    |    Sí     | Entero  | Timestamp UNIX en milisegundos |
+| time_distance              | Tiempo transcurrido entre la fecha de publicación y la fecha de captura, medido en horas                               |    No    |    No     | Decimal |                             |
 
-## Ejemplo de respuesta en formato json:
+## Ejemplo de respuesta en formato JSON:
 
-```
-"json"
-"response" : {
-    "data" : [{
-        "id": "...",
-        "hash": "...",
-        "published" : "...",
-        "crawled" : "...",
-        "updated" : "...",
-        "post_id" : "...",
-        "url" : "...",
-        "text" : "...",
-        "lang" : "...",
-        "retweet_count" : "...",
-        "reply_count" : "...",
-        "favorite_count" : "...",
-        "reproductions_count" : "...",
-        "created_at" : "...",
-        "user_name" : "...",
-        "user_screen_name" : "...",
-        "user_url" : "...",
-        "user_profile_image_url" : "...",
-        "entities_url" : "...",
-        "hashtags" : "...",
-        "user_mentions" : "...",
-        "time_distance" : "...",
-        "reply" : "...",
-    }],
-    "totalResults" : "...",
-    "restResults" : "...",
-    "next" : "..."
+```json
+{
+  "data": [
+    {
+      "id": "...",
+      "post_id": "...",
+      "hash_text": "...",
+      "user_name": "...",
+      "user_screen_name": "...",
+      "user_url": "...",
+      "user_icon": "...",
+      "published": "2024-08-03T23:01:25.601Z",
+      "url": "...",
+      "text": "...",
+      "likes_num": 35,
+      "comments_num": 12,
+      "type": "...",
+      "language": "...",
+      "language_detection_precision": 99,
+      "screen": 0,
+      "last_article": "2024-08-03T23:01:25.601Z",
+      "oldest_article": "2024-08-03T23:01:25.601Z",
+      "hash": "...",
+      "crawled": 1722726103860,
+      "updated": 1722726103860,
+      "time_distance": 0.01
+    }
+  ],
+  "totalResults": "...",
+  "restResults": "...",
+  "next": "..."
 }
 ```
+
 ## Ejemplo de salida
 
 ```
