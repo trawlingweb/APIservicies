@@ -101,7 +101,7 @@ Aquí tienes un listado de los elementos que puedes combinar con tus palabras cl
 | Desde una cuenta  | Búsqueda de tweets enviados por una cuenta específica                                | from:cocacola         |
 | A una cuenta      | Búsqueda de tweets enviados a una cuenta específica                                  | to:pepsi           |
 | Mención de cuenta | Búsqueda de tweets que mencionan una cuenta específica                               | @cocacola             |
-| Near ubicación    | Búsqueda de tweets enviados cerca de una ubicación específica                        | "comprar cocacola" near:"Argentina" |
+| Near ubicación    | Búsqueda de tweets enviados cerca de una ubicación específica                        | "comprar cocacola" near:"Quito" |
 | Dentro de radio   | Búsqueda de tweets enviados dentro de un radio específico                            | cocacola near:lima within:15km |
 | Desde fecha       | Búsqueda de tweets enviados desde una fecha específica                               | cocacola since:2022-02-17  |
 | Hasta fecha       | Búsqueda de tweets enviados hasta una fecha específica                               | pepsi until:2022-02-17 |
