@@ -62,7 +62,19 @@ Once a request is made to the Twitter API, it will return a response structured 
 | hashtags               | Hashtags referenced in the text                                                                                                                                                     |     No     |    No    | String  |                             |
 | user_mentions          | Names referenced in the text                                                                                                                                                        |     No     |    No    | String  |                             |
 | time_distance          | Hours elapsed between the publication date and the capture date                                                                                                                     |     No     |    No    | Decimal |                             |
-| reply                  | Indicates if it is a retweet                                                                                                                                               |     No     |    No    | Boolean |                             |
+| **Reply** | Indicates if it is a reply to an original tweet                                                                 | No | No | Boolean | |
+| **Quote** | Indicates if it is a quote of an original tweet                                                                 | No | No | Boolean | |
+
+### Important Notes on the "reply" and "quote" Fields
+
+| **Aspect**         | **Reply**                                               | **Quote**                                                           |
+|--------------------|---------------------------------------------------------|---------------------------------------------------------------------|
+| **Purpose**        | Participate in a direct conversation                    | Reference or comment on a tweet independently                       |
+| **Linking**        | `in_reply_to_status_id` points to the original tweet    | `referenced_tweets` with `type: "quoted"` points to the quoted tweet |
+| **Visualization**  | Appears in the conversation thread                       | Appears as an independent tweet with the quoted tweet embedded      |
+| **Context**        | Part of a dialogue chain                                 | Adds an additional layer of comment or context                      |
+| **Accounting**     | Counted as a single <b>post</b>, even if linked to the original tweet | Counted as a single <b>post</b>, even if linked to the original tweet |
+
 
 ## Example response in json format:
 
