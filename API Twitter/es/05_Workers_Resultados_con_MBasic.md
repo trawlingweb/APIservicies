@@ -63,6 +63,17 @@ Una vez lanzada una petición al API de Twitter éste devolverá una respuesta e
 | user_mentions          | Nombres referenciados en el texto                                                                                                                                                 |    No    |    No     | Cadena  |                             |
 | time_distance          | Horas transcurridas entre la fecha de publicación y la de captura                                                                                                                 |    No    |    No     | Decimal |                             |
 | reply                  | Indica sí es una respuesta a un tweet original                                                                                                                                             |    No    |    No     | Boleano |                             |
+| quote                  | Indica sí es una cita a un un tweet original                                                                                                                                             |    No    |    No     | Boleano |                             |
+
+### Notas importantes a los campos "reply" (respuesta) y "quote" (cita)
+| **Aspecto**      | **Respuesta (Reply)**                                     | **Cita (Quote)**                                                     |
+|------------------|----------------------------------------------------------|----------------------------------------------------------------------|
+| **Propósito**    | Participar en una conversación directa                   | Referenciar o comentar sobre un tweet de forma independiente         |
+| **Vinculación**  | `in_reply_to_status_id` apunta al tweet original         | `referenced_tweets` con `type: "quoted"` apunta al tweet citado       |
+| **Visualización**| Aparece en el hilo de conversación                       | Aparece como un tweet independiente con el tweet citado embebido     |
+| **Contexto**     | Parte de una cadena de diálogo                           | Añade una capa adicional de comentario o contexto                    |
+| **Contabilización** | Se computa como un <b>post</b> único, aunque tenga vinculación al tweet original | Se computa como un <b>post</b> único, aunque tenga vinculación al tweet original |
+
 
 ## Ejemplo de respuesta en formato json:
 
