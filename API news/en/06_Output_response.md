@@ -124,6 +124,6 @@ If you have any questions, need assistance, need to contract or expand your serv
 * [SAC Email](mailto:gestion@trawlingweb.com)
 
 **Sales (Sales Support):**
-* [Sales Email](mailto:sales@trawlingweb.com)
+* [Sales Email](mailto:marketing@trawlingweb.com)
 
 

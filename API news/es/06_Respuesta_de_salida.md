@@ -138,6 +138,6 @@ Si tienes alguna pregunta, necesitas asistencia, contratar o ampliar tus servici
 * [Correo SAC](mailto:gestion@trawlingweb.com)
 
 **Sales (Soporte ventas):**
-* [Correo Ventas](mailto:sales@trawlingweb.com)
+* [Correo Ventas](mailto:marketing@trawlingweb.com)
 
 
