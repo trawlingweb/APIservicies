@@ -8,12 +8,30 @@ Bienvenido al repositorio de soporte de los Servicios API de TrawlingWeb. Aquí 
 
 TrawlingWeb ofrece un conjunto de potentes APIs diseñadas para ayudarte a recopilar, gestionar y analizar datos de diversas fuentes. Ya sea que busques integrar datos de redes sociales, noticias u otros contenidos en línea en tus aplicaciones, nuestras APIs proporcionan la flexibilidad y funcionalidad que necesitas.
 
-## ¿Qué Hacen Nuestras APIs?
+## ¿Qué Ofrecen Nuestras APIs?
 
 Nuestras APIs te permiten:
 - **Recopilar Datos:** Recoger datos de múltiples fuentes como redes sociales, sitios web de noticias y más.
 - **Procesar Datos:** Utilizar nuestros servicios ETL (Extract, Transform, Load) para limpiar y organizar los datos.
 - **Analizar Datos:** Conectar los datos recopilados a herramientas de visualización para un análisis en profundidad.
+
+## ¿Para qué usar nuestras API?
+***Aplicaciones más comunes***
+
+Las API de TrawlingWeb pueden ser aplicadas en una variedad de industrias, proporcionando soluciones efectivas para la recopilación y análisis de datos en línea. A continuación, se describen dos de las aplicaciones más comunes:
+
+### 1. **Monitoreo de Medios para Marcas**
+   Las empresas especializadas en monitoreo de medios pueden utilizar las API de TrawlingWeb para rastrear y analizar menciones en sitios de noticias, blogs y otras fuentes en línea. Esto les permite:
+   - **Monitorear la reputación de las marcas de sus clientes** en tiempo real.
+   - **Generar informes sobre la exposición mediática** de las marcas en distintas regiones y fuentes.
+   - **Detectar rápidamente menciones críticas o positivas** que pueden afectar la percepción pública.
+
+### 2. **Social Listening para Redes Sociales**
+   Las empresas que ofrecen servicios de Social Listening pueden aprovechar las API de TrawlingWeb para rastrear conversaciones en redes sociales y obtener KPIs relevantes e insights valiosos. Algunas de las funcionalidades clave incluyen:
+   - **Seguimiento de menciones en redes sociales** (como Twitter, Facebook, Instagram y YouTube) relacionadas con productos, marcas o temas específicos.
+   - **Identificación de tendencias emergentes** a través del análisis de hashtags, palabras clave y menciones.
+   - **Análisis de KPIs de interacción** (me gusta, comentarios, compartidos) para medir el impacto de las campañas en redes sociales.
+
 
 ## Registro y Uso Gratuito de las APIs
 
@@ -100,12 +118,31 @@ Welcome to the support repository for TrawlingWeb API Services. Here you will fi
 
 TrawlingWeb offers a set of powerful APIs designed to help you collect, manage, and analyze data from various sources. Whether you're looking to integrate data from social media, news, or other online content into your applications, our APIs provide the flexibility and functionality you need.
 
-## What Do Our APIs Do?
+## What Do Our APIs Offer?
 
 Our APIs allow you to:
 - **Collect Data:** Gather data from multiple sources such as social media, news websites, and more.
 - **Process Data:** Use our ETL (Extract, Transform, Load) services to clean and organize the data.
 - **Analyze Data:** Connect the collected data to visualization tools for in-depth analysis.
+
+
+## Why Use Our APIs?
+***Common Applications***
+
+TrawlingWeb's APIs can be applied across a variety of industries, providing effective solutions for online data collection and analysis. Below are two of the most common applications:
+
+### 1. **Brand Media Monitoring**
+   Companies specializing in media monitoring can use TrawlingWeb's APIs to track and analyze mentions on news sites, blogs, and other online sources. This allows them to:
+   - **Monitor their clients' brand reputation** in real-time.
+   - **Generate reports on media exposure** for brands across different regions and sources.
+   - **Quickly detect critical or positive mentions** that could affect public perception.
+
+### 2. **Social Listening for Social Networks**
+   Companies offering Social Listening services can leverage TrawlingWeb's APIs to track conversations on social media and gain relevant KPIs and valuable insights. Some key functionalities include:
+   - **Tracking mentions on social networks** (such as Twitter, Facebook, Instagram, and YouTube) related to products, brands, or specific topics.
+   - **Identifying emerging trends** through the analysis of hashtags, keywords, and mentions.
+   - **Analyzing interaction KPIs** (likes, comments, shares) to measure the impact of social media campaigns.
+
 
 ## Registration and Free Use of APIs
 
