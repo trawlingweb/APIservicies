@@ -1,6 +1,6 @@
 # API de Noticias y Blogs de Trawlingweb.com
 
-Bienvenido a la documentación de la API de Noticias y Blogs de Trawlingweb.com. Trawlingweb es líder en el sector de captura y análisis de información, utilizando tecnologías propias de web scraping, Big Data e inteligencia artificial. Con más de 18 millones de fuentes tratadas, ofrecemos un acceso estructurado a datos web provenientes de dominios de contenido verticales.
+Bienvenido a la documentación para el acceso API al repositorio de datos de Noticias y Blogs de Trawlingweb.com. Trawlingweb es líder en el sector de captura y análisis de información, utilizando tecnologías propias de web scraping, Big Data e inteligencia artificial. Con más de 18 millones de fuentes tratadas, ofrecemos un acceso estructurado a datos web provenientes de dominios de contenido verticales.
 
 En esta sección, encontrarás toda la documentación necesaria para utilizar nuestra API y obtener así el mejor beneficio posible de nuestros servicios. Nuestra API permite automatizar procesos de forma eficaz para garantizar un flujo constante, de calidad y sin preocupaciones, integrando cómodamente nuestros contenidos en tus sistemas.
 
@@ -14,24 +14,29 @@ Nuestros avanzados rastreadores descargan y estructuran los datos de diversas we
 
 ### Beneficios para Empresas:
 
-* **Monitoreo de Medios**: Proveemos datos esenciales para empresas dedicadas al monitoreo de medios, ayudándolas a mantenerse al tanto de las últimas tendencias y noticias.
-- **Social Listening**: Nuestras capacidades permiten a las empresas realizar un seguimiento efectivo de las conversaciones en redes sociales, proporcionando insights valiosos sobre la percepción de marca y tendencias del mercado.
-* **Marketing y Análisis de Información**: Potenciamos los sistemas de análisis de información de empresas de marketing, facilitando la toma de decisiones informadas y estratégicas.
+- **Monitoreo de Medios**: Proveemos datos esenciales para empresas dedicadas al monitoreo de medios, ayudándolas a mantenerse al tanto de las últimas tendencias y noticias.
+
+* **Social Listening**: Nuestras capacidades permiten a las empresas realizar un seguimiento efectivo de las conversaciones en redes sociales, proporcionando insights valiosos sobre la percepción de marca y tendencias del mercado.
+
+- **Marketing y Análisis de Información**: Potenciamos los sistemas de análisis de información de empresas de marketing, facilitando la toma de decisiones informadas y estratégicas.
 
 Nuestra API de Noticias y Blogs está diseñada para ser una herramienta poderosa y flexible, adaptada a las diversas necesidades de nuestros usuarios. Te invitamos a explorar la documentación y descubrir cómo puedes aprovechar al máximo nuestras capacidades líderes en captura y análisis de datos.
 
 ---
 
 # Contacto
+
 Si tienes alguna pregunta, necesitas asistencia, contratar o ampliar tus servicios por favor contacta con nosotros.
 
 **SAT (Soporte Técnico):**
-* [Correo SAT](mailto:support@trawlingweb.com)
-* [Documentación Oficial](https://docs.trawlingweb.com)
+
+- [Correo SAT](mailto:support@trawlingweb.com)
+- [Documentación Oficial](https://docs.trawlingweb.com)
 
 **SAC (Soporte administrativo):**
-* [Correo SAC](mailto:gestion@trawlingweb.com)
+
+- [Correo SAC](mailto:gestion@trawlingweb.com)
 
 **Sales (Soporte ventas):**
-* [Correo Ventas](mailto:sales@trawlingweb.com)
 
+- [Correo Ventas](mailto:sales@trawlingweb.com)
