@@ -1,4 +1,4 @@
-# API de Print media de Trawlingweb.com
+# API de Print Media de Trawlingweb.com
 
 Bienvenido a la documentación para el acceso API al repositorio de datos de Print media de Trawlingweb.com. Trawlingweb es líder en el sector de captura y análisis de información, utilizando tecnologías propias de web scraping, Big Data e inteligencia artificial. Con más de 18 millones de fuentes tratadas, ofrecemos un acceso estructurado a datos web provenientes de dominios de contenido verticales.
 
