@@ -1,4 +1,4 @@
-# API PRESS WRITTEN – Respuesta de salida
+# API Print media – Respuesta de salida
 
 Al realizar una petición al API de Prensa Escrita, la respuesta (output) en formato JSON incluye dos bloques de información:
 
@@ -9,58 +9,58 @@ Al realizar una petición al API de Prensa Escrita, la respuesta (output) en for
 
 ## Datos de noticia
 
-| Campo                        | Descripción                                                  | Buscable | Ordenable |          Tipo           |       Formato        |     Servicio      |
-| ---------------------------- | ------------------------------------------------------------ | :------: | :-------: | :---------------------: | :------------------: | :---------------: |
-| `id`                         | Identificador único asignado por TrawlingWeb a cada artículo |    No    |    No     |         Cadena          |                      | API Press Written |
-| `id_page`                    | Código de página dentro del medio                            |    No    |    No     |         Cadena          |                      | API Press Written |
-| `published`                  | Fecha de publicación                                         |    Sí    |    Sí     |          Fecha          |     ISO 8601-UTC     | API Press Written |
-| `crawled`                    | Fecha y hora de rastreo (timestamp en ms)                    |    Sí    |    Sí     |         Entero          | UNIX Timestamp (ms)  | API Press Written |
-| `updated`                    | Última fecha de actualización del registro                   |    Sí    |    Sí     |          Fecha          |     ISO 8601-UTC     | API Press Written |
-| `site`                       | Nombre del medio (ej. “Expreso”)                             |    Sí    |    No     |         Cadena          |                      | API Press Written |
-| `site_language`              | Idioma del medio                                             |    Sí    |    No     |         Cadena          |      ISO 639-1       | API Press Written |
-| `site_country`               | País del medio                                               |    Sí    |    No     |         Cadena          | ISO 3166-1 (alpha-2) | API Press Written |
-| `site_type`                  | Tipo de sitio (p.ej. “Newspaper”)                            |    Sí    |    No     |         Cadena          |                      | API Press Written |
-| `site_tier`                  | Categoría de alcance del medio (p.ej. “1”, “2”)              |    No    |    No     |         Cadena          |                      | API Press Written |
-| `site_owner`                 | Propietario del medio                                        |    No    |    No     |         Cadena          |                      | API Press Written |
-| `site_topic`                 | Tema principal del medio (p.ej. “News”)                      |    Sí    |    No     |         Cadena          |                      | API Press Written |
-| `site_region1` / `region2/3` | Regiones geográficas que cubre el medio                      |    No    |    No     |         Cadena          |                      | API Press Written |
-| `site_scope`                 | Alcance geográfico (p.ej. “Nacional”)                        |    No    |    No     |         Cadena          |                      | API Press Written |
-| `title`                      | Título del artículo                                          |    Sí    |    No     |         Cadena          |                      | API Press Written |
-| `opening`                    | Entradilla / subtítulo                                       |    No    |    No     |         Cadena          |                      | API Press Written |
-| `text`                       | Texto breve o extracto                                       |    Sí    |    No     |         Cadena          |                      | API Press Written |
-| `textFull`                   | Texto completo del artículo                                  |    No    |    No     |         Cadena          |                      | API Press Written |
-| `caption`                    | Pie de foto                                                  |    No    |    No     |         Cadena          |                      | API Press Written |
-| `note`                       | Notas o comentarios adicionales                              |    No    |    No     |         Cadena          |                      | API Press Written |
-| `title_vision_paragraphs`    | Párrafos del título con coordenadas de bounding box          |    No    |    No     |    Lista de objetos     |      JSON array      | API Press Written |
-| `opening_vision_paragraphs`  | Párrafos de la entradilla con bounding box                   |    No    |    No     |    Lista de objetos     |      JSON array      | API Press Written |
-| `note_vision_paragraphs`     | Párrafos de la nota con bounding box                         |    No    |    No     |    Lista de objetos     |      JSON array      | API Press Written |
-| `caption_vision_paragraphs`  | Párrafos del pie de foto con bounding box                    |    No    |    No     |    Lista de objetos     |      JSON array      | API Press Written |
-| `text_vision_paragraphs`     | Párrafos del texto completo con bounding box                 |    No    |    No     |    Lista de objetos     |      JSON array      | API Press Written |
-| `pages`                      | Número de página en la que aparece el artículo               |    No    |    No     |         Cadena          |                      | API Press Written |
-| `page`                       | Índice de página                                             |    No    |    No     |         Cadena          |                      | API Press Written |
-| `audience`                   | Audiencia estimada del medio                                 |    No    |    No     |         Entero          |                      | API Press Written |
-| `circulation`                | Tirada o ejemplares distribuidos                             |    No    |    No     |         Entero          |                      | API Press Written |
-| `value`                      | Valor económico estimado                                     |    No    |    No     | Número en coma flotante |                      | API Press Written |
-| `valuePage`                  | Valor por página                                             |    No    |    No     | Número en coma flotante |                      | API Press Written |
-| `meta_ocupation`             | Código de ocupación genérico                                 |    No    |    No     |         Cadena          |                      | API Press Written |
-| `meta_ocupation_fine`        | Código de ocupación detallado                                |    No    |    No     |         Cadena          |                      | API Press Written |
-| `width` / `height`           | Dimensiones de la página (en píxeles)                        |    No    |    No     |         Entero          |                      | API Press Written |
-| `nameFile`                   | Nombre del fichero de imagen / PDF                           |    No    |    No     |         Cadena          |                      | API Press Written |
-| `pathComplete`               | Ruta completa en el repositorio                              |    No    |    No     |         Cadena          |                      | API Press Written |
-| `boundingBoxMax`             | Coordenadas máximas de la página                             |    No    |    No     |         Objeto          |     JSON object      | API Press Written |
-| `status_foto`                | Indica si la página incluye foto (`true`/`false`)            |    No    |    No     |         Cadena          |                      | API Press Written |
-| `status_continue`            | Indica si la extracción continúa en páginas siguientes       |    No    |    No     |         Cadena          |                      | API Press Written |
+| Campo                        | Descripción                                                  | Buscable | Ordenable |          Tipo           |       Formato        |    Servicio     |
+| ---------------------------- | ------------------------------------------------------------ | :------: | :-------: | :---------------------: | :------------------: | :-------------: |
+| `id`                         | Identificador único asignado por TrawlingWeb a cada artículo |    No    |    No     |         Cadena          |                      | API Print media |
+| `id_page`                    | Código de página dentro del medio                            |    No    |    No     |         Cadena          |                      | API Print media |
+| `published`                  | Fecha de publicación                                         |    Sí    |    Sí     |          Fecha          |     ISO 8601-UTC     | API Print media |
+| `crawled`                    | Fecha y hora de rastreo (timestamp en ms)                    |    Sí    |    Sí     |         Entero          | UNIX Timestamp (ms)  | API Print media |
+| `updated`                    | Última fecha de actualización del registro                   |    Sí    |    Sí     |          Fecha          |     ISO 8601-UTC     | API Print media |
+| `site`                       | Nombre del medio (ej. “Expreso”)                             |    Sí    |    No     |         Cadena          |                      | API Print media |
+| `site_language`              | Idioma del medio                                             |    Sí    |    No     |         Cadena          |      ISO 639-1       | API Print media |
+| `site_country`               | País del medio                                               |    Sí    |    No     |         Cadena          | ISO 3166-1 (alpha-2) | API Print media |
+| `site_type`                  | Tipo de sitio (p.ej. “Newspaper”)                            |    Sí    |    No     |         Cadena          |                      | API Print media |
+| `site_tier`                  | Categoría de alcance del medio (p.ej. “1”, “2”)              |    No    |    No     |         Cadena          |                      | API Print media |
+| `site_owner`                 | Propietario del medio                                        |    No    |    No     |         Cadena          |                      | API Print media |
+| `site_topic`                 | Tema principal del medio (p.ej. “News”)                      |    Sí    |    No     |         Cadena          |                      | API Print media |
+| `site_region1` / `region2/3` | Regiones geográficas que cubre el medio                      |    No    |    No     |         Cadena          |                      | API Print media |
+| `site_scope`                 | Alcance geográfico (p.ej. “Nacional”)                        |    No    |    No     |         Cadena          |                      | API Print media |
+| `title`                      | Título del artículo                                          |    Sí    |    No     |         Cadena          |                      | API Print media |
+| `opening`                    | Entradilla / subtítulo                                       |    No    |    No     |         Cadena          |                      | API Print media |
+| `text`                       | Texto breve o extracto                                       |    Sí    |    No     |         Cadena          |                      | API Print media |
+| `textFull`                   | Texto completo del artículo                                  |    No    |    No     |         Cadena          |                      | API Print media |
+| `caption`                    | Pie de foto                                                  |    No    |    No     |         Cadena          |                      | API Print media |
+| `note`                       | Notas o comentarios adicionales                              |    No    |    No     |         Cadena          |                      | API Print media |
+| `title_vision_paragraphs`    | Párrafos del título con coordenadas de bounding box          |    No    |    No     |    Lista de objetos     |      JSON array      | API Print media |
+| `opening_vision_paragraphs`  | Párrafos de la entradilla con bounding box                   |    No    |    No     |    Lista de objetos     |      JSON array      | API Print media |
+| `note_vision_paragraphs`     | Párrafos de la nota con bounding box                         |    No    |    No     |    Lista de objetos     |      JSON array      | API Print media |
+| `caption_vision_paragraphs`  | Párrafos del pie de foto con bounding box                    |    No    |    No     |    Lista de objetos     |      JSON array      | API Print media |
+| `text_vision_paragraphs`     | Párrafos del texto completo con bounding box                 |    No    |    No     |    Lista de objetos     |      JSON array      | API Print media |
+| `pages`                      | Número de página en la que aparece el artículo               |    No    |    No     |         Cadena          |                      | API Print media |
+| `page`                       | Índice de página                                             |    No    |    No     |         Cadena          |                      | API Print media |
+| `audience`                   | Audiencia estimada del medio                                 |    No    |    No     |         Entero          |                      | API Print media |
+| `circulation`                | Tirada o ejemplares distribuidos                             |    No    |    No     |         Entero          |                      | API Print media |
+| `value`                      | Valor económico estimado                                     |    No    |    No     | Número en coma flotante |                      | API Print media |
+| `valuePage`                  | Valor por página                                             |    No    |    No     | Número en coma flotante |                      | API Print media |
+| `meta_ocupation`             | Código de ocupación genérico                                 |    No    |    No     |         Cadena          |                      | API Print media |
+| `meta_ocupation_fine`        | Código de ocupación detallado                                |    No    |    No     |         Cadena          |                      | API Print media |
+| `width` / `height`           | Dimensiones de la página (en píxeles)                        |    No    |    No     |         Entero          |                      | API Print media |
+| `nameFile`                   | Nombre del fichero de imagen / PDF                           |    No    |    No     |         Cadena          |                      | API Print media |
+| `pathComplete`               | Ruta completa en el repositorio                              |    No    |    No     |         Cadena          |                      | API Print media |
+| `boundingBoxMax`             | Coordenadas máximas de la página                             |    No    |    No     |         Objeto          |     JSON object      | API Print media |
+| `status_foto`                | Indica si la página incluye foto (`true`/`false`)            |    No    |    No     |         Cadena          |                      | API Print media |
+| `status_continue`            | Indica si la extracción continúa en páginas siguientes       |    No    |    No     |         Cadena          |                      | API Print media |
 
 ---
 
 ## Datos de petición
 
-| Dato           | Descripción                                                  |  Tipo  |     Servicio      |
-| :------------- | :----------------------------------------------------------- | :----: | :---------------: |
-| `requestLeft`  | Consultas restantes según tu plan                            | Entero | API Press Written |
-| `totalResults` | Total de artículos encontrados                               | Entero | API Press Written |
-| `restResults`  | Resultados pendientes de entrega                             | Entero | API Press Written |
-| `next`         | URL para paginar y obtener la siguiente página de resultados | Cadena | API Press Written |
+| Dato           | Descripción                                                  |  Tipo  |    Servicio     |
+| :------------- | :----------------------------------------------------------- | :----: | :-------------: |
+| `requestLeft`  | Consultas restantes según tu plan                            | Entero | API Print media |
+| `totalResults` | Total de artículos encontrados                               | Entero | API Print media |
+| `restResults`  | Resultados pendientes de entrega                             | Entero | API Print media |
+| `next`         | URL para paginar y obtener la siguiente página de resultados | Cadena | API Print media |
 
 ---
 
