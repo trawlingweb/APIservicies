@@ -1,56 +1,84 @@
 
 ---
-# ES: Servicios API de TrawlingWeb
+# ES: FeedScale - Solución de Conectividad de Datos de TrawlingWeb
 
-Bienvenido al repositorio de soporte de los Servicios API de TrawlingWeb. Aquí encontrarás guías completas, manuales y recursos para ayudarte a aprovechar al máximo nuestros servicios API.
+Bienvenido al repositorio de soporte de **FeedScale**, nuestra solución de conectividad de datos para empresas que necesitan integrar grandes volúmenes de contenidos informativos en sus propios sistemas. Aquí encontrarás guías completas, manuales y recursos para ayudarte a aprovechar al máximo nuestros servicios.
 
 ## Descripción General
 
-TrawlingWeb ofrece un conjunto de potentes APIs diseñadas para ayudarte a recopilar, gestionar y analizar datos de diversas fuentes. Ya sea que busques integrar datos de redes sociales, noticias u otros contenidos en línea en tus aplicaciones, nuestras APIs proporcionan la flexibilidad y funcionalidad que necesitas.
+**FeedScale** es nuestra solución de conectividad de datos que ofrece acceso vía API a un repositorio en tiempo real de **noticias digitales, blogs y publicaciones relevantes en redes sociales**, estructurado y enriquecido semánticamente con inteligencia artificial. 
+
+Todo el contenido proviene de medios públicos, abiertos y legalmente accesibles, listos para ser analizados, visualizados o integrados en plataformas propias.
+
+## 🔧 Así funciona FeedScale
+
+![FeedScale Flow](https://img1.wsimg.com/isteam/ip/ad0a6f5f-49c3-4317-8961-3481f38bcd12/FeedScale_Flow-8eb5d05.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280,h:720)
+
+*Diagrama del flujo de procesamiento de datos de FeedScale: desde la captura de fuentes hasta la entrega estructurada de contenido.*
+
+## 🌐 Universo de Captura de FeedScale
+
+**Millones de fuentes. Miles de resultados cada hora. Todo estructurado y listo para usar.**
+
+Nuestra infraestructura captura y procesa de forma continua contenidos provenientes de:
+
+- 🗞️ Más de **18 millones de fuentes** digitales indexadas
+- 📱 Cientos de miles de publicaciones diarias en **redes sociales públicas**
+- ✍️ Miles de blogs y medios temáticos especializados
+- 🌍 Cobertura en **43 idiomas y más de 90 países**
 
 ## ¿Qué Ofrecen Nuestras APIs?
 
-Nuestras APIs te permiten:
+FeedScale te permite:
 - **Recopilar Datos:** Recoger datos de múltiples fuentes como redes sociales, sitios web de noticias y más.
 - **Procesar Datos:** Utilizar nuestros servicios ETL (Extract, Transform, Load) para limpiar y organizar los datos.
 - **Analizar Datos:** Conectar los datos recopilados a herramientas de visualización para un análisis en profundidad.
 
-## ¿Para qué usar nuestras API?
-***Aplicaciones más comunes***
+## 🎯 ¿A quién va dirigido FeedScale?
 
-Las API de TrawlingWeb pueden ser aplicadas en una variedad de industrias, proporcionando soluciones efectivas para la recopilación y análisis de datos en línea. A continuación, se describen dos de las aplicaciones más comunes:
+FeedScale está diseñado para empresas que necesitan integrar grandes volúmenes de contenidos informativos. Las aplicaciones más comunes incluyen:
 
-### 1. **Monitoreo de Medios para Marcas**
-   Las empresas especializadas en monitoreo de medios pueden utilizar las API de TrawlingWeb para rastrear y analizar menciones en sitios de noticias, blogs y otras fuentes en línea. Esto les permite:
+- **🧠 Social Listening y PR:** más cobertura, menos coste; alertas y sentimiento listos para usar.
+- **📰 Monitoreo de medios:** noticias y menciones en tiempo real, multifuente y multidioma.
+- **📊 Investigación de mercados/insights:** tendencias, volumen y contexto para estudios y reports.
+- **🏢 Grandes agencias de marketing/comunicación:** ingesta vía API para dashboards y reporting.
+- **🧩 Equipos de BI/Analytics:** datos estructurados, integrables en tu stack (ETL/DB/Looker/Power BI).
+- **🛡️ Corporaciones con foco en reputación y riesgos:** detección temprana y anticipación.
+- **🚀 Startups y productos de datos:** acelerar time‑to‑market sin construir la captura desde cero.
+
+### Casos de Uso Específicos
+
+#### 1. **Monitoreo de Medios para Marcas**
+   Las empresas especializadas en monitoreo de medios pueden utilizar FeedScale para rastrear y analizar menciones en sitios de noticias, blogs y otras fuentes en línea. Esto les permite:
    - **Monitorear la reputación de las marcas de sus clientes** en tiempo real.
    - **Generar informes sobre la exposición mediática** de las marcas en distintas regiones y fuentes.
    - **Detectar rápidamente menciones críticas o positivas** que pueden afectar la percepción pública.
 
-### 2. **Social Listening para Redes Sociales**
-   Las empresas que ofrecen servicios de Social Listening pueden aprovechar las API de TrawlingWeb para rastrear conversaciones en redes sociales y obtener KPIs relevantes e insights valiosos. Algunas de las funcionalidades clave incluyen:
+#### 2. **Social Listening para Redes Sociales**
+   Las empresas que ofrecen servicios de Social Listening pueden aprovechar FeedScale para rastrear conversaciones en redes sociales y obtener KPIs relevantes e insights valiosos. Algunas de las funcionalidades clave incluyen:
    - **Seguimiento de menciones en redes sociales** (como Twitter, Facebook, Instagram y YouTube) relacionadas con productos, marcas o temas específicos.
    - **Identificación de tendencias emergentes** a través del análisis de hashtags, palabras clave y menciones.
    - **Análisis de KPIs de interacción** (me gusta, comentarios, compartidos) para medir el impacto de las campañas en redes sociales.
 
 
-## Registro y Uso Gratuito de las APIs
+## Registro y Uso Gratuito de FeedScale
 
-Te invitamos a registrarte y comenzar a utilizar cualquiera de nuestras APIs de manera gratuita. Este acceso inicial no tiene costo, pero incluye ciertas limitaciones que se pueden ajustar según tus necesidades específicas.
+Te invitamos a registrarte y comenzar a utilizar FeedScale de manera gratuita. Este acceso inicial no tiene costo, pero incluye ciertas limitaciones que se pueden ajustar según tus necesidades específicas.
 
-1. **Regístrate Gratis:** Crea una cuenta en [TrawlingWeb](https://dashboard.trawlingweb.com/register) y accede a nuestras APIs sin costo.
-2. **Explora y Experimenta:** Comprueba la utilidad de nuestras APIs en tus proyectos.
+1. **Regístrate Gratis:** Crea una cuenta en [TrawlingWeb](https://dashboard.trawlingweb.com/register) y accede a FeedScale sin costo.
+2. **Explora y Experimenta:** Comprueba la utilidad de FeedScale en tus proyectos.
 3. **Cotización de Servicios:** Una vez validados los servicios, puedes solicitar una cotización para servicios ampliados a través de nuestro contacto de email.
 
 
 ## Empezando
 
-### Autenticación de la API
-Para acceder a nuestras APIs, necesitarás autenticar tus solicitudes usando una clave API. Aquí te explicamos cómo obtener y usar tu clave API:
+### Autenticación de FeedScale
+Para acceder a FeedScale, necesitarás autenticar tus solicitudes usando una clave API. Aquí te explicamos cómo obtener y usar tu clave API:
 
 1. **Regístrate:** Crea una cuenta en TrawlingWeb desde [aquí](https://dashboard.trawlingweb.com/register)
-2. **Elige tu servicio API**: Elige que servicio o servicios API qeuires probar.
-2. **Consigue tus Clave API:** Una vez dentro del playground pudes conseguir tus claves API en la pagina de inicio.
-3. **Usa tu servicio medinate API REST:** Consulta la documentación del servicio API que quieres probar. Aqui tienes un indice de servicios y sus repsectivas documentaciones:
+2. **Elige tu servicio API**: Elige que servicio o servicios API de FeedScale quieres probar.
+3. **Consigue tus Clave API:** Una vez dentro del playground puedes conseguir tus claves API en la página de inicio.
+4. **Usa FeedScale mediante API REST:** Consulta la documentación del servicio API que quieres probar. Aquí tienes un índice de servicios y sus respectivas documentaciones:
 - [API news](https://github.com/trawlingweb/APIservicies/tree/main/API%20news)
 - [API Twitter](https://github.com/trawlingweb/APIservicies/tree/main/API%20Twitter)
 - [API Facebook](https://github.com/trawlingweb/APIservicies/tree/main/API%20facebook)
@@ -89,7 +117,9 @@ Nuestras APIs pueden integrarse con herramientas de visualización populares com
 
 ## Conclusión
 
-Los servicios API de TrawlingWeb ofrecen una solución robusta para la recopilación, procesamiento y análisis de datos. Siguiendo las guías y utilizando los recursos proporcionados en este repositorio, puedes integrar eficazmente nuestras APIs en tus flujos de trabajo y desbloquear valiosos insights de tus datos.
+**FeedScale** de TrawlingWeb ofrece una solución robusta para la recopilación, procesamiento y análisis de datos en tiempo real. Con acceso a más de 18 millones de fuentes digitales y cobertura en 43 idiomas, FeedScale proporciona la conectividad de datos que tu empresa necesita para integrar grandes volúmenes de contenidos informativos en sus propios sistemas.
+
+Siguiendo las guías y utilizando los recursos proporcionados en este repositorio, puedes integrar eficazmente FeedScale en tus flujos de trabajo y desbloquear valiosos insights de tus datos.
 
 Para obtener información más detallada, consulta nuestra documentación oficial y páginas de soporte.
 
@@ -110,57 +140,85 @@ Si tienes alguna pregunta, necesitas asistencia, contratar o ampliar tus servici
 
 ---
 
-# ENG: TrawlingWeb API Services
+# ENG: FeedScale - TrawlingWeb Data Connectivity Solution
 
-Welcome to the support repository for TrawlingWeb API Services. Here you will find comprehensive guides, manuals, and resources to help you make the most of our API services.
+Welcome to the support repository for **FeedScale**, our data connectivity solution for companies that need to integrate large volumes of informational content into their own systems. Here you will find comprehensive guides, manuals, and resources to help you make the most of our services.
 
 ## Overview
 
-TrawlingWeb offers a set of powerful APIs designed to help you collect, manage, and analyze data from various sources. Whether you're looking to integrate data from social media, news, or other online content into your applications, our APIs provide the flexibility and functionality you need.
+**FeedScale** is our data connectivity solution that offers API access to a real-time repository of **digital news, blogs, and relevant social media publications**, structured and semantically enriched with artificial intelligence.
 
-## What Do Our APIs Offer?
+All content comes from public, open, and legally accessible media, ready to be analyzed, visualized, or integrated into proprietary platforms.
 
-Our APIs allow you to:
+## 🔧 How FeedScale Works
+
+![FeedScale Flow](https://img1.wsimg.com/isteam/ip/ad0a6f5f-49c3-4317-8961-3481f38bcd12/FeedScale_Flow-8eb5d05.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280,h:720)
+
+*FeedScale data processing flow diagram: from source capture to structured content delivery.*
+
+## 🌐 FeedScale Capture Universe
+
+**Millions of sources. Thousands of results every hour. Everything structured and ready to use.**
+
+Our infrastructure continuously captures and processes content from:
+
+- 🗞️ More than **18 million indexed** digital sources
+- 📱 Hundreds of thousands of daily publications on **public social networks**
+- ✍️ Thousands of specialized thematic blogs and media
+- 🌍 Coverage in **43 languages and more than 90 countries**
+
+## What Does FeedScale Offer?
+
+FeedScale allows you to:
 - **Collect Data:** Gather data from multiple sources such as social media, news websites, and more.
 - **Process Data:** Use our ETL (Extract, Transform, Load) services to clean and organize the data.
 - **Analyze Data:** Connect the collected data to visualization tools for in-depth analysis.
 
 
-## Why Use Our APIs?
-***Common Applications***
+## 🎯 Who is FeedScale For?
 
-TrawlingWeb's APIs can be applied across a variety of industries, providing effective solutions for online data collection and analysis. Below are two of the most common applications:
+FeedScale is designed for companies that need to integrate large volumes of informational content. The most common applications include:
 
-### 1. **Brand Media Monitoring**
-   Companies specializing in media monitoring can use TrawlingWeb's APIs to track and analyze mentions on news sites, blogs, and other online sources. This allows them to:
+- **🧠 Social Listening and PR:** more coverage, less cost; alerts and sentiment ready to use.
+- **📰 Media monitoring:** real-time news and mentions, multi-source and multilingual.
+- **📊 Market research/insights:** trends, volume and context for studies and reports.
+- **🏢 Large marketing/communication agencies:** API ingestion for dashboards and reporting.
+- **🧩 BI/Analytics teams:** structured data, integrable into your stack (ETL/DB/Looker/Power BI).
+- **🛡️ Corporations focused on reputation and risks:** early detection and anticipation.
+- **🚀 Startups and data products:** accelerate time-to-market without building capture from scratch.
+
+### Specific Use Cases
+
+#### 1. **Brand Media Monitoring**
+   Companies specializing in media monitoring can use FeedScale to track and analyze mentions on news sites, blogs, and other online sources. This allows them to:
    - **Monitor their clients' brand reputation** in real-time.
    - **Generate reports on media exposure** for brands across different regions and sources.
    - **Quickly detect critical or positive mentions** that could affect public perception.
 
-### 2. **Social Listening for Social Networks**
-   Companies offering Social Listening services can leverage TrawlingWeb's APIs to track conversations on social media and gain relevant KPIs and valuable insights. Some key functionalities include:
+#### 2. **Social Listening for Social Networks**
+   Companies offering Social Listening services can leverage FeedScale to track conversations on social media and gain relevant KPIs and valuable insights. Some key functionalities include:
    - **Tracking mentions on social networks** (such as Twitter, Facebook, Instagram, and YouTube) related to products, brands, or specific topics.
    - **Identifying emerging trends** through the analysis of hashtags, keywords, and mentions.
    - **Analyzing interaction KPIs** (likes, comments, shares) to measure the impact of social media campaigns.
 
 
-## Registration and Free Use of APIs
+## Registration and Free Use of FeedScale
 
-We invite you to register and start using any of our APIs for free. This initial access is cost-free but includes certain limitations that can be adjusted according to your specific needs.
+We invite you to register and start using FeedScale for free. This initial access is cost-free but includes certain limitations that can be adjusted according to your specific needs.
 
-1. **Register for Free:** Create an account at [TrawlingWeb](https://dashboard.trawlingweb.com/register) and access our APIs at no cost.
-2. **Explore and Experiment:** Check the usefulness of our APIs in your projects.
+1. **Register for Free:** Create an account at [TrawlingWeb](https://dashboard.trawlingweb.com/register) and access FeedScale at no cost.
+2. **Explore and Experiment:** Check the usefulness of FeedScale in your projects.
 3. **Service Quotation:** Once the services are validated, you can request a quote for extended services through our contact email.
 
 ## Getting Started
 
-### API Authentication
-To access our APIs, you will need to authenticate your requests using an API key. Here's how to obtain and use your API key:
+### FeedScale Authentication
+To access FeedScale, you will need to authenticate your requests using an API key. Here's how to obtain and use your API key:
 
 1. **Register:** Create an account at TrawlingWeb from [here](https://dashboard.trawlingweb.com/register).
-2. **Choose Your API Service:** Select the API service or services you want to test.
+2. **Choose Your API Service:** Select the FeedScale API service or services you want to test.
 3. **Get Your API Keys:** Once inside the playground, you can get your API keys on the homepage.
-4. **Use Your Service via REST API:** Refer to the documentation of the API service you want to test. Here is an index of services and their respective documentation:
+4. **Use FeedScale via REST API:** Refer to the documentation of the API service you want to test. Here is an index of services and their respective documentation:
    - [API News](https://github.com/trawlingweb/APIservicies/tree/main/API%20news)
    - [API Twitter](https://github.com/trawlingweb/APIservicies/tree/main/API%20Twitter)
    - [API Facebook](https://github.com/trawlingweb/APIservicies/tree/main/API%20facebook)
@@ -197,7 +255,9 @@ Our APIs can integrate with popular visualization tools such as Looker Studio to
 
 ## Conclusion
 
-TrawlingWeb API services offer a robust solution for data collection, processing, and analysis. By following the guides and using the resources provided in this repository, you can effectively integrate our APIs into your workflows and unlock valuable insights from your data.
+**FeedScale** by TrawlingWeb offers a robust solution for real-time data collection, processing, and analysis. With access to more than 18 million digital sources and coverage in 43 languages, FeedScale provides the data connectivity your company needs to integrate large volumes of informational content into your own systems.
+
+By following the guides and using the resources provided in this repository, you can effectively integrate FeedScale into your workflows and unlock valuable insights from your data.
 
 For more detailed information, refer to our official documentation and support pages.
 
