@@ -86,14 +86,6 @@ text:constitucion?
    "partido de futbol"
    ```
 
-3. **Proximidad**
-
-   ```
-   "Corte Constitucional"~5
-   ```
-
-   → “Corte” y “Constitucional” con máximo 5 palabras de separación.
-
 4. **Campo específico**
 
    ```

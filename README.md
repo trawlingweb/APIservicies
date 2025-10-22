@@ -84,6 +84,7 @@ Para acceder a FeedScale, necesitarás autenticar tus solicitudes usando una cla
 - [API Facebook](https://github.com/trawlingweb/APIservicies/tree/main/API%20facebook)
 - [API Instagram](https://github.com/trawlingweb/APIservicies/tree/main/API%20instagram)
 - [API YouTube](https://github.com/trawlingweb/APIservicies/tree/main/API%20youtube)
+- [API TikTok](https://github.com/trawlingweb/APIservicies/tree/main/API%20TikTok)
 - [API Legal](https://github.com/trawlingweb/APIservicies/tree/main/API%20legal)
 
 
@@ -224,6 +225,7 @@ To access FeedScale, you will need to authenticate your requests using an API ke
    - [API Facebook](https://github.com/trawlingweb/APIservicies/tree/main/API%20facebook)
    - [API Instagram](https://github.com/trawlingweb/APIservicies/tree/main/API%20instagram)
    - [API YouTube](https://github.com/trawlingweb/APIservicies/tree/main/API%20youtube)
+   - [API TikTok](https://github.com/trawlingweb/APIservicies/tree/main/API%20TikTok)
    - [API Legal](https://github.com/trawlingweb/APIservicies/tree/main/API%20legal)
 
 ### Example of Use

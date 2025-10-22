@@ -110,13 +110,6 @@ The TrawlingWeb APIs allow queries that can contain boolean operators based on L
 
 Here are some query examples to illustrate the use of Lucene syntax in our News API:
 
-* Proximity Searches (or near): Find words that are a certain distance apart.
-
-   ```
-   "financial crime"~5
-   ```
-   the match will be if both words are found and they are located within a maximum distance of 5 characters between them
-
 * Search for articles that contain the word "technology":
 
   ```

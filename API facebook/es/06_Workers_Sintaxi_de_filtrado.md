@@ -99,13 +99,6 @@ A continuación, te presentamos algunas características clave y ejemplos útile
 
 Aquí tienes algunos ejemplos de consultas para ilustrar el uso de la sintaxis de Lucene en nuestra API de Noticias:
 
-* Búsquedas de Proximidad (o near): Encuentra palabras que estén a cierta distancia entre sí.
-
-   ```
-   "delito financiero"~5
-   ```
-   el match será si se encuentran las dos palabras y estas se encuentra ubicadas a una distancia máxima de 5 caractéres entre estas
-
 * Buscar artículos que contengan la palabra "tecnología":
 
   ```

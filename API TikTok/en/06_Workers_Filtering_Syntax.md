@@ -1,6 +1,6 @@
-# Using Basic Boolean Queries in the TrawlingWeb Instagram API
+# Using Basic Boolean Queries in the TrawlingWeb TikTok API
 
-TrawlingWeb APIs accept boolean queries combined with Lucene syntax expressions. Below, we show some practical examples to help you have a better experience and optimize your searches and results when using the Instagram API.
+TrawlingWeb APIs accept boolean queries combined with Lucene syntax expressions. Below, we show some practical examples to help you have a better experience and optimize your searches and results when using the TikTok API.
 
 ## Always within `q=`
 Remember that these boolean expressions can only be used within the q= parameter in the API call and must be combined with the necessary PATH filters and parameters.
@@ -141,7 +141,7 @@ If you have any questions, need assistance, want to hire or expand your services
 
 **Technical Support (SAT):**
 * [Email SAT](mailto:support@trawlingweb.com)
-* [Official Documentation](https://docs.trawlingweb.com)
+* [Official Documentation](https://github.com/trawlingweb/APIservicies/tree/main/API%20TikTok)
 
 **Administrative Support (SAC):**
 * [Email SAC](mailto:gestion@trawlingweb.com)

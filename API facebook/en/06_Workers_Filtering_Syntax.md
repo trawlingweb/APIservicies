@@ -98,13 +98,6 @@ Below, we present some key features and useful examples to optimize your user ex
 
 Here are some query examples to illustrate the use of Lucene syntax in our News API:
 
-* Proximity Searches (or near): Finds words that are within a certain distance of each other.
-
-```
-"financial crime"~5
-```
-The match will be if the two words are found and they are located within a maximum distance of 5 characters from each other.
-
 * Search for articles containing the word "technology":
 
 ```

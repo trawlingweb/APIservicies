@@ -1,6 +1,6 @@
-# Uso de Consultas Booleanas Básicas en el API de Twitter de TrawlingWeb
+# Uso de Consultas Booleanas Básicas en el API de API TikTok de TrawlingWeb
 
-Las APIs de TrawlingWeb aceptan consultas booleanas combinadas con expresiones de la sintaxis de Lucene. A continuación, mostramos algunos ejemplos prácticos que te ayudarán a tener una mejor experiencia y optimizar tus búsquedas y resultados al utilizar la API de Twitter.
+Las APIs de TrawlingWeb aceptan consultas booleanas combinadas con expresiones de la sintaxis de Lucene. A continuación, mostramos algunos ejemplos prácticos que te ayudarán a tener una mejor experiencia y optimizar tus búsquedas y resultados al utilizar la API de API TikTok.
 
 Recuerda que estas expresiones booleanas solo pueden utilizarse dentro del parámetro q= en la llamada a la API y deben combinarse con los filtros y parámetros PATH necesarios.
 
@@ -139,7 +139,7 @@ Si tienes alguna pregunta, necesitas asistencia, contratar o ampliar tus servici
 
 **SAT (Soporte Técnico):**
 * [Correo SAT](mailto:support@trawlingweb.com)
-* [Documentación Oficial](https://docs.trawlingweb.com)
+* [Documentación Oficial](https://github.com/trawlingweb/APIservicies/tree/main/API%20TikTok)
 
 **SAC (Soporte administrativo):**
 * [Correo SAC](mailto:gestion@trawlingweb.com)
