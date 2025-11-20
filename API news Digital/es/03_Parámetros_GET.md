@@ -1,11 +1,13 @@
 # API NEWS & BLOGS - Parámetros GET
 
 ### Introducción
+
 En esta sección, se presenta una guía detallada sobre cómo construir y ejecutar consultas utilizando la API News & Blogs de TrawlingWeb. Esta API permite a los usuarios acceder a una amplia base de datos de contenidos capturados, filtrando y recuperando información específica mediante el uso de parámetros GET.
 
 A continuación, se explican los métodos estándar para realizar consultas, desglosando cada componente de la URL de ejemplo. También se proporciona una tabla con una descripción exhaustiva de cada parámetro, su uso, valores predeterminados y ejemplos prácticos. Esta información es esencial para los desarrolladores y usuarios que buscan maximizar la eficiencia y precisión de sus consultas a la API.
 
 ## Métodos Standard
+
 Veamos la estructura de la consulta de ejemplo:
 
 ```
@@ -36,14 +38,18 @@ https://api.trawlingweb.com/?token={APIKEY}&q="messi"%20AND%20"Barcelona"&ts=151
 ---
 
 # Contacto
+
 Si tienes alguna pregunta, necesitas asistencia, contratar o ampliar tus servicios por favor contacta con nosotros.
 
 **SAT (Soporte Técnico):**
-* [Correo SAT](mailto:support@trawlingweb.com)
-* [Documentación Oficial](https://docs.trawlingweb.com)
+
+- [Correo SAT](mailto:support@trawlingweb.com)
+- [Documentación Oficial](https://docs.trawlingweb.com)
 
 **SAC (Soporte administrativo):**
-* [Correo SAC](mailto:gestion@trawlingweb.com)
+
+- [Correo SAC](mailto:gestion@trawlingweb.com)
 
 **Sales (Soporte ventas):**
-* [Correo Ventas](mailto:sales@trawlingweb.com)
+
+- [Correo Ventas](mailto:sales@trawlingweb.com)
