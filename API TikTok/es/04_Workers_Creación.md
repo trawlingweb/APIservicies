@@ -48,6 +48,30 @@ https://tiktok.trawlingweb.com/create/?token={APIKEY}
 | description | Descripción que ha de tener el Worker. | Valor obligatorio | Cadena no superior a 200 carácteres                       |
 | words       | Palabras de búsqueda.                  | Valor obligatorio | El número de parablas no ha de superar el límite acordado |
 
+### Estructura del parámetro words
+
+El parámetro `words` debe enviarse como un **array JSON** de cadenas de texto, donde cada elemento del array representa una Palabra Clave. Cada Palabra Clave puede contener sintaxis avanzada de TikTok (hashtags, menciones, etc.).
+
+### Ejemplo de body en formato JSON:
+
+```json
+{
+    "description": "Worker de ejemplo para monitoreo de marcas",
+    "words": [
+        "#pepsi",
+        "@cocacola",
+        "#openai"
+    ]
+}
+```
+
+En este ejemplo, el Worker se crea con 3 Palabras Clave:
+1. Un hashtag: "#pepsi"
+2. Una mención: "@cocacola"
+3. Un hashtag específico: "#openai"
+
+Cada elemento del array `words` consume 1 crédito (1 crédito = 1 Palabra Clave).
+
 # Respuesta de salida - RESPONSE
 
 Una vez lanzada una petición al API de TikTok éste devolverá una respuesta estructurada de la siguiente forma:
@@ -88,11 +112,11 @@ TikTok utiliza su propia sintaxis avanzada para ejecutar búsquedas específicas
 
 Aquí tienes un listado de los elementos que puedes combinar con tus palabras clave al crearlas dentro de un worker:
 
-| Tipo              | Descripción                                                                          | Ejemplo                   |
-| ----------------- | :----------------------------------------------------------------------------------- | :------------------------ |
-| Hashtag           | Términos referenciados con la almohadilla #                                          | #pepsi                     |
-| Arroba            | Usuarios referenciados con la arroba @                                               | @cocacola                     |
-| Hashtag específico| Búsqueda de hashtags específicos                                                     | #openai                    |
+| Tipo              | Descripción                                                                          | Ejemplo keyword                | Resultado                                                                           |
+| ----------------- | :----------------------------------------------------------------------------------- | :----------------------------- | ----------------------------------------------------------------------------------- |
+| Hashtag           | Términos referenciados con la almohadilla #                                          | #pepsi                         | devolverá posts que contienen el hashtag (#) pepsi                                     |
+| Arroba            | Usuarios referenciados con la arroba @                                               | @cocacola                      | devolverá posts en los que se ha etiquetado/mencionado (@) cocacola                   |
+| Hashtag específico| Búsqueda de hashtags específicos                                                     | #openai                        | devolverá posts que contienen el hashtag (#) openai                                 |
 
 
 ## Caracteres reservados en palabras de búsqueda

@@ -47,6 +47,30 @@ https://tiktok.trawlingweb.com/create/?token={APIKEY}
 | description | Description of the Worker.              | Required value    | String up to 200 characters                                |
 | words       | Search keywords.                       | Required value    | Number of words not exceeding agreed limit                  |
 
+### Structure of the words parameter
+
+The `words` parameter must be sent as a **JSON array** of text strings, where each array element represents a Keyword. Each Keyword can contain advanced TikTok syntax (hashtags, mentions, etc.).
+
+### Example body in JSON format:
+
+```json
+{
+    "description": "Example Worker for brand monitoring",
+    "words": [
+        "#pepsi",
+        "@cocacola",
+        "#openai"
+    ]
+}
+```
+
+In this example, the Worker is created with 3 Keywords:
+1. A hashtag: "#pepsi"
+2. A mention: "@cocacola"
+3. A specific hashtag: "#openai"
+
+Each element in the `words` array consumes 1 credit (1 credit = 1 Keyword).
+
 # Output Response - RESPONSE
 
 Upon making a request to the TikTok API, it will return a structured response as follows:
@@ -86,11 +110,11 @@ TikTok utilizes its own advanced syntax to execute specific and detailed searche
 
 Here's a list of elements you can combine with your keywords when creating them within a worker:
 
-| Type              | Description                                                                          | Example                   |
-| ----------------- | :----------------------------------------------------------------------------------- | :------------------------ |
-| Hashtag           | Terms referenced with the # symbol                                                     | #pepsi                     |
-| Mention           | Users referenced with the @ symbol                                                      | @cocacola                     |
-| Specific Hashtag  | Search for specific hashtags                                                           | #openai                    |
+| Type              | Description                                                                          | Example keyword                | Result                                                                           |
+| ----------------- | :----------------------------------------------------------------------------------- | :----------------------------- | ----------------------------------------------------------------------------------- |
+| Hashtag           | Terms referenced with the # symbol                                                     | #pepsi                         | returns posts that contain the hashtag (#) pepsi                                     |
+| Mention           | Users referenced with the @ symbol                                                      | @cocacola                      | returns posts in which @cocacola has been tagged/mentioned                   |
+| Specific Hashtag  | Search for specific hashtags                                                           | #openai                        | returns posts that contain the hashtag (#) openai                                 |
 
 ## Reserved Characters in Search Keywords
 

@@ -48,6 +48,34 @@ https://facebook.trawlingweb.com/create/?token={APIKEY}
 | description | Descripción que ha de tener el Worker. | Valor obligatorio | Cadena no superior a 200 carácteres                       |
 | words       | Palabras de búsqueda.                  | Valor obligatorio | El número de parablas no ha de superar el límite acordado |
 
+### Estructura del parámetro words
+
+El parámetro `words` debe enviarse como un **array JSON** de cadenas de texto, donde cada elemento del array representa una Palabra Clave. Cada Palabra Clave puede contener sintaxis avanzada de Facebook (hashtags, menciones, operadores booleanos, etc.).
+
+### Ejemplo de body en formato JSON:
+
+```json
+{
+    "description": "Worker de ejemplo para monitoreo de marcas",
+    "words": [
+        "cocacola",
+        "#pepsi",
+        "@cocacola",
+        "Cocacola (__) Pepsi",
+        "\"cocacola con hielo\""
+    ]
+}
+```
+
+En este ejemplo, el Worker se crea con 5 Palabras Clave:
+1. Una palabra simple: "cocacola"
+2. Un hashtag: "#pepsi"
+3. Una mención: "@cocacola"
+4. Una búsqueda con OR usando (__): "Cocacola (__) Pepsi"
+5. Una búsqueda exacta entre comillas: "cocacola con hielo"
+
+Cada elemento del array `words` consume 1 crédito (1 crédito = 1 Palabra Clave).
+
 # Respuesta de salida - RESPONSE
 
 Una vez lanzada una petición al API de Facebook éste devolverá una respuesta estructurada de la siguiente forma:
@@ -88,15 +116,15 @@ Facebook utiliza su propia sintaxis avanzada para ejecutar búsquedas específic
 
 Aquí tienes un listado de los elementos que puedes combinar con tus palabras clave al crearlas dentro de un worker:
 
-| Tipo              | Descripción                                                                          | Ejemplo                   |
-| ----------------- | :----------------------------------------------------------------------------------- | :------------------------ |
-| Hashtag           | Términos referenciados con la almohadilla #                                          | #pepsi                     |
-| Arroba            | Usuarios referenciados con la arroba @                                               | @cocacola                     |
-| Cadena simple     | Palabra con términos alfanuméricos sin caracteres especiales                         | Studio54                  |
-| Cadena complejas  | Palabras con términos alfanuméricos sin caracteres especiales separadas por espacios | Cocoa Cola 2019          |
-| Búsqueda exacta   | Palabras o frases específicas entre comillas                                         | "cocacola con hielo"      |
-| Búsqueda con OR   | Palabras múltiples separadas por Espacio (__) para ampliar resultados                          | Cocacola (__) Pepsi   |
-| Hashtag específico| Búsqueda de hashtags específicos                                                     | #openai                    |
+| Tipo              | Descripción                                                                          | Ejemplo keyword                | Resultado                                                                           |
+| ----------------- | :----------------------------------------------------------------------------------- | :----------------------------- | ----------------------------------------------------------------------------------- |
+| Hashtag           | Términos referenciados con la almohadilla #                                          | #pepsi                         | devolverá posts que contienen el hashtag (#) pepsi                                     |
+| Arroba            | Usuarios referenciados con la arroba @                                               | @cocacola                      | devolverá posts en los que se ha etiquetado/mencionado (@) cocacola                   |
+| Cadena simple     | Palabra con términos alfanuméricos sin caracteres especiales                         | Studio54                       | devolverá posts que contienen la palabra "Studio54"                                  |
+| Cadena complejas  | Palabras con términos alfanuméricos sin caracteres especiales separadas por espacios | Cocoa Cola 2019                | devolverá cualquier post que contenga alguna o todas estas palabras del ejemplo |
+| Búsqueda exacta   | Palabras o frases específicas entre comillas                                         | "cocacola con hielo"           | devolverá posts que contienen exactamente la frase "cocacola con hielo"             |
+| Búsqueda con OR   | Palabras múltiples separadas por (__) para ampliar resultados                          | Cocacola (__) Pepsi            | devolverá posts que contienen "Cocacola" o "Pepsi" (o ambos)                       |
+| Hashtag específico| Búsqueda de hashtags específicos                                                     | #openai                        | devolverá posts que contienen el hashtag (#) openai                                 |
 
 
 ## Caracteres reservados en palabras de búsqueda
