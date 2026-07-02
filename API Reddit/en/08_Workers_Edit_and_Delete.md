@@ -63,7 +63,7 @@ Upon making a request to the Reddit API, it will return a structured response as
 
 # Worker characteristics
 
-Captured data is stored in monthly indices `reddit_YYYY_MM` with the retention agreed in the client's plan (typically the last months queryable via `ts`/`tsi`).
+Indexed data is stored in monthly indices `reddit_YYYY_MM` with the retention agreed in the client's plan (typically the last months queryable via `ts`/`tsi`).
 
 Users can delete a specific Worker. This deletion destroys the Worker's configuration. Historical data associated with the Worker can no longer be queried through it once removed.
 

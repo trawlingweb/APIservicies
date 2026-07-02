@@ -1,6 +1,6 @@
 # API Instagram - Método GET /comments
 
-Permite obtener los **comentarios** capturados de un post concreto de Instagram. Está pensado como un **drill-down** desde `GET /posts`: primero se consultan las publicaciones de un Worker, y después, para cada publicación de la que se quieran ver los comentarios, se hace una llamada adicional a `/comments` indicando el `post_id`. **Cada llamada a `/comments` es una consulta facturable independiente** dentro de tu plan.
+Permite obtener los **comentarios** indexados de un post concreto de Instagram. Está pensado como un **drill-down** desde `GET /posts`: primero se consultan las publicaciones de un Worker, y después, para cada publicación de la que se quieran ver los comentarios, se hace una llamada adicional a `/comments` indicando el `post_id`. **Cada llamada a `/comments` es una consulta facturable independiente** dentro de tu plan.
 
 # Parámetros GET
 
@@ -27,7 +27,7 @@ https://instagram.trawlingweb.com/comments?token={APIKEY}&post_id={POST_ID}
 
 # ⚠️ Importante — llamadas estériles también se facturan
 
-`GET /comments?post_id=X` consulta el repositorio compartido de comentarios capturados por TrawlingWeb. Si **nadie** ha configurado un Worker `subtype=comments` que monitorice al autor del post solicitado, el endpoint devolverá:
+`GET /comments?post_id=X` consulta el repositorio compartido de comentarios indexados por TrawlingWeb. Si **nadie** ha configurado un Worker `subtype=comments` que monitorice al autor del post solicitado, el endpoint devolverá:
 
 ```json
 { "response": { "data": [], "totalResults": 0, "restResults": 0 } }
@@ -49,14 +49,14 @@ Una vez lanzada una petición, el endpoint devuelve una respuesta estructurada. 
 | comment_id       | ID del comentario en Instagram.                                                            |    No    |    No     | Cadena  |                                 |
 | parent_post_id   | ID del post al que pertenece el comentario.                                                |    No    |    No     | Cadena  |                                 |
 | parent_post_url  | URL del post padre.                                                                        |    No    |    No     | Cadena  |                                 |
-| worker_id        | WORKERID del Worker que capturó el comentario.                                             |    No    |    No     | Cadena  |                                 |
+| worker_id        | WORKERID del Worker que indexó el comentario.                                             |    No    |    No     | Cadena  |                                 |
 | client_id        | ID interno del cliente al que pertenece el Worker.                                         |    No    |    No     | Entero  |                                 |
 | type             | Tipo de documento — siempre `"comment"`.                                                   |    No    |    No     | Cadena  |                                 |
 | platform         | Plataforma — siempre `"instagram_comments"`.                                               |    No    |    No     | Cadena  |                                 |
 | text             | **Texto del comentario** (no del post).                                                    |    No    |    No     | Cadena  |                                 |
 | likes            | **Me gusta del comentario** (no del post).                                                 |    No    |    No     | Entero  |                                 |
 | ad_value         | Valor publicitario estimado (modelo híbrido: audience potential × CPM ajustado por likes). |    No    |    No     | Decimal |                                 |
-| crawled          | Fecha y hora en que se procesó/capturó el comentario.                                      |    No    |    Sí     | Entero  | Timestamp UNIX en milisegundos  |
+| crawled          | Fecha y hora en que se procesó/indexó el comentario.                                      |    No    |    Sí     | Entero  | Timestamp UNIX en milisegundos  |
 | raw              | Objeto crudo del scrape original. **No buscable** (`enabled: false` en el mapping).        |    No    |    No     | Objeto  |                                 |
 
 ## Datos del autor del comentario
@@ -82,7 +82,7 @@ Una vez lanzada una petición, el endpoint devuelve una respuesta estructurada. 
 
 | Campo   | Descripción                                                          | Buscable | Ordenable |  Tipo   | Formato                |
 | ------- | -------------------------------------------------------------------- | :------: | :-------: | :-----: | :--------------------: |
-| country | País asociado al Worker que capturó el comentario (ISO 3166-1 alpha-2). | No    |    No     | Cadena  | Ej: `BR`, `ES`, `MX`   |
+| country | País asociado al Worker que indexó el comentario (ISO 3166-1 alpha-2). | No    |    No     | Cadena  | Ej: `BR`, `ES`, `MX`   |
 | lang    | Idioma del comentario. Se deriva automáticamente del campo `country`.|    No    |    No     | Cadena  | ISO 639-1 (`pt`, `es`, `en`...) |
 
 ## Datos de la petición

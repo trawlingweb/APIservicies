@@ -5,7 +5,7 @@ Welcome to the Trawlingweb.com Reddit API documentation. Our API provides access
 ## Key Features:
 
 * **Credit-Based Subscription**: Service subscription based on credit plans redeemable for keyword searches, where 1 credit = 1 keyword. This allows clients to choose the number of credits they wish to purchase, enabling them to create and monitor keywords within Reddit.
-* **Keywords**: A Keyword is a search term configured within a "worker". The number of Keywords you can register depends on the credits purchased (1 credit = 1 Keyword). Workers use these keywords to filter the captured Reddit posts and comments and gather specific data, which is stored and available for query and download via REST API. Therefore, workers function as a list of keywords.
+* **Keywords**: A Keyword is a search term configured within a "worker". The number of Keywords you can register depends on the credits purchased (1 credit = 1 Keyword). Workers use these keywords to filter the indexed Reddit posts and comments and gather derived data, which is stored and available for query and download via REST API. Therefore, workers function as a list of keywords.
 
     Examples of keywords and credits required for creation:
 
@@ -17,7 +17,7 @@ Welcome to the Trawlingweb.com Reddit API documentation. Our API provides access
 
 * **Structured Access to Reddit Data**: Obtain organized public Reddit posts and comments for analysis and further processing.
 * **Subreddit Search**: Filter by the subreddit where content appears (`subreddit` field indexed and searchable).
-* **Advanced Analysis Technology**: We employ state-of-the-art systems that ensure precise and up-to-date analysis of captured data.
+* **Advanced Analysis Technology**: We employ state-of-the-art systems that ensure precise and up-to-date analysis of indexed data.
 * **On-Demand Storage and Query**: Processed data is stored in monthly indices (`reddit_YYYY_MM`) to enable quick and flexible queries as per your needs.
 * **Versatility and Optimization**: Combine the worker's keyword list with boolean / Lucene queries via the `q=` parameter to refine results without consuming additional credits.
 

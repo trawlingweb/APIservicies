@@ -5,7 +5,7 @@ Welcome to the Trawlingweb.com TikTok API documentation. Our API provides access
 ## Key Features:
 
 * **Credit-Based Subscription**: Service subscription based on credit plans redeemable for keyword searches, where 1 credit = 1 keyword. This allows clients to choose the number of credits they wish to purchase, enabling them to create and monitor keywords within the social network.
-* **Keywords**: A Keyword is a search term configured within a "worker". The number of Keywords you can register depends on the credits purchased (1 credit = 1 Keyword). Workers use these keywords to perform searches on social networks and gather specific data, which is stored and available for query and download via REST API. Therefore, workers function as a list of keywords.
+* **Keywords**: A Keyword is a search term configured within a "worker". The number of Keywords you can register depends on the credits purchased (1 credit = 1 Keyword). Workers use these keywords to perform searches on social networks and gather derived data, which is stored and available for query and download via REST API. Therefore, workers function as a list of keywords.
 
     Examples of keywords and credits required for creation:
 

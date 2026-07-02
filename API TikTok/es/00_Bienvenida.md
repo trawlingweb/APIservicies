@@ -6,7 +6,7 @@ Bienvenido a la documentación de la API de TikTok de Trawlingweb.com. Nuestra A
 
 - **Contratación mediante Planes de créditos**: Contratación del servicio basada en la contratación de planes de créditos canjeables en número de palabras clave, donde 1 crédito = 1 palabra clave. De esta manera, el cliente puede escoger la cantidad de créditos que desea contratar, los cuales le permiten crear y monitorear palabras clave dentro de la red social.
 
-* **Palabras clave**: Una Palabra Clave es un término de búsqueda configurado dentro de un "worker". La cantidad de Palabras Clave que puedes registrar depende de los créditos contratados (1 crédito = 1 Palabra Clave). Los "workers" usan estas palabras clave para realizar búsquedas en redes sociales y recopilar datos específicos, los cuales se almacenan y están disponibles para consulta y descarga a través de API REST. Por lo tanto, los workers funcionan como una lista de palabras clave.
+* **Palabras clave**: Una Palabra Clave es un término de búsqueda configurado dentro de un "worker". La cantidad de Palabras Clave que puedes registrar depende de los créditos contratados (1 crédito = 1 Palabra Clave). Los "workers" usan estas palabras clave para realizar búsquedas en redes sociales y estructurar datos derivados, los cuales se almacenan y están disponibles para consulta y descarga a través de API REST. Por lo tanto, los workers funcionan como una lista de palabras clave.
 
   Ejemplos de palabras clave y créditos necesarios para su creación:
 

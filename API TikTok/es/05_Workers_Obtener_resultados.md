@@ -45,7 +45,7 @@ Una vez lanzada una petición a la API de TikTok, esta devolverá una respuesta 
 | likes     | Cantidad de "me gusta"                                                      |    No    |    No     | Entero |                             |
 | text      | Texto descriptivo de la publicación                                         |    No    |    No     | Cadena |                             |
 | published | Fecha de publicación del post                                               |    No    |    No     |  Fecha |        ISO 8601-UTC         |
-| crawled   | Fecha y hora en que se capturó la publicación                               |    No    |    Sí     | Entero | Timestamp UNIX en milisegundos |
+| crawled   | Fecha y hora en que se indexó la publicación                               |    No    |    Sí     | Entero | Timestamp UNIX en milisegundos |
 
 ## Datos del usuario
 

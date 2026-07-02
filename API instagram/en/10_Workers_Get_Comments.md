@@ -1,6 +1,6 @@
 # API Instagram - GET Method /comments
 
-Allows you to retrieve **comments** captured for a specific Instagram post. It is designed as a **drill-down** from `GET /posts`: first you query the publications of a Worker, and then, for each publication whose comments you want to inspect, you make an additional call to `/comments` providing the `post_id`. **Each call to `/comments` is a separate billable query** in your plan.
+Allows you to retrieve **comments** indexed for a specific Instagram post. It is designed as a **drill-down** from `GET /posts`: first you query the publications of a Worker, and then, for each publication whose comments you want to inspect, you make an additional call to `/comments` providing the `post_id`. **Each call to `/comments` is a separate billable query** in your plan.
 
 # GET Parameters
 
@@ -27,7 +27,7 @@ https://instagram.trawlingweb.com/comments?token={APIKEY}&post_id={POST_ID}
 
 # ⚠️ Important — sterile calls are also billed
 
-`GET /comments?post_id=X` queries the shared repository of comments captured by TrawlingWeb. If **nobody** has configured a `subtype=comments` Worker monitoring the author of the requested post, the endpoint will return:
+`GET /comments?post_id=X` queries the shared repository of comments indexed by TrawlingWeb. If **nobody** has configured a `subtype=comments` Worker monitoring the author of the requested post, the endpoint will return:
 
 ```json
 { "response": { "data": [], "totalResults": 0, "restResults": 0 } }
@@ -49,14 +49,14 @@ Upon making a request, the endpoint returns a structured response. The **wrapper
 | comment_id      | Comment ID on Instagram.                                                                   |     No     |    No     | String  |                                |
 | parent_post_id  | ID of the parent post.                                                                     |     No     |    No     | String  |                                |
 | parent_post_url | URL of the parent post.                                                                    |     No     |    No     | String  |                                |
-| worker_id       | WORKERID of the Worker that captured the comment.                                          |     No     |    No     | String  |                                |
+| worker_id       | WORKERID of the Worker that indexed the comment.                                          |     No     |    No     | String  |                                |
 | client_id       | Internal client ID owning the Worker.                                                      |     No     |    No     | Integer |                                |
 | type            | Document type — always `"comment"`.                                                        |     No     |    No     | String  |                                |
 | platform        | Platform — always `"instagram_comments"`.                                                  |     No     |    No     | String  |                                |
 | text            | **Text of the comment** (not the post).                                                    |     No     |    No     | String  |                                |
 | likes           | **Likes on the comment** (not the post).                                                   |     No     |    No     | Integer |                                |
 | ad_value        | Estimated ad value (hybrid model: audience potential × CPM adjusted by likes).             |     No     |    No     | Decimal |                                |
-| crawled         | Date and time when the comment was processed/captured.                                     |     No     |    Yes    | Integer | UNIX Timestamp in milliseconds |
+| crawled         | Date and time when the comment was processed/indexed.                                     |     No     |    Yes    | Integer | UNIX Timestamp in milliseconds |
 | raw             | Raw scrape object. **Not searchable** (`enabled: false` in the index mapping).             |     No     |    No     | Object  |                                |
 
 ## Comment Author Data
@@ -82,7 +82,7 @@ Upon making a request, the endpoint returns a structured response. The **wrapper
 
 | Field   | Description                                                          | Searchable | Orderable |  Type   | Format               |
 | ------- | -------------------------------------------------------------------- | :--------: | :-------: | :-----: | :------------------: |
-| country | Country associated with the Worker that captured the comment (ISO 3166-1 alpha-2). | No | No | String | E.g. `BR`, `ES`, `MX` |
+| country | Country associated with the Worker that indexed the comment (ISO 3166-1 alpha-2). | No | No | String | E.g. `BR`, `ES`, `MX` |
 | lang    | Comment language. Automatically derived from the `country` field.    |     No     |    No     | String  | ISO 639-1 (`pt`, `es`, `en`...) |
 
 ## Request Data

@@ -32,7 +32,7 @@ next "http://twitter.trawlingweb.com/010101010101010101?token=000000000000000000
 
 ## Uso de las Fechas `published` y `crawled`
 
-TrawlingWeb entrega dos fechas para cada tweet: `published` (fecha de creación) y `crawled` (fecha de captura). Esto es crucial ya que, al incorporar nuevas secciones, el sistema puede detectar como nuevos tweets que fueron publicados días o incluso meses atrás.
+TrawlingWeb entrega dos fechas para cada tweet: `published` (fecha de creación) y `crawled` (fecha de indexación). Esto es crucial ya que, al incorporar nuevas secciones, el sistema puede detectar como nuevos tweets que fueron publicados días o incluso meses atrás.
 
 También puede suceder que Twitter modifique su sistema, lo que puede provocar la aparición de tweets antiguos debido a errores o estrategias de SEO. Para evitar o controlar estos sucesos, aconsejamos que los clientes implementen reglas de seguridad en sus sistemas.
 
@@ -97,7 +97,7 @@ Explicación:
 El parámetro de agrupación se usa con la siguiente sintaxis: `sort=`. Este permite agrupar los tweets por dos tipos de criterios temporales:
 
 - **published**: Agrupa por fecha de creación. La fecha que se usará en la llamada al API es la fecha en la que se creó el tweet. `sort=published`
-- **Crawled**: Agrupa por fecha de captura. La fecha que se usará en la llamada al API es la fecha en la que se capturó el tweet. `sort=crawled`
+- **Crawled**: Agrupa por fecha de indexación. La fecha que se usará en la llamada al API es la fecha en la que se indexó el tweet. `sort=crawled`
 
 ### Ejemplo 1: Agrupar por fecha de creación
 
@@ -114,13 +114,13 @@ Explicación:
 `ejemplo: https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=obama&sort=crawled&order=desc&ts=1719784800000&tsi=1720130400000&size=4`
 
 Explicación: 
-* **Organización**: Los tweets se organizan por fecha de captura ***(sort=crawled)***
+* **Organización**: Los tweets se organizan por fecha de indexación ***(sort=crawled)***
 * **Ordenación**: Los tweets se ordenan de nuevos a viejos ***(order=desc)***.
 * **Resultados**: Definiendo el `size=4`, el máximo siempre será 4 en cada paginación.
 * **Next**: El "next" dentro del JSON permite saltar a los siguientes resultados, que como máximo serán los definidos en el `size=n`, que en este caso al ser `size=4` serán 4 resultados.
 
 #### Tips: 
-* Si queremos obtener resultados agrupados por fecha de creación, usaremos `sort=published`, y si queremos obtener resultados agrupados por fecha de captura, usaremos `sort=crawled`.
+* Si queremos obtener resultados agrupados por fecha de creación, usaremos `sort=published`, y si queremos obtener resultados agrupados por fecha de indexación, usaremos `sort=crawled`.
 - Si no utilizamos el parámetro `sort=`, por defecto la agrupación será `published`.
 
 ## Ordenación
@@ -148,17 +148,17 @@ Para modificar el número máximo de resultados que devuelve la llamada a la API
 
 ## Mantenimiento Periódico de Fuentes de Datos
 
-El mantenimiento periódico de las fuentes de datos es constante y esencial en TrawlingWeb. Implica una reevaluación integral de cada fuente, lo que a menudo conlleva la incorporación de nuevas secciones para indexar contenido no recopilado anteriormente. Contar con las fechas de creación (`published`) y de captura (`crawled`) permite gestionar estas actualizaciones de manera eficiente.
+El mantenimiento periódico de las fuentes de datos es constante y esencial en TrawlingWeb. Implica una reevaluación integral de cada fuente, lo que a menudo conlleva la incorporación de nuevas secciones para indexar contenido no indexado anteriormente. Contar con las fechas de creación (`published`) y de indexación (`crawled`) permite gestionar estas actualizaciones de manera eficiente.
 
-Al agregar nuevas fuentes de datos a nuestra cobertura, frecuentemente incluimos su historial realizando una indexación inicial profunda de todas sus secciones. Nuevamente, las fechas de creación (`published`) y de captura (`crawled`) facilitan este proceso.
+Al agregar nuevas fuentes de datos a nuestra cobertura, frecuentemente incluimos su historial realizando una indexación inicial profunda de todas sus secciones. Nuevamente, las fechas de creación (`published`) y de indexación (`crawled`) facilitan este proceso.
 
 Ciertas secciones de Twitter, además del contenido cronológico, pueden mostrar contenido no cronológico (como tweets destacados o relacionados) que también indexamos.
 
 ### Consideraciones
 
 * **Frecuencia de Indexación**: La frecuencia de indexación de una fuente de datos se determina por las necesidades del cliente, los requisitos funcionales, la cantidad de tweets y la frecuencia de publicación de la fuente.
-* **Diferenciación de Fechas**: Diferenciar claramente la fecha de captura (`crawled`) de la fecha de creación (`published`) permite que los clientes decidan qué tweets incorporar.
-* **Filosofía de Entrega de Contenido**: Nuestra filosofía es entregar todos los tweets procesados, dejando la decisión sobre cómo utilizar este contenido a los clientes.
+* **Diferenciación de Fechas**: Diferenciar claramente la fecha de indexación (`crawled`) de la fecha de creación (`published`) permite que los clientes decidan qué tweets incorporar.
+* **Filosofía de análisis derivado**: Entregamos datos derivados y metadatos de todos los tweets analizados. El uso final de este análisis lo decide el cliente.
 
 ### Tweets Entregados y Descartados
 

@@ -163,7 +163,7 @@ Para modificar el número máximo de resultados que devuelve la llamada a la API
 
 ## Mantenimiento Periódico de Fuentes de Datos
 
-El mantenimiento periódico de las fuentes de datos es constante y esencial en TrawlingWeb. Implica una reevaluación integral de cada fuente, lo que a menudo conlleva la incorporación de nuevas secciones para procesar contenido no recopilado anteriormente. Contar con las fechas de creación (`created_at`) y de procesamiento (`crawled`) permite gestionar estas actualizaciones de manera eficiente.
+El mantenimiento periódico de las fuentes de datos es constante y esencial en TrawlingWeb. Implica una reevaluación integral de cada fuente, lo que a menudo conlleva la incorporación de nuevas secciones para procesar contenido no indexado anteriormente. Contar con las fechas de creación (`created_at`) y de procesamiento (`crawled`) permite gestionar estas actualizaciones de manera eficiente.
 
 Al agregar nuevas fuentes de datos a nuestra cobertura, frecuentemente incluimos su historial realizando una indexación inicial profunda de todas sus secciones. Nuevamente, las fechas de creación (`created_at`) y de procesamiento (`crawled`) facilitan este proceso.
 
@@ -173,7 +173,7 @@ Ciertas secciones de Facebook, además del contenido cronológico, pueden mostra
 
 * **Frecuencia de indexación**: La frecuencia de indexación de una fuente de datos se determina por las necesidades del cliente, los requisitos funcionales, la cantidad de posts y la frecuencia de publicación de la fuente.
 * **Diferenciación de Fechas**: Diferenciar claramente la fecha de procesamiento (`crawled`) de la fecha de creación (`created_at`) permite que los clientes decidan qué posts incorporar.
-* **Filosofía de Entrega de Contenido**: Nuestra filosofía es entregar todos los posts procesados, dejando la decisión sobre cómo utilizar este contenido a los clientes.
+* **Filosofía de análisis derivado**: Entregamos datos derivados y metadatos de todos los posts analizados. El uso final de este análisis lo decide el cliente.
 
 ### posts Entregados y Descartados
 

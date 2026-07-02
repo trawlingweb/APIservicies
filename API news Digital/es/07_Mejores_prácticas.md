@@ -183,12 +183,12 @@ Ciertas secciones de los medios, además del contenido cronológico, muestran co
 
 * **Frecuencia de Indexación**: La frecuencia de indexación de una fuente de medios se determina por las necesidades del cliente, los requisitos funcionales, la cantidad de noticias y la frecuencia de publicación del medio.
 * **Diferenciación de Fechas**: Diferenciar claramente la fecha de indexación (`crawled`) de la fecha de publicación (`published`) permite que los clientes decidan qué noticias incorporar.
-* **Filosofía de Entrega de Información**: Nuestra filosofía es entregar todas las noticias indexadas, dejando la decisión sobre cómo utilizar esta información a los clientes.
+* **Filosofía de análisis derivado**: Entregamos los datos derivados y metadatos de todos los artículos indexados, dejando la decisión sobre cómo utilizar esta información a los clientes.
 
-### Noticias Entregadas y Descartadas
+### Análisis derivado: entrega y descarte
 
-* **Noticias Entregadas**: Todas las noticias indexadas se entregan al cliente.
-* **Noticias Descartadas**: Los clientes tienen la opción de descartar noticias según sus criterios y necesidades específicas.
+* **Entrega**: El análisis derivado de todos los artículos indexados se entrega al cliente (datos, metadatos y enlaces a las fuentes originales, no el contenido de terceros).
+* **Descarte**: Los clientes tienen la opción de descartar resultados según sus criterios y necesidades específicas.
 
 ## Sintaxis de Consultas de Lucene
 

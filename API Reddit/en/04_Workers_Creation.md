@@ -4,17 +4,17 @@ Allows creating new Workers with their keywords.
 
 ## What is a Worker?
 
-A Worker in TrawlingWeb is a user-configured entity to perform specific searches over the captured posts and comments from Reddit using Keywords. These Keywords are search terms configured within the Worker and are based on the contracted credits (1 credit = 1 Keyword).
+A Worker in TrawlingWeb is a user-configured entity to perform specific searches over the indexed posts and comments from Reddit using Keywords. These Keywords are search terms configured within the Worker and are based on the contracted credits (1 credit = 1 Keyword).
 
 ## Creation and Configuration of Workers
 
-Users can create and define search terms for each Worker directly on the dashboard ([https://dashboard.trawlingweb.com/workers](https://dashboard.trawlingweb.com/workers)) or using the method provided by the API. Once a Worker is created, it starts filtering the stream of captured posts and comments according to its keywords (results become available almost immediately).
+Users can create and define search terms for each Worker directly on the dashboard ([https://dashboard.trawlingweb.com/workers](https://dashboard.trawlingweb.com/workers)) or using the method provided by the API. Once a Worker is created, it starts filtering the stream of indexed posts and comments according to its keywords (results become available almost immediately).
 
 ## Workers Functionality
 
-* **Keywords**: Workers function as a list of keywords. They use the configured Keywords to filter the stream of public posts and comments captured from Reddit.
+* **Keywords**: Workers function as a list of keywords. They use the configured Keywords to filter the stream of public posts and comments indexed from Reddit.
 - **Search Process**: Workers apply keywords against the `text`, `user_name`, `user_screen_name`, and `subreddit` fields of each element.
-- **Delivery Process**: Each time the client calls the Worker, it uses the list of Keywords to launch the search against the database of posts and comments captured by TrawlingWeb and retrieve only those results matching the list of Keywords (combinable with boolean filters via `q=`).
+- **Delivery Process**: Each time the client calls the Worker, it uses the list of Keywords to launch the search against the database of posts and comments indexed by TrawlingWeb and retrieve only those results matching the list of Keywords (combinable with boolean filters via `q=`).
 
 Implementing and managing Workers efficiently allows users to maximize the relevance and accuracy of the processed data, tailored to the specific needs of their Reddit analysis and monitoring.
 

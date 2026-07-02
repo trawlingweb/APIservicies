@@ -30,7 +30,7 @@ Nuestra infraestructura analiza y procesa de forma continua información proveni
 ## ¿Qué Ofrecen Nuestras APIs?
 
 FeedScale te permite:
-- **Recopilar Datos:** Recoger datos de múltiples fuentes como redes sociales, sitios web de noticias y más.
+- **Indexar datos:** Analizar y estructurar información de múltiples fuentes como redes sociales, sitios web de noticias y más.
 - **Procesar Datos:** Utilizar nuestros servicios ETL (Extract, Transform, Load) para limpiar y organizar los datos.
 - **Analizar Datos:** Conectar los datos recopilados a herramientas de visualización para un análisis en profundidad.
 
@@ -93,7 +93,7 @@ Para acceder a FeedScale, necesitarás autenticar tus solicitudes usando una cla
 ### Ejemplo de Uso
 
 #### Configuración de Búsquedas para la Recuperación de Datos
-Para configurar búsquedas de contenido específico, configura tus trabajadores ETL con las palabras clave y fuentes requeridas. Esto te permite adaptar la recopilación de datos a tus necesidades.
+Para configurar búsquedas de contenido específico, configura tus trabajadores ETL con las palabras clave y fuentes requeridas. Esto te permite adaptar el análisis y estructurado de datos a tus necesidades.
 
 
 #### Almacenamiento de Resultados
@@ -114,15 +114,15 @@ Nuestras APIs pueden integrarse con herramientas de visualización populares com
 
 ## Ventajas
 
-- **Personalización:** Adapta los procesos de recopilación y análisis de datos a tus necesidades específicas.
-- **Escalabilidad:** Amplía fácilmente la recopilación y procesamiento de datos a medida que crecen tus requisitos.
+- **Personalización:** Adapta los procesos de análisis y procesamiento derivado de datos a tus necesidades específicas.
+- **Escalabilidad:** Amplía fácilmente el procesamiento y análisis derivado de datos a medida que crecen tus requisitos.
 - **Integración:** Integra sin problemas con herramientas y flujos de trabajo existentes para una experiencia de usuario fluida.
 
 ## Conclusión
 
-**FeedScale** de TrawlingWeb ofrece una solución robusta para la recopilación, procesamiento y análisis de datos en tiempo real. Con acceso a más de 18 millones de fuentes digitales y cobertura en 43 idiomas, FeedScale proporciona la conectividad de datos que tu empresa necesita para integrar grandes volúmenes de datos e información analizada en sus propios sistemas.
+**FeedScale** de TrawlingWeb ofrece una solución robusta para el análisis, procesamiento y estructurado de datos en tiempo real. Con acceso a más de 18 millones de fuentes digitales y cobertura en 43 idiomas, FeedScale proporciona la conectividad de datos que tu empresa necesita para integrar grandes volúmenes de datos e información analizada en sus propios sistemas.
 
-Siguiendo las guías y utilizando los recursos proporcionados en este repositorio, puedes integrar eficazmente FeedScale en tus flujos de trabajo y desbloquear valiosos insights de tus datos.
+Siguiendo las guías y utilizando los recursos proporcionados en este repositorio, puedes integrar eficazmente FeedScale en tus flujos de trabajo y obtener análisis derivado valioso de tus datos.
 
 Para obtener información más detallada, consulta nuestra documentación oficial y páginas de soporte.
 
@@ -173,7 +173,7 @@ Our infrastructure continuously analyzes and processes information from:
 ## What Does FeedScale Offer?
 
 FeedScale allows you to:
-- **Collect Data:** Gather data from multiple sources such as social media, news websites, and more.
+- **Analyse Data:** Analyse and structure information from public sources such as social media, news websites and more.
 - **Process Data:** Use our ETL (Extract, Transform, Load) services to clean and organize the data.
 - **Analyze Data:** Connect the collected data to visualization tools for in-depth analysis.
 

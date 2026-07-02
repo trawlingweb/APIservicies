@@ -32,15 +32,15 @@ next "https://telegram.trawlingweb.com/posts/010101010101010101?token=0000000000
 
 ## Using the `published` and `crawled` Dates
 
-TrawlingWeb provides two dates for each message: `published` (creation/publication date in Telegram) and `crawled` (capture date). This is crucial because, when adding new channels or performing backfill, the system may detect as new messages that were published days or even months earlier.
+TrawlingWeb provides two dates for each message: `published` (creation/publication date in Telegram) and `crawled` (indexing date). This is crucial because, when adding new channels or performing backfill, the system may detect as new messages that were published days or even months earlier.
 
-It can also happen that Telegram changes the visibility of a channel or re-edits trigger later captures. To avoid or control these situations, we advise clients to implement safety rules in their systems.
+It can also happen that Telegram changes the visibility of a channel or re-edits trigger later re-indexations. To avoid or control these situations, we advise clients to implement safety rules in their systems.
 
 ### Tips on rules to ensure proper use of dates:
 
 * **Date Filters**: Set up filters to ignore messages with very old publication dates if they are not relevant.
-* **Relevance Rules**: Create criteria that determine the relevance of messages based on their publication date and capture date.
-* **Change Monitoring**: Monitor changes in the tracked channels to adjust processing rules.
+* **Relevance Rules**: Create criteria that determine the relevance of messages based on their publication date and indexing date.
+* **Change Monitoring**: Monitor changes in the indexed channels to adjust processing rules.
 * **Alerts and Notifications**: Configure alerts to detect and notify the appearance of old messages, allowing manual review if needed.
 
 Implementing these measures helps our clients maintain the integrity and relevance of the data processed by TrawlingWeb.
@@ -57,7 +57,7 @@ If you need to receive fewer results per API call, you can adjust this number us
 
 ## Time ranges `ts` and `tsi`
 
-* `ts` (initial timestamp) — date from which to search for captured messages. By default, 1 month back from the time of the request.
+* `ts` (initial timestamp) — date from which to search for indexed messages. By default, 1 month back from the time of the request.
 * `tsi` (final timestamp) — date up to which to search. By default, the current date.
 * Both in Unix milliseconds.
 * If omitted or invalid, default values are applied.
@@ -73,12 +73,12 @@ https://telegram.trawlingweb.com/posts/?token={APIKEY}&q=cocacola%20AND%20crisis
 
 ## Periodic Maintenance of Data Sources
 
-Periodic maintenance of the tracked public channels and groups is constant and essential at TrawlingWeb. It involves a comprehensive reevaluation of each source, which often entails the incorporation of new relevant channels. Having the publication (`published`) and capture (`crawled`) dates allows managing these updates efficiently.
+Periodic maintenance of the tracked public channels and groups is constant and essential at TrawlingWeb. It involves a comprehensive reevaluation of each source, which often entails the incorporation of new relevant channels. Having the publication (`published`) and indexing (`crawled`) dates allows managing these updates efficiently.
 
 ### Considerations
 
 * **Indexing Frequency**: The indexing frequency of a source is determined by client needs, functional requirements, the volume of messages, and the publication cadence of each channel.
-* **Date Differentiation**: Clearly differentiating the capture date (`crawled`) from the publication date (`published`) allows clients to decide which messages to incorporate.
+* **Date Differentiation**: Clearly differentiating the indexing date (`crawled`) from the publication date (`published`) allows clients to decide which messages to incorporate.
 * **Content Delivery Philosophy**: Our philosophy is to deliver all processed messages, leaving the decision on how to use this content to the clients.
 
 ### Delivered and Discarded Messages

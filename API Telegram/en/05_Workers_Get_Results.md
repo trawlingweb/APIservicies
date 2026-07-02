@@ -45,7 +45,7 @@ Upon making a request to the Telegram API, it will return a structured response 
 | url              | Public URL of the message (when channel/group is public)                          |     No     |    No    | String |                                   |
 | text             | Message text                                                                       |    Yes     |    No    | String |                                   |
 | published        | Message publication date                                                          |     No     |   Yes    | Date   |           ISO 8601-UTC            |
-| crawled          | Date and time when the message was captured                                       |     No     |   Yes    | Integer| UNIX Timestamp in milliseconds     |
+| crawled          | Date and time when the message was indexed                                       |     No     |   Yes    | Integer| UNIX Timestamp in milliseconds     |
 
 ## Author / channel data
 

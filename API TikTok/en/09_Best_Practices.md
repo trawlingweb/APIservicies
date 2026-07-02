@@ -36,7 +36,7 @@ next "http://tiktok.trawlingweb.com/010101010101010101?token=0000000000000000000
 
 ## Using Dates `created_at` and `crawled`
 
-TrawlingWeb provides two dates for each tweet: `created_at` (creation date) and `crawled` (capture date). This is crucial as when incorporating new sections, the system may detect posts as new that were actually published days or even months ago.
+TrawlingWeb provides two dates for each tweet: `created_at` (creation date) and `crawled` (indexing date). This is crucial as when incorporating new sections, the system may detect posts as new that were actually published days or even months ago.
 
 It can also happen that API TikTok modifies its system, causing old posts to appear due to errors or SEO strategies. To prevent or control these occurrences, we advise clients to implement security rules in their systems.
 
@@ -107,7 +107,7 @@ Explanation:
 The grouping parameter is used with the following syntax: `sort=`. This allows grouping posts by two types of time criteria:
 
 * **Created_at**: Groups by creation date. The date used in the API call is the date the tweet was created. `sort=created_at`
-* **Crawled**: Groups by capture date. The date used in the API call is the date the tweet was captured. `sort=crawled`
+* **Crawled**: Groups by indexing date. The date used in the API call is the date the tweet was indexed. `sort=crawled`
 
 ### Example 1: Grouping by Creation Date
 
@@ -130,13 +130,13 @@ https://API TikTok.trawlingweb.com/01010101010101010?token=0000000000000000000&q
 ```
 
 Explanation:
-* **Organization**: posts are organized by capture date ***(sort=crawled)***
+* **Organization**: posts are organized by indexing date ***(sort=crawled)***
 * **Sorting**: posts are sorted from newest to oldest ***(order=desc)***.
 * **Results**: By defining `size=4`, the maximum will be 4 per pagination.
 * **Next**: The "next" within the JSON allows jumping to the next results, which will be up to the number defined in `size=n`, in this case `4` results.
 
 #### Tips:
-- Use `sort=created_at` to get results grouped by creation date and `sort=crawled` to get results grouped by capture date.
+- Use `sort=created_at` to get results grouped by creation date and `sort=crawled` to get results grouped by indexing date.
 - If `sort=` parameter is not used, default grouping will be `created_at`.
 
 ## Sorting
@@ -164,16 +164,16 @@ To modify the maximum number of results returned by the API call, use the `size=
 
 ## Regular Maintenance of Data Sources
 
-Regular maintenance of data sources is constant and essential at TrawlingWeb. It involves a comprehensive reassessment of each source, often involving the addition of new sections to index previously uncollected content. Having creation dates (`created_at`) and capture dates (`crawled`) allows efficient management of these updates.
+Regular maintenance of data sources is constant and essential at TrawlingWeb. It involves a comprehensive reassessment of each source, often involving the addition of new sections to index previously uncollected content. Having creation dates (`created_at`) and indexing dates (`crawled`) allows efficient management of these updates.
 
-When adding new data sources to our coverage, we often include their history by performing an initial deep indexing of all their sections. Again, creation dates (`created_at`) and capture dates (`crawled`) facilitate this process.
+When adding new data sources to our coverage, we often include their history by performing an initial deep indexing of all their sections. Again, creation dates (`created_at`) and indexing dates (`crawled`) facilitate this process.
 
 Certain sections of API TikTok, in addition to chronological content, may display non-chronological content (such as highlighted or related posts) that we also index.
 
 ### Considerations
 
 * **Indexing Frequency**: The indexing frequency of a data source is determined by client needs, functional requirements, tweet volume, and source publishing frequency.
-* **Differentiation of Dates**: Clearly differentiating capture date (`crawled`) from creation date (`created_at`) allows clients to decide which posts to incorporate.
+* **Differentiation of Dates**: Clearly differentiating indexing date (`crawled`) from creation date (`created_at`) allows clients to decide which posts to incorporate.
 * **Content Delivery Philosophy**: Our philosophy is to deliver all processed posts, leaving the decision on how to use this content to clients.
 
 ### Delivered and Discarded posts
