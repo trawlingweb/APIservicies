@@ -46,7 +46,7 @@ Upon making a request to the Reddit API, it will return a structured response as
 | text             | Post or comment text                                                              |    Yes     |    No    | String |                                   |
 | subreddit        | Subreddit where the content appears                                               |    Yes     |    No    | String |                                   |
 | published        | Publication date                                                                  |     No     |   Yes    | Date   |           ISO 8601-UTC            |
-| crawled          | Date and time the content was captured                                            |     No     |   Yes    | Integer| UNIX Timestamp in milliseconds     |
+| crawled          | Date and time the content was indexed                                            |     No     |   Yes    | Integer| UNIX Timestamp in milliseconds     |
 
 ## Author data
 

@@ -32,15 +32,15 @@ next "https://telegram.trawlingweb.com/posts/010101010101010101?token=0000000000
 
 ## Uso de las Fechas `published` y `crawled`
 
-TrawlingWeb entrega dos fechas para cada mensaje: `published` (fecha de creación/publicación en Telegram) y `crawled` (fecha de captura). Esto es crucial ya que, al incorporar nuevos canales o sufrir backfill, el sistema puede detectar como nuevos mensajes que fueron publicados días o incluso meses atrás.
+TrawlingWeb entrega dos fechas para cada mensaje: `published` (fecha de creación/publicación en Telegram) y `crawled` (fecha de indexación). Esto es crucial ya que, al incorporar nuevos canales o sufrir backfill, el sistema puede detectar como nuevos mensajes que fueron publicados días o incluso meses atrás.
 
-También puede suceder que Telegram modifique la visibilidad de algún canal o reediciones provoquen capturas posteriores. Para evitar o controlar estos sucesos, aconsejamos que los clientes implementen reglas de seguridad en sus sistemas.
+También puede suceder que Telegram modifique la visibilidad de algún canal o reediciones provoquen reindexaciones posteriores. Para evitar o controlar estos sucesos, aconsejamos que los clientes implementen reglas de seguridad en sus sistemas.
 
 ### Consejos sobre reglas para garantizar el buen uso de las fechas:
 
 * **Filtros de Fecha**: Establecer filtros para ignorar mensajes con fechas de publicación muy antiguas si no son relevantes.
-* **Reglas de Relevancia**: Crear criterios que determinen la relevancia de los mensajes en función de su fecha de publicación y la fecha de captura.
-* **Monitoreo de Cambios**: Supervisar cambios en los canales rastreados para ajustar las reglas de procesamiento.
+* **Reglas de Relevancia**: Crear criterios que determinen la relevancia de los mensajes en función de su fecha de publicación y la fecha de indexación.
+* **Monitoreo de Cambios**: Supervisar cambios en los canales indexados para ajustar las reglas de procesamiento.
 * **Alertas y Notificaciones**: Configurar alertas para detectar y notificar la aparición de mensajes antiguos, permitiendo una revisión manual si es necesario.
 
 Implementar estas medidas ayuda a nuestros clientes a mantener la integridad y relevancia de los datos procesados por TrawlingWeb.
@@ -57,7 +57,7 @@ Si necesitas recibir menos resultados por llamada a la API, puedes ajustar este 
 
 ## Rangos temporales `ts` y `tsi`
 
-* `ts` (timestamp inicial) — fecha desde la cual buscar mensajes capturados. Por defecto, 1 mes hacia atrás desde el momento de la petición.
+* `ts` (timestamp inicial) — fecha desde la cual buscar mensajes indexados. Por defecto, 1 mes hacia atrás desde el momento de la petición.
 * `tsi` (timestamp final) — fecha hasta la cual buscar. Por defecto, la fecha actual.
 * Ambos en milisegundos Unix.
 * Si se omiten o son inválidos, se aplican los valores por defecto.
@@ -73,13 +73,13 @@ https://telegram.trawlingweb.com/posts/?token={APIKEY}&q=cocacola%20AND%20crisis
 
 ## Mantenimiento Periódico de Fuentes de Datos
 
-El mantenimiento periódico de los canales y grupos públicos rastreados es constante y esencial en TrawlingWeb. Implica una reevaluación integral de cada fuente, lo que a menudo conlleva la incorporación de nuevos canales relevantes. Contar con las fechas de publicación (`published`) y de captura (`crawled`) permite gestionar estas actualizaciones de manera eficiente.
+El mantenimiento periódico de los canales y grupos públicos indexados es constante y esencial en TrawlingWeb. Implica una reevaluación integral de cada fuente, lo que a menudo conlleva la incorporación de nuevos canales relevantes. Contar con las fechas de publicación (`published`) y de indexación (`crawled`) permite gestionar estas actualizaciones de manera eficiente.
 
 ### Consideraciones
 
 * **Frecuencia de Indexación**: La frecuencia de indexación de una fuente se determina por las necesidades del cliente, los requisitos funcionales, la cantidad de mensajes y la frecuencia de publicación de cada canal.
-* **Diferenciación de Fechas**: Diferenciar claramente la fecha de captura (`crawled`) de la fecha de publicación (`published`) permite que los clientes decidan qué mensajes incorporar.
-* **Filosofía de Entrega de Contenido**: Nuestra filosofía es entregar todos los mensajes procesados, dejando la decisión sobre cómo utilizar este contenido a los clientes.
+* **Diferenciación de Fechas**: Diferenciar claramente la fecha de indexación (`crawled`) de la fecha de publicación (`published`) permite que los clientes decidan qué mensajes incorporar.
+* **Filosofía de análisis derivado**: Entregamos datos derivados y metadatos de todos los mensajes analizados. El uso final de este análisis lo decide el cliente.
 
 ### Mensajes Entregados y Descartados
 

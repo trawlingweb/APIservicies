@@ -44,7 +44,7 @@ Upon making a request to the TikTok API, it will return a structured response as
 | likes     | Number of likes                                                             |     No     |     No    | Integer |                             |
 | text      | Text description of the post                                                |     No     |     No    | String  |                             |
 | published | Date the post was published                                                 |     No     |     No    |  Date   |        ISO 8601-UTC         |
-| crawled   | Date and time when the post was captured                                    |     No     |    Yes    | Integer | UNIX Timestamp in milliseconds |
+| crawled   | Date and time when the post was indexed                                    |     No     |    Yes    | Integer | UNIX Timestamp in milliseconds |
 
 ## User Data
 

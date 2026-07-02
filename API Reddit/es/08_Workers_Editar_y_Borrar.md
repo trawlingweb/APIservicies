@@ -63,7 +63,7 @@ Una vez lanzada una petición a la API de Reddit ésta devolverá una respuesta 
 
 # Características de los Workers
 
-Los datos capturados se almacenan en índices mensuales `reddit_YYYY_MM` con la retención acordada en el plan del cliente (típicamente los últimos meses consultables vía `ts`/`tsi`).
+Los datos indexados se almacenan en índices mensuales `reddit_YYYY_MM` con la retención acordada en el plan del cliente (típicamente los últimos meses consultables vía `ts`/`tsi`).
 
 El usuario puede eliminar un Worker concreto. Esta eliminación implica la destrucción de la configuración del mismo. Los datos históricos asociados al Worker dejan de ser consultables a través de él una vez eliminado.
 

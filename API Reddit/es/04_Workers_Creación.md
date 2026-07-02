@@ -4,17 +4,17 @@ Permite crear nuevos Workers con sus palabras.
 
 # ¿Qué es un Worker?
 
-Un Worker en TrawlingWeb es una entidad configurada por el usuario para realizar búsquedas específicas sobre los posts y comentarios capturados de Reddit utilizando Palabras Clave. Estas Palabras Clave son términos de búsqueda configurados dentro del Worker y se basan en los créditos contratados (1 crédito = 1 Palabra Clave).
+Un Worker en TrawlingWeb es una entidad configurada por el usuario para realizar búsquedas específicas sobre los posts y comentarios indexados de Reddit utilizando Palabras Clave. Estas Palabras Clave son términos de búsqueda configurados dentro del Worker y se basan en los créditos contratados (1 crédito = 1 Palabra Clave).
 
 ## Creación y Configuración de Workers
 
-El usuario puede crear y definir los términos de búsqueda para cada Worker directamente en el dashboard ([https://dashboard.trawlingweb.com/workers](https://dashboard.trawlingweb.com/workers)) o utilizando el método proporcionado por la API. Una vez creado un Worker, este comienza a filtrar el flujo de posts y comentarios capturados según sus palabras clave (los resultados empiezan a estar disponibles de forma prácticamente inmediata).
+El usuario puede crear y definir los términos de búsqueda para cada Worker directamente en el dashboard ([https://dashboard.trawlingweb.com/workers](https://dashboard.trawlingweb.com/workers)) o utilizando el método proporcionado por la API. Una vez creado un Worker, este comienza a filtrar el flujo de posts y comentarios indexados según sus palabras clave (los resultados empiezan a estar disponibles de forma prácticamente inmediata).
 
 ## Funcionalidad de los Workers
 
-* **Palabras clave**: Los Workers funcionan como una lista de palabras clave. Usan las Palabras Clave configuradas para filtrar el flujo de posts y comentarios capturados de Reddit.
+* **Palabras clave**: Los Workers funcionan como una lista de palabras clave. Usan las Palabras Clave configuradas para filtrar el flujo de posts y comentarios indexados de Reddit.
 * **Proceso de búsqueda**: Los Workers aplican las palabras clave sobre los campos `text`, `user_name`, `user_screen_name` y `subreddit` de cada elemento.
-* **Proceso de entrega**: Cada vez que el cliente llama al Worker, este utiliza la lista de palabras clave para lanzar la búsqueda contra la base de datos de posts y comentarios capturados por TrawlingWeb y recuperar solo aquellos resultados que tienen relación con la lista de palabras clave (combinables con filtros booleanos vía `q=`).
+* **Proceso de entrega**: Cada vez que el cliente llama al Worker, este utiliza la lista de palabras clave para lanzar la búsqueda contra la base de datos de posts y comentarios indexados por TrawlingWeb y recuperar solo aquellos resultados que tienen relación con la lista de palabras clave (combinables con filtros booleanos vía `q=`).
 
 Implementar y gestionar Workers de manera eficiente permite a los usuarios maximizar la relevancia y precisión de los datos procesados, adaptándose a las necesidades específicas de sus análisis y monitoreo en Reddit.
 

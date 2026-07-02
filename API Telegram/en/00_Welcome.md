@@ -5,7 +5,7 @@ Welcome to the Trawlingweb.com Telegram API documentation. Our API provides acce
 ## Key Features:
 
 * **Credit-Based Subscription**: Service subscription based on credit plans redeemable for keyword searches, where 1 credit = 1 keyword. This allows clients to choose the number of credits they wish to purchase, enabling them to create and monitor keywords within Telegram.
-* **Keywords**: A Keyword is a search term configured within a "worker". The number of Keywords you can register depends on the credits purchased (1 credit = 1 Keyword). Workers use these keywords to filter the captured Telegram messages and gather specific data, which is stored and available for query and download via REST API. Therefore, workers function as a list of keywords.
+* **Keywords**: A Keyword is a search term configured within a "worker". The number of Keywords you can register depends on the credits purchased (1 credit = 1 Keyword). Workers use these keywords to filter the indexed Telegram messages and gather derived data, which is stored and available for query and download via REST API. Therefore, workers function as a list of keywords.
 
     Examples of keywords and credits required for creation:
 
@@ -16,7 +16,7 @@ Welcome to the Trawlingweb.com Telegram API documentation. Our API provides acce
 | "coca cola" |         1          |           1           | Exact phrase in the message text                                     |
 
 * **Structured Access to Telegram Data**: Obtain organized public Telegram messages from channels and public groups for analysis and further processing.
-* **Advanced Analysis Technology**: We employ state-of-the-art systems that ensure precise and up-to-date analysis of captured data.
+* **Advanced Analysis Technology**: We employ state-of-the-art systems that ensure precise and up-to-date analysis of indexed data.
 * **On-Demand Storage and Query**: Processed data is stored in monthly indices (`telegram_YYYY_MM`) to enable quick and flexible queries as per your needs.
 * **Multilingual Coverage**: Messages in multiple languages, with extended coverage on public channels relevant to brand monitoring, reputation, and intelligence.
 * **Versatility and Optimization**: Combine the worker's keyword list with boolean / Lucene queries via the `q=` parameter to refine results without consuming additional credits.

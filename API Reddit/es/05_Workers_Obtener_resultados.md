@@ -46,7 +46,7 @@ Una vez lanzada una petición a la API de Reddit, esta devolverá una respuesta 
 | text             | Texto del post o comentario                                                       |    Sí    |    No     | Cadena |                                    |
 | subreddit        | Subreddit donde aparece el contenido                                              |    Sí    |    No     | Cadena |                                    |
 | published        | Fecha de publicación                                                              |    No    |    Sí     | Fecha  |          ISO 8601-UTC              |
-| crawled          | Fecha y hora en que se capturó el contenido                                       |    No    |    Sí     | Entero | Timestamp UNIX en milisegundos     |
+| crawled          | Fecha y hora en que se indexó el contenido                                       |    No    |    Sí     | Entero | Timestamp UNIX en milisegundos     |
 
 ## Datos del autor
 
