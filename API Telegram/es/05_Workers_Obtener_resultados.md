@@ -45,7 +45,7 @@ Una vez lanzada una petición a la API de Telegram, esta devolverá una respuest
 | url              | URL pública del mensaje (cuando el canal/grupo es público)                        |    No    |    No     | Cadena |                                    |
 | text             | Texto del mensaje                                                                  |    Sí    |    No     | Cadena |                                    |
 | published        | Fecha de publicación del mensaje                                                  |    No    |    Sí     | Fecha  |          ISO 8601-UTC              |
-| crawled          | Fecha y hora en que se capturó el mensaje                                          |    No    |    Sí     | Entero | Timestamp UNIX en milisegundos     |
+| crawled          | Fecha y hora en que se indexó el mensaje                                          |    No    |    Sí     | Entero | Timestamp UNIX en milisegundos     |
 
 ## Datos del autor / canal
 

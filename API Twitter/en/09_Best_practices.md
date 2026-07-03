@@ -33,7 +33,7 @@ next "http://twitter.trawlingweb.com/010101010101010101?token=000000000000000000
 
 ## Using `published` and `crawled` Dates
 
-TrawlingWeb provides two dates for each tweet: `published` (creation date) and `crawled` (capture date). This is crucial as, when incorporating new sections, the system may detect as new tweets that were published days or even months ago.
+TrawlingWeb provides two dates for each tweet: `published` (creation date) and `crawled` (indexing date). This is crucial as, when incorporating new sections, the system may detect as new tweets that were published days or even months ago.
 
 It can also happen that Twitter modifies its system, which may cause the appearance of old tweets due to errors or SEO strategies. To avoid or control these occurrences, we advise clients to implement security rules in their systems.
 
@@ -107,7 +107,7 @@ Explanation:
 The grouping parameter is used with the following syntax: `sort=`. This allows tweets to be grouped by two types of temporal criteria:
 
 * **published**: Groups by creation date. The date used in the API call is the date the tweet was created. `sort=published`
-* **Crawled**: Groups by capture date. The date used in the API call is the date the tweet was captured. `sort=crawled`
+* **Crawled**: Groups by indexing date. The date used in the API call is the date the tweet was indexed. `sort=crawled`
 
 ### Example 1: Group by creation date
 
@@ -130,13 +130,13 @@ https://twitter.trawlingweb.com/01010101010101010?token=0000000000000000000&q=ob
 ```
 
 Explanation:
-* **Organization**: Tweets are organized by capture date ***(sort=crawled)***
+* **Organization**: Tweets are organized by indexing date ***(sort=crawled)***
 * **Ordering**: Tweets are sorted from new to old ***(order=desc)***.
 * **Results**: Defining `size=4`, the maximum will always be 4 in each pagination.
 * **Next**: The "next" in the JSON allows you to jump to the next results, which will be a maximum of those defined in `size=n`, which in this case being `size=4` will be 4 results.
 
 #### Tips:
-* If we want to get results grouped by creation date, we will use `sort=published`, and if we want to get results grouped by capture date, we will use `sort=crawled`.
+* If we want to get results grouped by creation date, we will use `sort=published`, and if we want to get results grouped by indexing date, we will use `sort=crawled`.
 * If we do not use the `sort=` parameter, the default grouping will be `published`.
 
 ## Sorting
@@ -164,16 +164,16 @@ To modify the maximum number of results returned by the API call, use the `size=
 
 ## Periodic Data Source Maintenance
 
-Periodic maintenance of data sources is constant and essential at TrawlingWeb. It involves a comprehensive reevaluation of each source, often incorporating new sections to index content not previously collected. Having the creation (`published`) and capture (`crawled`) dates allows us to manage these updates efficiently.
+Periodic maintenance of data sources is constant and essential at TrawlingWeb. It involves a comprehensive reevaluation of each source, often incorporating new sections to index content not previously indexed. Having the creation (`published`) and indexing (`crawled`) dates allows us to manage these updates efficiently.
 
-When adding new data sources to our coverage, we frequently include their history by performing a deep initial indexing of all their sections. Again, the creation (`published`) and capture (`crawled`) dates facilitate this process.
+When adding new data sources to our coverage, we frequently include their history by performing a deep initial indexing of all their sections. Again, the creation (`published`) and indexing (`crawled`) dates facilitate this process.
 
 Certain sections of Twitter, in addition to chronological content, may display non-chronological content (such as highlighted or related tweets) that we also index.
 
 ### Considerations
 
 * **Indexing Frequency**: The indexing frequency of a data source is determined by client needs, functional requirements, the number of tweets, and the publication frequency of the source.
-* **Date Differentiation**: Clearly differentiating the capture date (`crawled`) from the creation date (`published`) allows clients to decide which tweets to incorporate.
+* **Date Differentiation**: Clearly differentiating the indexing date (`crawled`) from the creation date (`published`) allows clients to decide which tweets to incorporate.
 * **Content Delivery Philosophy**: Our philosophy is to deliver all processed tweets, leaving the decision on how to use this content to the clients.
 
 ### Delivered and Discarded Tweets

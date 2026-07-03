@@ -1,6 +1,6 @@
 ## What is a Worker?
 
-A **Worker** in TrawlingWeb is a key entity that allows users to perform automated and specific searches over the captured messages from public Telegram channels and groups, using Keywords. These Workers are configured by users to monitor, analyze, and process content in real time or at set intervals, according to their specific needs.
+A **Worker** in TrawlingWeb is a key entity that allows users to perform automated and specific searches over the indexed messages from public Telegram channels and groups, using Keywords. These Workers are configured by users to monitor, analyze, and process content in real time or at set intervals, according to their specific needs.
 
 ### How Workers Work
 
@@ -8,7 +8,7 @@ A **Worker** in TrawlingWeb is a key entity that allows users to perform automat
 
 - **Credits:** The number of Keywords a user can configure within a Worker depends on the credits available in their TrawlingWeb account. In TrawlingWeb, 1 credit equals 1 Keyword. Therefore, if a user has 10 credits, they can configure up to 10 Keywords across one or multiple Workers.
 
-- **Crawling and Results:** Once configured, the Worker filters the continuous stream of messages captured by our Telegram crawlers, looking for content matching the specified Keywords. Matching content (message text, author, channel, date, etc.) is processed and stored in monthly indices `telegram_YYYY_MM`, allowing the user to access the data, analyze it, and generate detailed reports.
+- **Crawling and Results:** Once configured, the Worker filters the continuous stream of messages indexed by our Telegram indexers, looking for content matching the specified Keywords. Matching content (message text, author, channel, date, etc.) is processed and stored in monthly indices `telegram_YYYY_MM`, allowing the user to access the data, analyze it, and generate detailed reports.
 
 - **Search Intervals:** Users can query their Workers as often as needed, adjusting the call frequency according to the level of detail and timeliness required. This is particularly useful for real-time monitoring campaigns, where the immediacy of the information is crucial.
 
@@ -16,7 +16,7 @@ A **Worker** in TrawlingWeb is a key entity that allows users to perform automat
 
 ### Example of Use
 
-Suppose a brand wants to monitor in real time how a product launch is being discussed on public Telegram channels. They configure a Worker in TrawlingWeb with Keywords such as the product name, the brand, and mentions of the official account. As Trawlingweb crawlers capture messages from public channels, the Worker analyzes and stores the matches, enabling the brand to analyze overall sentiment, identify relevant channels, and respond quickly to interactions.
+Suppose a brand wants to monitor in real time how a product launch is being discussed on public Telegram channels. They configure a Worker in TrawlingWeb with Keywords such as the product name, the brand, and mentions of the official account. As TrawlingWeb indexers process messages from public channels, the Worker analyzes and stores the matches, enabling the brand to analyze overall sentiment, identify relevant channels, and respond quickly to interactions.
 
 ### Benefits of Using Workers in TrawlingWeb
 

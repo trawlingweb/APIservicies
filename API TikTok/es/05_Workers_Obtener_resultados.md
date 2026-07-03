@@ -50,7 +50,7 @@ Una vez lanzada una petición a la API de TikTok, esta devolverá una respuesta 
 | region    | País asociado a la publicación (ISO 3166-1 alpha-2, minúsculas)             |    Sí    |    No     | Cadena | `mx`, `es`, `ar`, `co`, `us`… |
 | language  | Idioma detectado del contenido (ISO 639-1, minúsculas; `un` = indefinido)   |    Sí    |    No     | Cadena | `es`, `en`, `pt`, `un`…      |
 | published | Fecha de publicación del post                                               |    No    |    No     |  Fecha |        ISO 8601-UTC         |
-| crawled   | Fecha y hora en que se capturó la publicación                               |    No    |    Sí     | Entero | Timestamp UNIX en milisegundos |
+| crawled   | Fecha y hora en que se indexó la publicación                               |    No    |    Sí     | Entero | Timestamp UNIX en milisegundos |
 
 ## Datos del usuario
 

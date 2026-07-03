@@ -7,7 +7,7 @@ La integridad de los datos se refiere a la precisión, consistencia y confiabili
 * **Verificación Continua**: Los datos son verificados continuamente durante el proceso de análisis para asegurar su exactitud y coherencia.
 * **Corrección de Errores**: Cualquier inconsistencia o error detectado en los datos se corrige inmediatamente para mantener su fiabilidad.
 * **Actualización Regular**: Los datos se actualizan regularmente para reflejar la información más reciente y relevante, minimizando la posibilidad de datos obsoletos.
-* **Mantenimiento de Fuentes**: Se realiza un mantenimiento periódico de los subreddits rastreados para asegurar que los datos procesados sean de alta calidad y actuales.
+* **Mantenimiento de Fuentes**: Se realiza un mantenimiento periódico de los subreddits indexados para asegurar que los datos procesados sean de alta calidad y actuales.
 
 Implementar estas medidas ayuda a nuestros clientes a mantener la integridad y confiabilidad de los datos procesados por Trawlingweb.
 

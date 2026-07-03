@@ -8,7 +8,7 @@ Our advanced systems analyze, process, and structure data from various websites,
 
 ### Key Features:
 
-* **Industry Leadership**: We are recognized leaders in information analysis and processing, with vast experience and cutting-edge technology.
+* **Legal and technical framework**: We apply derived analysis and processing of the public Internet universe under the TDM exception (Art. 4 EU Directive 2019/790 and Art. 67 bis Spanish IP Law) with an in-house stack of NLP, multilingual NER and sector-calibrated foundation LLMs.
 * **Extensive Source Coverage**: We process data from over 18 million sources, ensuring comprehensive and diversified coverage.
 * **Advanced Technology**: We employ proprietary Text and Data Mining (TDM), Big Data, and artificial intelligence techniques to ensure the highest quality and precision of data.
 
@@ -18,7 +18,7 @@ Our advanced systems analyze, process, and structure data from various websites,
 * **Social Listening**: Our capabilities allow companies to effectively track conversations on social media, providing valuable insights into brand perception and market trends.
 * **Marketing and Information Analysis**: We enhance the information analysis systems of marketing companies, facilitating informed and strategic decision-making.
 
-Our News & Blogs API is designed to be a powerful and flexible tool, tailored to the diverse needs of our users. We invite you to explore the documentation and discover how you can make the most of our leading capabilities in data analysis and processing.
+Our News & Blogs API is designed to be a powerful and flexible tool, tailored to the diverse needs of our users. We invite you to explore the documentation and discover how you can make the most of our technical capabilities in derived analysis and processing.
 
 ---
 **Contact Us:**

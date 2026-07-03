@@ -6,7 +6,7 @@ Bienvenido a la documentación de la API de Telegram de Trawlingweb.com. Nuestra
 
 - **Contratación mediante Planes de créditos**: Contratación del servicio basada en la contratación de planes de créditos canjeables en número de palabras clave, donde 1 crédito = 1 palabra clave. De esta manera, el cliente puede escoger la cantidad de créditos que desea contratar, los cuales le permiten crear y monitorear palabras clave dentro de Telegram.
 
-* **Palabras clave**: Una Palabra Clave es un término de búsqueda configurado dentro de un "worker". La cantidad de Palabras Clave que puedes registrar depende de los créditos contratados (1 crédito = 1 Palabra Clave). Los "workers" usan estas palabras clave para realizar búsquedas sobre los mensajes capturados de Telegram y recopilar datos específicos, los cuales se almacenan y están disponibles para consulta y descarga a través de API REST. Por lo tanto, los workers funcionan como una lista de palabras clave.
+* **Palabras clave**: Una Palabra Clave es un término de búsqueda configurado dentro de un "worker". La cantidad de Palabras Clave que puedes registrar depende de los créditos contratados (1 crédito = 1 Palabra Clave). Los "workers" usan estas palabras clave para realizar búsquedas sobre los mensajes indexados de Telegram y estructurar datos derivados, los cuales se almacenan y están disponibles para consulta y descarga a través de API REST. Por lo tanto, los workers funcionan como una lista de palabras clave.
 
   Ejemplos de palabras clave y créditos necesarios para su creación:
 
@@ -19,7 +19,7 @@ Bienvenido a la documentación de la API de Telegram de Trawlingweb.com. Nuestra
 <br>
 
 - **Acceso Estructurado a Datos de Telegram**: Obtén mensajes públicos de canales y grupos públicos de Telegram de forma organizada y accesible para análisis y procesamiento posterior.
-- **Tecnología de Análisis Avanzada**: Utilizamos sistemas de última generación que garantizan el análisis preciso y actualizado de la información capturada.
+- **Tecnología de Análisis Avanzada**: Utilizamos sistemas de última generación que garantizan el análisis preciso y actualizado de la información indexada.
 - **Almacenamiento y Consulta Bajo Demanda**: Los datos procesados se almacenan en índices mensuales (`telegram_YYYY_MM`) para permitir consultas rápidas y flexibles según tus necesidades.
 - **Cobertura Multidioma**: Mensajes en múltiples idiomas, con cobertura ampliada en canales públicos relevantes para monitoreo de marca, reputación e inteligencia.
 - **Versatilidad y Optimización**: Combina la lista de palabras clave del worker con consultas booleanas / Lucene en el parámetro `q=` para refinar resultados sin consumir créditos adicionales.

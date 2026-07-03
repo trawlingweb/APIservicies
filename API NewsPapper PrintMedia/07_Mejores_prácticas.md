@@ -133,7 +133,7 @@ Cada respuesta actualiza `next` con nuevos `ts` y `tsi` (timestamps en ms) para 
 
 ---
 
-## Filosofía de entrega
+## Filosofía de análisis derivado
 
 TrawlingWeb siempre entrega **todas** las noticias indexadas. Queda en manos del cliente:
 

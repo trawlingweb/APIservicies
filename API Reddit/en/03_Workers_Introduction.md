@@ -1,6 +1,6 @@
 ## What is a Worker?
 
-A **Worker** in TrawlingWeb is a key entity that allows users to perform automated and specific searches over the captured posts and comments from Reddit, using Keywords. These Workers are configured by users to monitor, analyze, and process content in real time or at set intervals, according to their specific needs.
+A **Worker** in TrawlingWeb is a key entity that allows users to perform automated and specific searches over the indexed posts and comments from Reddit, using Keywords. These Workers are configured by users to monitor, analyze, and process content in real time or at set intervals, according to their specific needs.
 
 ### How Workers Work
 
@@ -8,7 +8,7 @@ A **Worker** in TrawlingWeb is a key entity that allows users to perform automat
 
 - **Credits:** The number of Keywords a user can configure within a Worker depends on the credits available in their TrawlingWeb account. In TrawlingWeb, 1 credit equals 1 Keyword. Therefore, if a user has 10 credits, they can configure up to 10 Keywords across one or multiple Workers.
 
-- **Crawling and Results:** Once configured, the Worker filters the continuous stream of posts and comments captured by our Reddit crawlers, looking for content matching the specified Keywords. Matching content (text, author, subreddit, date, etc.) is processed and stored in monthly indices `reddit_YYYY_MM`, allowing the user to access the data, analyze it, and generate detailed reports.
+- **Crawling and Results:** Once configured, the Worker filters the continuous stream of posts and comments indexed by our Reddit indexers, looking for content matching the specified Keywords. Matching content (text, author, subreddit, date, etc.) is processed and stored in monthly indices `reddit_YYYY_MM`, allowing the user to access the data, analyze it, and generate detailed reports.
 
 - **Search Intervals:** Users can query their Workers as often as needed, adjusting the call frequency according to the level of detail and timeliness required. This is particularly useful for real-time monitoring campaigns, where the immediacy of the information is crucial.
 
@@ -16,7 +16,7 @@ A **Worker** in TrawlingWeb is a key entity that allows users to perform automat
 
 ### Example of Use
 
-Suppose a brand wants to monitor in real time how a product launch is being discussed on Reddit. They configure a Worker in TrawlingWeb with Keywords such as the product name, the brand, and mentions of the official account (u/brand). As Trawlingweb crawlers capture posts and comments, the Worker analyzes and stores the matches, enabling the brand to analyze overall sentiment, identify relevant subreddits, and respond quickly to interactions.
+Suppose a brand wants to monitor in real time how a product launch is being discussed on Reddit. They configure a Worker in TrawlingWeb with Keywords such as the product name, the brand, and mentions of the official account (u/brand). As TrawlingWeb indexers process posts and comments, the Worker analyzes and stores the matches, enabling the brand to analyze overall sentiment, identify relevant subreddits, and respond quickly to interactions.
 
 ### Benefits of Using Workers in TrawlingWeb
 

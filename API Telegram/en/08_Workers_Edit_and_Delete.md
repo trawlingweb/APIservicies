@@ -63,7 +63,7 @@ Upon making a request to the Telegram API, it will return a structured response 
 
 # Worker characteristics
 
-Captured data is stored in monthly indices `telegram_YYYY_MM` with the retention agreed in the client's plan (typically the last months queryable via `ts`/`tsi`).
+Indexed data is stored in monthly indices `telegram_YYYY_MM` with the retention agreed in the client's plan (typically the last months queryable via `ts`/`tsi`).
 
 Users can delete a specific Worker. This deletion destroys the Worker's configuration. Historical data associated with the Worker can no longer be queried through it once removed.
 

@@ -7,7 +7,7 @@ Data integrity refers to the accuracy, consistency, and reliability of data over
 * **Continuous Verification**: Data is continuously verified during analysis to ensure accuracy and consistency.
 * **Error Correction**: Any inconsistency or error detected in the data is corrected immediately to maintain reliability.
 * **Regular Update**: Data is updated regularly to reflect the most recent and relevant information, minimizing the chance of stale data.
-* **Source Maintenance**: Periodic maintenance is performed on the tracked subreddits to ensure that the processed data is of high quality and current.
+* **Source Maintenance**: Periodic maintenance is performed on the indexed subreddits to ensure that the processed data is of high quality and current.
 
 Implementing these measures helps our clients maintain the integrity and reliability of the data processed by Trawlingweb.
 

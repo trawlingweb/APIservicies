@@ -38,7 +38,7 @@ Upon making a request to the TikTok API, it will return a structured response as
 
 | Field       | Description                                                                       | Searchable | Orderable |  Type   |           Format           |
 | ----------- | --------------------------------------------------------------------------------- | :--------: | :-------: | :-----: | :-------------------------: |
-| id          | Identification code assigned by Trawlingweb to each tracked post                  |     No     |     No    | String  |                             |
+| id          | Identification code assigned by Trawlingweb to each indexed post                  |     No     |     No    | String  |                             |
 | post_id     | ID of the post                                                                    |     No     |     No    | String  |                             |
 | type        | Type of post (photo or video)                                                     |     No     |     No    | String  |                             |
 | url         | URL of the post                                                                   |     No     |     No    | String  |                             |
@@ -49,7 +49,7 @@ Upon making a request to the TikTok API, it will return a structured response as
 | region      | Country associated with the post (ISO 3166-1 alpha-2, lowercase)                  |    Yes     |     No    | String  | `mx`, `es`, `ar`, `co`, `us`… |
 | language    | Detected language of the content (ISO 639-1, lowercase; `un` = undefined)         |    Yes     |     No    | String  | `es`, `en`, `pt`, `un`…      |
 | published   | Date the post was published                                                       |     No     |     No    |  Date   |        ISO 8601-UTC         |
-| crawled     | Date and time when the post was captured                                          |     No     |    Yes    | Integer | UNIX Timestamp in milliseconds |
+| crawled     | Date and time when the post was indexed                                           |     No     |    Yes    | Integer | UNIX Timestamp in milliseconds |
 
 ## User Data
 
