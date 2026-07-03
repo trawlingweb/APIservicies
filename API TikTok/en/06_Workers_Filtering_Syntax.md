@@ -81,9 +81,47 @@ Below, we present some key features and useful examples to optimize your user ex
 
 5. **Attribute-Specific Queries**: Specify an attribute to search in particular parts of the document.
     ```
-    title
     text:"exact phrase"
+    region:mx
+    language:es
     ```
+
+### Available Filterable Fields
+
+When you write `field:value` inside `q=`, you can restrict the search to a specific attribute of the document. The fields available in the TikTok index are:
+
+#### Text fields (default search targets)
+
+Keywords without a field prefix are searched across these fields. You can also reference them explicitly with `field:value`.
+
+| Field              | Description                                            |
+| :----------------- | :----------------------------------------------------- |
+| `text`             | Post text / description                                |
+| `user_name`        | Creator's display name                                 |
+| `user_screen_name` | Creator's handle                                       |
+| `user_id_name`     | Internal user identifier                               |
+| `music_title`      | Title of the music/audio track attached to the post    |
+| `user_signature`   | Creator's profile bio                                  |
+
+#### Location and language fields (ISO 3166-1 / ISO 639-1, always **lowercase**)
+
+| Field             | Description                                                    | Examples             |
+| :---------------- | :------------------------------------------------------------- | :------------------- |
+| `region`          | Country associated with the post                               | `mx`, `es`, `ar`, `co`, `us` |
+| `user_region`     | Country declared in the creator's profile                      | idem                 |
+| `language`        | Detected language of the post content                          | `es`, `en`, `pt`, `un` (undefined) |
+| `user_language`   | Language of the creator's profile                              | idem                 |
+
+### Examples combining keywords with region and language
+
+```
+q=(coca cola OR pepsi) AND region:mx AND language:es
+q=elections AND (region:mx OR region:co OR region:ar) AND language:es
+q=brand AND user_region:mx AND language:es
+q=football AND region:gb AND NOT language:un
+```
+
+> **Important note on `region` and `language` reliability:** these values come directly from TikTok itself — we deliver them as received, without recomputing or validating them. TikTok's tagging is not always accurate: it is common to find posts labelled with one country (e.g. `region:uy`) that are in fact from another (`mx`), or clearly Spanish-language content tagged as `language:en` or `language:un` because the detector struggles with short texts, hashtags or emojis. Use these fields to reduce noise and narrow volume, but not as absolute truth; if you need exhaustive coverage of a market, combine them with local keywords, characteristic hashtags, or several regions at once (`region:mx OR user_region:mx`).
 
 ### Useful Examples of Grouping Search Elements
 

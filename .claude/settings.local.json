@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"C:\\\\Users\\\\oscar\\\\Dev\\\\Trawlingweb\\\\feedscale_system\\\\ateneaDataTrawlingwebJS\" add src/01DataCollector/telegram.js)",
+      "Bash(git -C 'C:\\\\Users\\\\oscar\\\\Dev\\\\Trawlingweb\\\\feedscale_system\\\\ateneaDataTrawlingwebJS' commit -m ' *)",
+      "Bash(git -C \"C:\\\\Users\\\\oscar\\\\Dev\\\\Trawlingweb\\\\feedscale_system\\\\ateneaDataTrawlingwebJS\" status)",
+      "Bash(git -C \"C:\\\\Users\\\\oscar\\\\Dev\\\\Trawlingweb\\\\feedscale_system\\\\ateneaDataTrawlingwebJS\" log --oneline origin/main..HEAD)",
+      "Bash(git *)"
+    ]
+  }
+}

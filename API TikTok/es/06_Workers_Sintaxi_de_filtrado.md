@@ -81,11 +81,49 @@ A continuación, te presentamos algunas características clave y ejemplos útile
      
 5. **Consultas Específicas de atributo**: Especifica atributo para buscar en partes particulares del documento.
    ```
-   title:ejemplo
    text:"frase exacta"
+   region:mx
+   language:es
    ```
 
    ***Recuerda que: Las consultas booleanas o los parámetros de sintaxis de Lucene siempre deben utilizarse dentro del parámetro q= en la estructura de la URL de llamada a la API. Los elementos dentro de q= constituyen toda la consulta que se adjunta a la llamada a la API.***
+
+### Campos filtrables disponibles
+
+Cuando escribes `campo:valor` dentro de `q=`, puedes acotar la búsqueda a un atributo concreto del documento. Los campos disponibles en el índice de TikTok son los siguientes:
+
+#### Campos de texto (búsqueda por defecto)
+
+Estos son los campos donde se buscan las palabras clave cuando no antepones ningún atributo. También puedes referenciarlos explícitamente con `campo:valor`.
+
+| Campo             | Descripción                                            |
+| :---------------- | :----------------------------------------------------- |
+| `text`            | Texto/descripción del post                             |
+| `user_name`       | Nombre del creador                                     |
+| `user_screen_name`| Nombre de usuario mostrado (handle)                    |
+| `user_id_name`    | Identificador interno del usuario                      |
+| `music_title`     | Título de la música/audio asociado al post             |
+| `user_signature`  | Bio del perfil del creador                             |
+
+#### Campos de localización e idioma (ISO 3166-1 / ISO 639-1, siempre en **minúsculas**)
+
+| Campo             | Descripción                                                     | Ejemplos            |
+| :---------------- | :-------------------------------------------------------------- | :------------------ |
+| `region`          | País asociado a la publicación                                  | `mx`, `es`, `ar`, `co`, `us` |
+| `user_region`     | País declarado en el perfil del creador                         | idem                |
+| `language`        | Idioma detectado del contenido del post                         | `es`, `en`, `pt`, `un` (indefinido) |
+| `user_language`   | Idioma del perfil del creador                                   | idem                |
+
+### Ejemplos combinando keywords con región e idioma
+
+```
+q=(coca cola OR pepsi) AND region:mx AND language:es
+q=elecciones AND (region:mx OR region:co OR region:ar) AND language:es
+q=marca AND user_region:mx AND language:es
+q=fútbol AND region:es AND NOT language:un
+```
+
+> **Nota importante sobre la fiabilidad de `region` y `language`:** estos valores provienen directamente del propio TikTok — nosotros los entregamos tal cual los recibimos, sin recalcularlos ni validarlos. TikTok no siempre etiqueta con precisión: es habitual encontrar posts marcados con un país (por ejemplo `region:uy`) que en realidad son de otro (`mx`), o contenido claramente en español que aparece con `language:en` o `language:un` porque el detector se equivoca con textos cortos, hashtags o emojis. Úsalos como filtro para reducir ruido y acotar volumen, pero no como verdad absoluta; si necesitas cobertura exhaustiva de un mercado combínalos con keywords locales, hashtags característicos o varias regiones a la vez (`region:mx OR user_region:mx`).
 
 ### Ejemplso útiles de agrupación de elementos de búsqueda
 

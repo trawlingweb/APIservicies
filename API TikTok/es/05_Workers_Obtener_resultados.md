@@ -33,6 +33,8 @@ https://tiktok.trawlingweb.com/posts/?cursor=XXX&token=YYY
 
 Una vez lanzada una petición a la API de TikTok, esta devolverá una respuesta estructurada de la siguiente forma:
 
+> La columna **Buscable** indica si el campo puede usarse dentro del parámetro `q=` con sintaxis Lucene. Los campos marcados como buscables aceptan tanto la búsqueda por keyword (sobre el conjunto de campos de texto por defecto) como el filtrado por atributo (`campo:valor`).
+
 ## Datos de la publicación
 
 | Campo     | Descripción                                                                 | Buscable | Ordenable |  Tipo  |           Formato           |
@@ -43,25 +45,34 @@ Una vez lanzada una petición a la API de TikTok, esta devolverá una respuesta 
 | url       | URL de la publicación                                                       |    No    |    No     | Cadena |                             |
 | media_url | URL del contenido multimedia                                                |    No    |    No     | Cadena |                             |
 | likes     | Cantidad de "me gusta"                                                      |    No    |    No     | Entero |                             |
-| text      | Texto descriptivo de la publicación                                         |    No    |    No     | Cadena |                             |
+| text      | Texto descriptivo de la publicación                                         |    Sí    |    No     | Cadena |                             |
+| music_title | Título de la música/audio asociado al post                                |    Sí    |    No     | Cadena |                             |
+| region    | País asociado a la publicación (ISO 3166-1 alpha-2, minúsculas)             |    Sí    |    No     | Cadena | `mx`, `es`, `ar`, `co`, `us`… |
+| language  | Idioma detectado del contenido (ISO 639-1, minúsculas; `un` = indefinido)   |    Sí    |    No     | Cadena | `es`, `en`, `pt`, `un`…      |
 | published | Fecha de publicación del post                                               |    No    |    No     |  Fecha |        ISO 8601-UTC         |
 | crawled   | Fecha y hora en que se capturó la publicación                               |    No    |    Sí     | Entero | Timestamp UNIX en milisegundos |
 
 ## Datos del usuario
 
-| Campo             | Descripción                  | Buscable | Ordenable |  Tipo  | Formato |
-| ----------------- | ---------------------------- | :------: | :-------: | :----: | :-----: |
-| user_name         | Nombre de usuario            |    No    |    No     | Cadena |         |
-| user_screen_name  | Nombre de usuario mostrado   |    No    |    No     | Cadena |         |
-| user_publications | Número de publicaciones      |    No    |    No     | Entero |         |
-| user_followers    | Número de seguidores         |    No    |    No     | Entero |         |
-| user_followed     | Número de usuarios seguidos  |    No    |    No     | Entero |         |
+| Campo             | Descripción                                                          | Buscable | Ordenable |  Tipo  | Formato |
+| ----------------- | -------------------------------------------------------------------- | :------: | :-------: | :----: | :-----: |
+| user_name         | Nombre de usuario                                                    |    Sí    |    No     | Cadena |         |
+| user_screen_name  | Nombre de usuario mostrado (handle)                                  |    Sí    |    No     | Cadena |         |
+| user_id_name      | Identificador interno del usuario                                    |    Sí    |    No     | Cadena |         |
+| user_signature    | Bio/descripción del perfil del creador                               |    Sí    |    No     | Cadena |         |
+| user_region       | País declarado en el perfil del creador (ISO 3166-1, minúsculas)     |    Sí    |    No     | Cadena | `mx`, `es`, `ar`… |
+| user_language     | Idioma del perfil del creador (ISO 639-1, minúsculas)                |    Sí    |    No     | Cadena | `es`, `en`, `un`… |
+| user_publications | Número de publicaciones                                              |    No    |    No     | Entero |         |
+| user_followers    | Número de seguidores                                                 |    No    |    No     | Entero |         |
+| user_followed     | Número de usuarios seguidos                                          |    No    |    No     | Entero |         |
 
 ## Datos de los comentarios
 
 | Campo    | Descripción  | Buscable | Ordenable |  Tipo  | Formato |
 | -------- | ------------ | :------: | :-------: | :----: | :-----: |
 | comments | Comentarios  |    No    |    No     | Cadena |         |
+
+> **Aviso sobre `region` / `language` / `user_region` / `user_language`:** estos valores provienen directamente de TikTok — los entregamos tal cual los recibimos, sin recalcularlos ni validarlos. TikTok no siempre etiqueta con precisión (posts marcados `region:uy` que en realidad son `mx`, contenido en español etiquetado como `language:en` o `language:un` por errores del detector con textos cortos, hashtags o emojis, etc.). Úsalos como filtro para acotar volumen y reducir ruido, pero no como verdad absoluta; si necesitas cobertura exhaustiva de un mercado combina con keywords locales y varias regiones a la vez.
 
 ## Datos de la petición
 
@@ -78,17 +89,24 @@ Una vez lanzada una petición a la API de TikTok, esta devolverá una respuesta 
   "data": [
     {
       "id": "...",
-      "user_screen_name": "...",
-      "user_publications": 239,
-      "user_followers": 6762,
-      "user_followed": 1792,
-      "user_name": "...",
       "post_id": "...",
       "type": "...",
       "url": "...",
       "media_url": "...",
-      "likes": 125,
       "text": "...",
+      "region": "mx",
+      "language": "es",
+      "music_title": "...",
+      "likes": 125,
+      "user_name": "...",
+      "user_screen_name": "...",
+      "user_id_name": "...",
+      "user_signature": "...",
+      "user_region": "mx",
+      "user_language": "es",
+      "user_publications": 239,
+      "user_followers": 6762,
+      "user_followed": 1792,
       "comments": null,
       "published": "2024-08-03T11:00:04.000Z",
       "crawled": 1722682829465

@@ -32,35 +32,46 @@ https://tiktok.trawlingweb.com/posts/{WORKERID}?token={APIKEY}
 
 Upon making a request to the TikTok API, it will return a structured response as follows:
 
+> The **Searchable** column indicates whether the field can be used inside the `q=` parameter with Lucene syntax. Fields flagged as searchable accept both keyword search (over the default set of text fields) and attribute filtering (`field:value`).
+
 ## Post Data
 
-| Field     | Description                                                                 | Searchable | Orderable |  Type   |           Format           |
-| --------- | --------------------------------------------------------------------------- | :--------: | :-------: | :-----: | :-------------------------: |
-| id        | Identification code assigned by Trawlingweb to each tracked post            |     No     |     No    | String  |                             |
-| post_id   | ID of the post                                                              |     No     |     No    | String  |                             |
-| type      | Type of post (photo or video)                                               |     No     |     No    | String  |                             |
-| url       | URL of the post                                                             |     No     |     No    | String  |                             |
-| media_url | URL of the media content                                                    |     No     |     No    | String  |                             |
-| likes     | Number of likes                                                             |     No     |     No    | Integer |                             |
-| text      | Text description of the post                                                |     No     |     No    | String  |                             |
-| published | Date the post was published                                                 |     No     |     No    |  Date   |        ISO 8601-UTC         |
-| crawled   | Date and time when the post was captured                                    |     No     |    Yes    | Integer | UNIX Timestamp in milliseconds |
+| Field       | Description                                                                       | Searchable | Orderable |  Type   |           Format           |
+| ----------- | --------------------------------------------------------------------------------- | :--------: | :-------: | :-----: | :-------------------------: |
+| id          | Identification code assigned by Trawlingweb to each tracked post                  |     No     |     No    | String  |                             |
+| post_id     | ID of the post                                                                    |     No     |     No    | String  |                             |
+| type        | Type of post (photo or video)                                                     |     No     |     No    | String  |                             |
+| url         | URL of the post                                                                   |     No     |     No    | String  |                             |
+| media_url   | URL of the media content                                                          |     No     |     No    | String  |                             |
+| likes       | Number of likes                                                                   |     No     |     No    | Integer |                             |
+| text        | Text description of the post                                                      |    Yes     |     No    | String  |                             |
+| music_title | Title of the music/audio track attached to the post                               |    Yes     |     No    | String  |                             |
+| region      | Country associated with the post (ISO 3166-1 alpha-2, lowercase)                  |    Yes     |     No    | String  | `mx`, `es`, `ar`, `co`, `us`… |
+| language    | Detected language of the content (ISO 639-1, lowercase; `un` = undefined)         |    Yes     |     No    | String  | `es`, `en`, `pt`, `un`…      |
+| published   | Date the post was published                                                       |     No     |     No    |  Date   |        ISO 8601-UTC         |
+| crawled     | Date and time when the post was captured                                          |     No     |    Yes    | Integer | UNIX Timestamp in milliseconds |
 
 ## User Data
 
-| Field             | Description                | Searchable | Orderable |  Type   | Format  |
-| ----------------- | -------------------------- | :--------: | :-------: | :-----: | :-----: |
-| user_name         | Username                   |     No     |     No    | String  |         |
-| user_screen_name  | Displayed username         |     No     |     No    | String  |         |
-| user_publications | Number of posts            |     No     |     No    | Integer |         |
-| user_followers    | Number of followers        |     No     |     No    | Integer |         |
-| user_followed     | Number of followed users   |     No     |     No    | Integer |         |
+| Field             | Description                                                        | Searchable | Orderable |  Type   | Format  |
+| ----------------- | ------------------------------------------------------------------ | :--------: | :-------: | :-----: | :-----: |
+| user_name         | Username                                                           |    Yes     |     No    | String  |         |
+| user_screen_name  | Displayed username (handle)                                        |    Yes     |     No    | String  |         |
+| user_id_name      | Internal user identifier                                           |    Yes     |     No    | String  |         |
+| user_signature    | Creator's profile bio                                              |    Yes     |     No    | String  |         |
+| user_region       | Country declared in the creator's profile (ISO 3166-1, lowercase)  |    Yes     |     No    | String  | `mx`, `es`, `ar`… |
+| user_language     | Language of the creator's profile (ISO 639-1, lowercase)           |    Yes     |     No    | String  | `es`, `en`, `un`… |
+| user_publications | Number of posts                                                    |     No     |     No    | Integer |         |
+| user_followers    | Number of followers                                                |     No     |     No    | Integer |         |
+| user_followed     | Number of followed users                                           |     No     |     No    | Integer |         |
 
 ## Comments Data
 
 | Field    | Description | Searchable | Orderable |  Type   | Format  |
 | -------- | ----------- | :--------: | :-------: | :-----: | :-----: |
 | comments | Comments    |     No     |     No    | String  |         |
+
+> **Notice on `region` / `language` / `user_region` / `user_language`:** these values come directly from TikTok — we deliver them as received, without recomputing or validating them. TikTok's tagging is not always accurate (posts flagged `region:uy` that are actually `mx`, Spanish-language content labelled as `language:en` or `language:un` due to detector errors on short texts, hashtags or emojis, etc.). Use them as a filter to narrow volume and reduce noise, but not as absolute truth; if you need exhaustive market coverage, combine them with local keywords and several regions at once.
 
 ## Request Data
 
@@ -77,17 +88,24 @@ Upon making a request to the TikTok API, it will return a structured response as
   "data": [
     {
       "id": "...",
-      "user_screen_name": "...",
-      "user_publications": 239,
-      "user_followers": 6762,
-      "user_followed": 1792,
-      "user_name": "...",
       "post_id": "...",
       "type": "...",
       "url": "...",
       "media_url": "...",
-      "likes": 125,
       "text": "...",
+      "region": "mx",
+      "language": "es",
+      "music_title": "...",
+      "likes": 125,
+      "user_name": "...",
+      "user_screen_name": "...",
+      "user_id_name": "...",
+      "user_signature": "...",
+      "user_region": "mx",
+      "user_language": "es",
+      "user_publications": 239,
+      "user_followers": 6762,
+      "user_followed": 1792,
       "comments": null,
       "published": "2024-08-03T11:00:04.000Z",
       "crawled": 1722682829465
